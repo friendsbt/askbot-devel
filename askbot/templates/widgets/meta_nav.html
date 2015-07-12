@@ -1,5 +1,10 @@
 {% import "macros.html" as macros%}
-<a 
+<a
+  id="navFBT"
+  href="http://211.149.208.82:9189/#/schools"
+  {% if active_tab == 'tags' %}class="on"{% endif %}
+  >返回FBT</a>
+<a
   id="navTags"
   href="{% url tags %}"
   {% if active_tab == 'tags' %}class="on"{% endif %}
