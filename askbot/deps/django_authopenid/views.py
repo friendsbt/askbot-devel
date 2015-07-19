@@ -528,6 +528,7 @@ def signin(request, template_name='authopenid/signin.html'):
                             )
                         if user is None:
                             login_form.set_password_login_error()
+                            return HttpResponse(status=204)  # my hack
                         else:
                             login(request, user)
                             #todo: here we might need to set cookies
@@ -583,7 +584,7 @@ def signin(request, template_name='authopenid/signin.html'):
                         user_identifier=email,
                         redirect_url=next_url
                     )
-                    
+
             elif login_form.cleaned_data['login_type'] == 'openid':
                 #initiate communication process
                 logging.debug('processing signin with openid submission')
