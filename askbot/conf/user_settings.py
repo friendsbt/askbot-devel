@@ -125,7 +125,7 @@ settings.register(
         description=_(
                 'Base URL for the gravatar service'
             ),
-        default='//www.gravatar.com/avatar',
+        default='https://secure.gravatar.com',
         update_callback=gravatar_url_callback
     )
 )
