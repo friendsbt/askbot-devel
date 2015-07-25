@@ -155,7 +155,7 @@ msgstr "请输入您的问题"
 #: media/js/post.js:145
 msgid "%(question)s must have > %(length)s character"
 msgid_plural "%(question)s must have > %(length)s characters"
-msgstr[0] ""
+msgstr[0] "%(question)s 至少需要 %(length)s 个字符"
 
 #: media/js/post.js:168
 msgid "content cannot be empty"
@@ -164,7 +164,7 @@ msgstr "内容不能为空"
 #: media/js/post.js:171
 msgid "%(answer)s must be > %(length)s character"
 msgid_plural "%(answer)s must be > %(length)s characters"
-msgstr[0] ""
+msgstr[0] "%(answer)s 至少需要 %(length)s 个字符"
 
 #: media/js/post.js:232
 msgid "Back to the question"
@@ -172,15 +172,15 @@ msgstr "回到问题"
 
 #: media/js/post.js:332
 msgid "Merge"
-msgstr ""
+msgstr "合并"
 
 #: media/js/post.js:336 media/js/post.js.c:388
 msgid "Load preview"
-msgstr ""
+msgstr "加载预览"
 
 #: media/js/post.js:348
 msgid "messages"
-msgstr ""
+msgstr "消息"
 
 #: media/js/post.js:387 media/js/utils.js:1456 media/js/utils.js.c:1948
 msgid "Cancel"
@@ -200,7 +200,7 @@ msgstr "请登录"
 
 #: media/js/post.js:684
 msgid "anonymous users cannot %(follow_questions)s"
-msgstr ""
+msgstr "匿名用户无法 %(follow_questions)s"
 
 #: media/js/post.js:690
 msgid "anonymous users cannot subscribe to questions"
@@ -232,17 +232,17 @@ msgstr "帖子已删除"
 
 #: media/js/post.js:932
 msgid "sorry, you cannot %(accept_own_answer)s"
-msgstr ""
+msgstr "对不起，您无法 %(accept_own_answer)s"
 
 #: media/js/post.js:969
 msgid "Follow"
-msgstr "跟踪"
+msgstr "关注"
 
 #: media/js/post.js:978 media/js/post.js.c:987
 #, c-format
 msgid "%s follower"
 msgid_plural "%s followers"
-msgstr[0] "%s 位跟踪者"
+msgstr[0] "%s 位关注者"
 
 #: media/js/post.js:983
 msgid "<div>Following</div><div class=\"unfollow\">Unfollow</div>"
@@ -284,7 +284,7 @@ msgstr "请输入至少 %s 个字符"
 #: media/js/post.js:1856
 #, c-format
 msgid "enter at least %s more characters"
-msgstr "还需要 %s个字符"
+msgstr "还需要 %s 个字符"
 
 #: media/js/post.js:1868
 #, c-format
@@ -293,7 +293,7 @@ msgstr "还可写 %s 个字符"
 
 #: media/js/post.js:1870
 msgid "maximum comment length reached"
-msgstr ""
+msgstr "已达到最大评论长度"
 
 #: media/js/post.js:1984
 msgid "minor edit (don't send alerts)"
@@ -409,7 +409,7 @@ msgstr "请选择至少一项"
 
 #: media/js/user.js:241
 msgid "Load more items."
-msgstr ""
+msgstr "加载更多。"
 
 #: media/js/user.js:386
 msgid "Looks there are some things to fix:"
@@ -470,7 +470,7 @@ msgstr "点击消息框关闭"
 #: media/js/utils.js:670
 #, c-format
 msgid "page %s"
-msgstr ""
+msgstr "%s 页"
 
 #: media/js/utils.js:1370
 msgid "click to edit this comment"

@@ -40,12 +40,12 @@ msgstr "-"
 #: feed.py:35
 #, python-format
 msgid "Individual %(question)s feed"
-msgstr ""
+msgstr "定制 %(question)s 订阅消息"
 
 #: feed.py:108
 #, python-format
 msgid "Latest %(question)s feed"
-msgstr ""
+msgstr "最新 %(question)s 订阅消息"
 
 #: forms.py:164
 msgid "select country"
@@ -93,22 +93,22 @@ msgstr[0] "至少需要 %d 个字符"
 #, python-format
 msgid ""
 "The %(question)s is too long, maximum allowed size is %(length)d characters"
-msgstr ""
+msgstr "问题 %(question)s 太长，最多 %(length)d 个字符"
 
 #: forms.py:320
 #, python-format
 msgid "The %(question)s is too long, maximum allowed size is %(length)d bytes"
-msgstr ""
+msgstr "问题 %(question)s 太长，最多 %(length)d 个字节"
 
 #: forms.py:350
 msgid "post"
-msgstr ""
+msgstr "发布"
 
 #: forms.py:357
 #, python-format
 msgid "%(post)s content must be > %(count)d character"
 msgid_plural "%(post)s content must be > %(count)d characters"
-msgstr[0] ""
+msgstr[0] "“%(post)s” 内容至少需要 %(count)d 个字符"
 
 #: forms.py:405
 #, python-format
@@ -159,7 +159,7 @@ msgstr "更新摘要："
 msgid ""
 "enter a brief summary of your revision (e.g. fixed spelling, grammar, "
 "improved style...), this field is optional"
-msgstr ""
+msgstr "输入简短的说明(例如纠正拼写、语法或更新样式)，此项可选"
 
 #: forms.py:684
 msgid "Enter number of points to add or subtract"
@@ -251,7 +251,7 @@ msgstr "我不想给出电子邮箱地址或接收回应:"
 
 #: forms.py:854
 msgid "Message is required"
-msgstr ""
+msgstr "此信息不可为空"
 
 #: forms.py:860 models/__init__.py:2438
 msgid "Anonymous"
@@ -297,7 +297,7 @@ msgstr "详细描述"
 
 #: forms.py:1043
 msgid "post anonymously"
-msgstr ""
+msgstr "匿名发布"
 
 #: forms.py:1064
 msgid ""
@@ -314,7 +314,7 @@ msgstr "详细描述"
 
 #: forms.py:1352
 msgid "remove anonymity"
-msgstr ""
+msgstr "取消匿名"
 
 #: forms.py:1437
 msgid "Real name"
@@ -399,7 +399,7 @@ msgstr "标签"
 
 #: tasks.py:129
 msgid "make an edit by email"
-msgstr ""
+msgstr "通过邮件编辑"
 
 #: urls.py:46
 #, fuzzy
@@ -536,7 +536,7 @@ msgstr "关闭/"
 #, fuzzy
 msgctxt "urls"
 msgid "reopen/"
-msgstr "打开/"
+msgstr "重新打开/"
 
 #: urls.py:293
 #, fuzzy
@@ -593,13 +593,13 @@ msgstr "访问控制设置"
 
 #: conf/access_control.py:19
 msgid "Make site read-only"
-msgstr ""
+msgstr "让网站只读"
 
 #: conf/access_control.py:28
 msgid ""
 "The site is temporarily read-only. Only viewing of the content is possible "
 "at the moment."
-msgstr ""
+msgstr "网站暂时处于只读状态，仅可以浏览"
 
 #: conf/access_control.py:39
 msgid "Allow only registered user to access the forum"
@@ -895,7 +895,7 @@ msgstr "启用电子邮件提醒"
 
 #: conf/email.py:80 conf/email.py:90
 msgid "Also, premoderation mode must be enabled"
-msgstr ""
+msgstr "同时，启用premoderation模式"
 
 #: conf/email.py:89
 #, fuzzy
@@ -919,11 +919,11 @@ msgstr "启用电子邮件提醒"
 
 #: conf/email.py:127
 msgid "Enable HTML-formatted email"
-msgstr ""
+msgstr "启用HTML格式编辑邮件"
 
 #: conf/email.py:128
 msgid "May not be supported by some email clients"
-msgstr ""
+msgstr "某些邮件客户端不支持"
 
 #: conf/email.py:137
 msgid "Maximum number of news entries in an email alert"
@@ -1000,11 +1000,11 @@ msgstr "大家"
 
 #: conf/email.py:229
 msgid "moderators & administrators"
-msgstr ""
+msgstr "版主和管理员"
 
 #: conf/email.py:238
 msgid "Whom to remind about unanswered questions"
-msgstr ""
+msgstr "发送未回答问题提醒给他们"
 
 #: conf/email.py:248
 msgid "Days before starting to send reminders about unanswered questions"
@@ -1098,7 +1098,7 @@ msgstr "为了启用这项功能，请确保lamson正在运行"
 
 #: conf/email.py:392
 msgid "Emailed post: when to notify author about publishing"
-msgstr ""
+msgstr "通过邮件发布：何时通知作者"
 
 #: conf/email.py:417
 msgid "Reply by email hostname"
@@ -1112,15 +1112,15 @@ msgstr "如果电子邮件的回复字数少于该数字，将会被发布为注
 
 #: conf/email_text.py:8
 msgid "Email template phrases"
-msgstr ""
+msgstr "邮件模板短语"
 
 #: conf/email_text.py:16
 msgid "Short welcome message, for subject line"
-msgstr ""
+msgstr "简短的欢迎词,用于邮件主题"
 
 #: conf/email_text.py:17
 msgid "Welcome to {{ SITE_NAME }}!"
-msgstr ""
+msgstr "欢迎来到 {{ SITE_NAME }}！"
 
 #: conf/email_text.py:19
 msgid ""
@@ -1130,31 +1130,31 @@ msgstr ""
 
 #: conf/email_text.py:28
 msgid "Longer welcome message, for email body"
-msgstr ""
+msgstr "更长的欢迎词，用于邮件正文"
 
 #: conf/email_text.py:29
 msgid ""
 "<p>Please visit {{ SITE_NAME }} at {{ SITE_LINK }}, we look forward to your "
 "posts.</p>"
-msgstr ""
+msgstr "<p>请在此 {{ SITE_LINK }} 访问 {{ SITE_NAME }} ，我们期待你发布帖子。</p>"
 
 #: conf/email_text.py:37
 msgid "Email footer"
-msgstr ""
+msgstr "邮件落款"
 
 #: conf/email_text.py:38
 msgid "<p>Sincerely,<br>{{ SITE_NAME }} Administrator</p>"
-msgstr ""
+msgstr "<p>{{ SITE_NAME }} 管理员</p>"
 
 #: conf/email_text.py:46
 msgid "Header for the batch email alerts"
-msgstr ""
+msgstr "批量邮件提醒开头"
 
 #: conf/email_text.py:47
 msgid ""
 "<p>Dear {{ USER_NAME }},</p>\n"
 "<p>{{ SITE_NAME }} has these updates, please have a look:</p>"
-msgstr ""
+msgstr "<p>亲爱的 {{ USER_NAME }}，</p>\n<p>{{ SITE_NAME }} 有如下更新，请查看：</p>"
 
 #: conf/external_keys.py:11
 msgid "Keys for external services"
@@ -2046,40 +2046,40 @@ msgstr "要启用，请转到 设置->撰写->远程发布 并选中 XML-RPC 的
 #: conf/login_providers.py:63
 #, fuzzy
 msgid "WordPress login button image"
-msgstr "WordPress 博客名称"
+msgstr "WordPress 登录按钮图片"
 
 #: conf/login_providers.py:73
 #, fuzzy
 msgid "Enable Fedora OpenID login"
-msgstr "返回登录"
+msgstr "启用Fedora OpenID账号登录"
 
 #: conf/login_providers.py:82
 msgid "Enable custom OpenID login"
-msgstr ""
+msgstr "启用自定义OpenID账号登录"
 
 #: conf/login_providers.py:90
 msgid "Custom OpenID"
-msgstr ""
+msgstr "自定义OpenID账号"
 
 #: conf/login_providers.py:91
 msgid "Short name for the custom OpenID provider"
-msgstr ""
+msgstr "自定义OpenID账号提供商缩写"
 
 #: conf/login_providers.py:96
 msgid "Direct button login"
-msgstr ""
+msgstr "直接点击登录"
 
 #: conf/login_providers.py:97
 msgid "Requires username"
-msgstr ""
+msgstr "需要用户名"
 
 #: conf/login_providers.py:105
 msgid "Type of OpenID login"
-msgstr ""
+msgstr "OpenID账号登录方式"
 
 #: conf/login_providers.py:115
 msgid "Upload custom OpenID icon"
-msgstr ""
+msgstr "上传自定义OpenID账号头像"
 
 #: conf/login_providers.py:125
 msgid "Custom OpenID endpoint"
@@ -2094,7 +2094,7 @@ msgstr ""
 
 #: conf/login_providers.py:164
 msgid "disable"
-msgstr ""
+msgstr "禁用"
 
 #: conf/login_providers.py:169
 msgid "local password"
@@ -2116,17 +2116,18 @@ msgstr ""
 
 #: conf/login_providers.py:199
 msgid "MediaWiki login button image"
-msgstr ""
+msgstr "MediaWiki登录按钮图片"
 
 #: conf/login_providers.py:213
 msgid "Google login"
-msgstr ""
+msgstr "Google登录"
 
 #: conf/login_providers.py:215
 msgid ""
 "To enable Google-Plus login, OAuth keys are required in the \"External keys"
 "\" section"
-msgstr ""
+msgstr "为了启用Google-Plus登录, 需要在\"External keys"
+"\"中设置OAuth密钥"
 
 #: conf/markup.py:15
 msgid "Markup in posts"
@@ -4557,7 +4558,7 @@ msgstr ""
 #: mail/messages.py:356
 #, fuzzy
 msgid "Welcome message"
-msgstr "发送消息"
+msgstr "欢迎消息"
 
 #: mail/messages.py:357
 msgid "Sent to newly registered user when replying by email is disabled"
@@ -5594,7 +5595,7 @@ msgstr ""
 #: views/commands.py:1292
 #, python-format
 msgid "%(user)s, welcome to group %(group)s!"
-msgstr ""
+msgstr "%(user)s，欢迎加入 %(group)s ！"
 
 #: views/commands.py:1349 views/commands.py:1379
 msgid "Sorry, only thread moderators can use this function"
@@ -6798,7 +6799,7 @@ msgstr "无法转换，因为文本的字符数超过了评论允许的最大值
 #~ "<p>系统不能正确处理你的信息，原因如下：<p>\n"
 
 #~ msgid "Welcome to %(site_name)s!"
-#~ msgstr "欢迎 %(site_name)s!"
+#~ msgstr "欢迎来到 %(site_name)s!"
 
 #~ msgid "%(action)s an %(widget_name)s widget"
 #~ msgstr "%(action)s%(widget_name)s的小工具"
