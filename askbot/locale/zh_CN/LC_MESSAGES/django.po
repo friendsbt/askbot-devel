@@ -4066,39 +4066,39 @@ msgstr " 标签不能为空。"
 
 #: const/message_keys.py:35
 msgid "please use letters, numbers and characters \"-+.#\""
-msgstr ""
+msgstr "请使用字母、数字和符号(-+.#)"
 
 #: const/message_keys.py:38
 msgid ""
 "# is not a valid character at the beginning of tags, use only letters and "
 "numbers"
-msgstr ""
+msgstr "标签不能以字符#开头，仅可使用字母和数字"
 
 #: const/message_keys.py:41
 #, python-format
 msgid "Sorry, you cannot %(perform_action)s because %(your_account_is)s"
-msgstr ""
+msgstr "对不起，你不能 %(perform_action)s，因为 %(your_account_is)s"
 
 #: const/message_keys.py:43
 #, python-format
 msgid ">%(min_rep)s points required to %(perform_action)s"
-msgstr ""
+msgstr "%(perform_action)s 至少需要 %(min_rep)s 积分"
 
 #: const/message_keys.py:44
 #, python-format
 msgid "Sorry, you will be able to %(perform_action)s after %(until)s"
-msgstr ""
+msgstr "对不起，%(perform_action)s 之后，你就可以 %(perform_action)s"
 
 #: const/message_keys.py:46
 #, python-format
 msgid "Sorry, only moderators or the %(post_author)s %(perform_action)s"
-msgstr ""
+msgstr "对不起，只有管理员和 %(post_author)s 可以 %(perform_action)s"
 
 #: const/message_keys.py:48
 msgid ""
 "Your account might be blocked in error - please contact the site "
 "administrators, if you think so."
-msgstr ""
+msgstr "你的账号可能因为出错被锁定，如有必要，请联系网站管理员"
 
 #: deps/django_authopenid/backends.py:100
 msgid ""
@@ -4108,11 +4108,11 @@ msgstr "欢迎！请在资料中设置电子邮件地址 (重要!)，并修改�
 
 #: deps/django_authopenid/forms.py:62
 msgid "I have read and agree with the terms of service"
-msgstr ""
+msgstr "我已阅读和同意服务条款"
 
 #: deps/django_authopenid/forms.py:65
 msgid "In order to register, you must accept the terms of service"
-msgstr ""
+msgstr "为了完成注册，你必须同意服务条款"
 
 #: deps/django_authopenid/forms.py:102 deps/django_authopenid/views.py:209
 msgid "i-names are not supported"
@@ -4142,7 +4142,7 @@ msgstr "密码不匹配"
 #: deps/django_authopenid/forms.py:296 deps/django_authopenid/forms.py:367
 #, python-format
 msgid "choose password > %(len)s characters"
-msgstr ""
+msgstr "请选择大于 %(len)s 个字符的密码"
 
 #: deps/django_authopenid/forms.py:352 utils/forms.py:276
 msgid "password is required"
@@ -4150,11 +4150,11 @@ msgstr "必填项"
 
 #: deps/django_authopenid/forms.py:358
 msgid "retype your password"
-msgstr ""
+msgstr "重新输入密码"
 
 #: deps/django_authopenid/forms.py:378 utils/forms.py:285
 msgid "entered passwords did not match, please try again"
-msgstr ""
+msgstr "两次输入的密码不匹配，请重试"
 
 #: deps/django_authopenid/forms.py:428
 msgid "Sorry, we don't have this email address in the database"
@@ -4198,7 +4198,7 @@ msgstr "注册/"
 #, fuzzy
 msgctxt "urls"
 msgid "signup/"
-msgstr "登录/"
+msgstr "注册/"
 
 #: deps/django_authopenid/urls.py:51
 #, fuzzy
@@ -4234,12 +4234,12 @@ msgstr "修改密码"
 #: deps/django_authopenid/util.py:423
 #, python-format
 msgid "Login with %(login_name)s"
-msgstr ""
+msgstr "使用 %(login_name)s 登录"
 
 #: deps/django_authopenid/util.py:425
 #, python-format
 msgid "%(login_name)s username"
-msgstr ""
+msgstr "%(login_name)s 用户名"
 
 #: deps/django_authopenid/util.py:592
 msgid "Sign in with Yahoo"
@@ -4255,7 +4255,7 @@ msgstr "用 Launchpad 帐号登录"
 
 #: deps/django_authopenid/util.py:615
 msgid "OpenID url"
-msgstr "OpenID url"
+msgstr "OpenID 地址"
 
 #: deps/django_authopenid/util.py:644
 msgid "Flickr user name"
@@ -4328,11 +4328,11 @@ msgstr "OpenID %(openid_url)s是不正确的"
 msgid ""
 "Sorry, there was some problem connecting to the login provider, please try "
 "again or use another login method"
-msgstr ""
+msgstr "对不起，连接登录提供商出错，请重试或使用其他登录方法"
 
 #: deps/django_authopenid/views.py:546 deps/django_authopenid/views.py:853
 msgid "Your new password is saved"
-msgstr ""
+msgstr "新密码已保存"
 
 #: deps/django_authopenid/views.py:625 deps/django_authopenid/views.py:641
 #, python-format
@@ -4379,7 +4379,7 @@ msgstr "对不起，系统出错，请重试"
 msgid ""
 "If you are trying to sign in to another account, please sign out first. "
 "Otherwise, please report the incident to the site administrator."
-msgstr ""
+msgstr "如果需要登录其他账户，请先退出当前账户。否则，请向网站管理员反馈情况。"
 
 #: deps/django_authopenid/views.py:992
 #, python-format
@@ -4390,7 +4390,7 @@ msgstr "你的%(provider)s登录成功"
 msgid ""
 "Sorry, registration failed. The token can be already used or has expired. "
 "Please try again"
-msgstr ""
+msgstr "对不起，注册失败。Token已经被使用或过期。请重试。"
 
 #: deps/django_authopenid/views.py:1345
 msgid "Please check your email and visit the enclosed link."
@@ -4436,7 +4436,7 @@ msgstr "恭喜您，社区给您颁发了奖牌"
 
 #: mail/__init__.py:150
 msgid "<p>To post by email, please:</p>"
-msgstr ""
+msgstr "<p>通过邮件发布，请：</p>"
 
 #: mail/__init__.py:152
 msgid "<li>Type title in the subject line</li>"
@@ -4444,19 +4444,21 @@ msgstr "<li>在主题行写标题</li>"
 
 #: mail/__init__.py:155
 msgid "<li>Type details into the email body</li>"
-msgstr ""
+msgstr "<li>在邮件正文中输入详情</li>"
 
 #: mail/__init__.py:158
 msgid ""
 "<li>The beginning of the subject line can contain tags,\n"
 "<em>enclosed in the square brackets</em> like so: [Tag1; Tag2]</li>"
-msgstr ""
+msgstr "<li>主题开头可以包含标签，\n"
+"<em>将标签放在方括号中</em>，例如：[标签1;标签2]</li>"
 
 #: mail/__init__.py:162
 msgid ""
 "<li>In the beginning of the subject add at least one tag\n"
 "<em>enclosed in the brackets</em> like so: [Tag1; Tag2].</li>"
-msgstr ""
+msgstr "<li>主题开头至少包含一个标签，\n"
+"<em>将标签放在方括号中</em>，例如：[标签1;标签2]</li>"
 
 #: mail/__init__.py:166
 msgid ""
@@ -4472,31 +4474,31 @@ msgstr ""
 msgid ""
 "<p>Sorry, there was an error while processing your message please contact "
 "the %(site)s administrator</p>"
-msgstr ""
+msgstr "<p>对不起，处理信息时出错，请联系 %(site)s 管理员</p>"
 
 #: mail/__init__.py:208
 #, python-format
 msgid ""
 "<p>Sorry, in order to make posts to %(site)s by email, please <a href="
 "\"%(url)s\">register first</a></p>"
-msgstr ""
+msgstr "<p>对不起，如果需要通过邮件发布帖子，请先 <a href=\"%(url)s\">注册</a></p>"
 
 #: mail/__init__.py:216
 msgid ""
 "<p>Sorry, your post could not be made by email due to insufficient "
 "privileges of your user account</p>"
-msgstr ""
+msgstr "<p>对不起，你不能通过邮件发帖，因为权限不足</p>"
 
 #: mail/lamson_handlers.py:162 mail/messages.py:345
 msgid ""
 "You were replying to an email address             unknown to the system or "
 "you were replying from a different address from the one where "
 "you             received the notification."
-msgstr ""
+msgstr "你所输入的邮件地址系统无法识别或者输入邮件地址有误"
 
 #: mail/lamson_handlers.py:259
 msgid "Please reply to the welcome email without editing it"
-msgstr ""
+msgstr "请回复欢迎邮件但不要修改它"
 
 #: mail/messages.py:117
 #, fuzzy
@@ -4505,11 +4507,11 @@ msgstr "触发邮件通知"
 
 #: mail/messages.py:118
 msgid "Sent to relevant users when a post is made or edited"
-msgstr ""
+msgstr "当帖子被创建或编辑，发送给相关用户"
 
 #: mail/messages.py:120
 msgid "At least two users and one post are needed to generate the preview"
-msgstr ""
+msgstr "至少需要两个用户和一个帖子，才可以生成预览"
 
 #: mail/messages.py:258
 #, python-format
@@ -4552,7 +4554,7 @@ msgstr "允许邮件提问"
 
 #: mail/messages.py:343
 msgid "Sent to the post author when error occurs when posting by email"
-msgstr ""
+msgstr "当通过邮件发布错误时，发送给发布者"
 
 #: mail/messages.py:356
 #, fuzzy
@@ -4561,49 +4563,49 @@ msgstr "欢迎消息"
 
 #: mail/messages.py:357
 msgid "Sent to newly registered user when replying by email is disabled"
-msgstr ""
+msgstr "当通过邮件回复被禁用时，发送给新注册用户"
 
 #: mail/messages.py:359 mail/messages.py:379
 msgid "At least one user is required generate a preview"
-msgstr ""
+msgstr "至少需要一个用户来生成预览"
 
 #: mail/messages.py:376
 msgid "Respondable \"welcome\" message"
-msgstr ""
+msgstr "可回复的\"欢迎\"消息"
 
 #: mail/messages.py:377
 msgid "Sent to newly registered user when replying by email is enabled"
-msgstr ""
+msgstr "当通过邮件发布被启用时，发送给新注册用户"
 
 #: mail/messages.py:411
 msgid "Reply to the user response to the \"welcome\" message"
-msgstr ""
+msgstr "回复给应答\"欢迎\"消息的用户"
 
 #: mail/messages.py:412
 msgid "Sent to newly registered user who replied to the welcome message"
-msgstr ""
+msgstr "发送给应答欢迎消息的新注册用户"
 
 #: mail/messages.py:414 mail/messages.py:446 mail/messages.py:474
 #: mail/messages.py:524
 msgid "At least one user on the site is necessary to generate the preview"
-msgstr ""
+msgstr "至少需要一个注册用户来生成预览"
 
 #: mail/messages.py:440
 msgid "Request to reply to get a sample of email the signature"
-msgstr ""
+msgstr "请求回复得到邮件签名的样例"
 
 #: mail/messages.py:442
 msgid ""
 "Sent when the system does not have a record of email signature for the user"
-msgstr ""
+msgstr "当系统无用户邮件签名的记录时发送"
 
 #: mail/messages.py:468
 msgid "Insufficient karma to post by email"
-msgstr ""
+msgstr "声望值不足，无法通过邮件发布帖子"
 
 #: mail/messages.py:470
 msgid "Sent when user does not have enough karma upon posting by email"
-msgstr ""
+msgstr "当用户无足够声望值通过邮件发布帖子时发送"
 
 #: mail/messages.py:499
 #, fuzzy
@@ -4612,15 +4614,15 @@ msgstr "您的帖子已经被拒绝。"
 
 #: mail/messages.py:501
 msgid "Sent when post was rejected by a moderator with a reason given"
-msgstr ""
+msgstr "当帖子被管理员合理拒绝后发送"
 
 #: mail/messages.py:519
 msgid "Moderation queue has items"
-msgstr ""
+msgstr "审核队列不为空"
 
 #: mail/messages.py:521
 msgid "Sent to moderators when the moderation queue is not empty"
-msgstr ""
+msgstr "当审核队列不为空时，发送给审核者"
 
 #: mail/messages.py:545
 #, fuzzy
@@ -4628,14 +4630,15 @@ msgid "Batch email alert"
 msgstr "启用电子邮件提醒"
 
 #: mail/messages.py:546
+#: not sure
 msgid "Contains daily of weekly batches of email updates"
-msgstr ""
+msgstr "包含每日电子邮件更新周刊"
 
 #: mail/messages.py:548
 msgid ""
 "At least one user on the site and two questions are necessary to generate "
 "the preview"
-msgstr ""
+msgstr "至少需要一个注册用户和两个提问来生成预览"
 
 #: mail/messages.py:576 management/commands/send_email_alerts.py:478
 msgid "new question"
@@ -4654,7 +4657,7 @@ msgstr "答案被接受可以获得积分"
 #: mail/messages.py:608 mail/messages.py:625 mail/messages.py:676
 #: mail/messages.py:701
 msgid "At least one user and one question are required to generate a preview"
-msgstr ""
+msgstr "至少需要一个用户和一个提问来生成预览"
 
 #: mail/messages.py:622
 #, fuzzy
@@ -4669,11 +4672,11 @@ msgstr "点击查看回答数最少的问题"
 #: mail/messages.py:653
 #, fuzzy
 msgid "Email validation"
-msgstr "取消应用"
+msgstr "邮箱验证"
 
 #: mail/messages.py:654
 msgid "Sent when user validates email or recovers account"
-msgstr ""
+msgstr "当用户验证邮箱或恢复账号时发送"
 
 #: mail/messages.py:673
 #, fuzzy
@@ -4682,15 +4685,15 @@ msgstr "触发邮件通知"
 
 #: mail/messages.py:674 mail/messages.py:699
 msgid "Sent when post revision is approved by the moderator"
-msgstr ""
+msgstr "当审核者通过帖子修改时发送"
 
 #: mail/messages.py:698
 msgid "Respondable approved post notification"
-msgstr ""
+msgstr "可回复的“帖子通过”通知"
 
 #: mail/messages.py:729
 msgid "To add to your post EDIT ABOVE THIS LINE"
-msgstr ""
+msgstr "在帖子中加入“在此行编辑”"
 
 #: mail/messages.py:742
 #, fuzzy
@@ -4699,12 +4702,12 @@ msgstr "触发邮件通知"
 
 #: mail/messages.py:743
 msgid "Sent when a private message is sent to the user"
-msgstr ""
+msgstr "当私有消息发送给用户时发送"
 
 #: mail/messages.py:745
 msgid ""
 "At least one user and one personal message are required to generate a preview"
-msgstr ""
+msgstr "至少需要一个用户和一个私有消息来生成预览"
 
 #: mail/messages.py:764
 #, fuzzy
@@ -4713,7 +4716,7 @@ msgstr "反馈"
 
 #: mail/messages.py:765
 msgid "Sent when users submits feedback form"
-msgstr ""
+msgstr "当用户提交反馈表单时发送"
 
 #: middleware/forum_mode.py:64
 #, python-format
@@ -4734,14 +4737,14 @@ msgstr "已上传头像"
 
 #: models/__init__.py:666
 msgid "perform this action"
-msgstr ""
+msgstr "执行此动作"
 
 #: models/__init__.py:670
 #, python-format
 msgid ""
 "Sorry, you cannot %(perform_action)s because the site is temporarily read "
 "only"
-msgstr ""
+msgstr "对不起，你不能 %(perform_action)s ，因为网址暂时只读"
 
 #: models/__init__.py:675 models/__init__.py:1454 views/writers.py:223
 msgid "Sorry, but you have only read access"
@@ -4754,23 +4757,23 @@ msgstr "通过邮件恢复你的账户"
 
 #: models/__init__.py:690 models/__init__.py:761
 msgid "your account is blocked"
-msgstr ""
+msgstr "你的账号被冻结了"
 
 #: models/__init__.py:698 models/__init__.py:706 models/__init__.py:757
 msgid "your account is suspended"
-msgstr ""
+msgstr "你的账号被暂停了"
 
 #: models/__init__.py:727
 #, python-format
 msgid "Sorry, only moderators and site administrators can %(perform_action)s"
-msgstr ""
+msgstr "对不起，只有审核者和管理员能 %(perform_action)s"
 
 #: models/__init__.py:734
 #, python-format
 msgid ""
 "Sorry, only administrators, moderators or users with reputation > "
 "%(min_rep)s can %(perform_action)s"
-msgstr ""
+msgstr "对不起，只有管理员、审核者或拥有大于 %(perform_action)s 声望值的用户能 %(perform_action)s"
 
 #: models/__init__.py:824
 msgid "Sorry, you cannot vote for your own posts"
@@ -4786,11 +4789,11 @@ msgstr "投反对票"
 
 #: models/__init__.py:848
 msgid "upload files"
-msgstr ""
+msgstr "上传文件"
 
 #: models/__init__.py:858
 msgid "join or leave groups"
-msgstr ""
+msgstr "加入或离开组"
 
 #: models/__init__.py:871 views/commands.py:217
 #, fuzzy
@@ -4799,7 +4802,7 @@ msgstr "所有标签的邮件"
 
 #: models/__init__.py:879
 msgid "merge duplicate questions"
-msgstr ""
+msgstr "合并重复的提问"
 
 #: models/__init__.py:892
 msgid "Could not post, because your karma is insufficient to publish links"
@@ -4808,11 +4811,11 @@ msgstr "无法发表，因为你的声望不足以发布链接"
 #: models/__init__.py:915
 #, python-format
 msgid "Sorry, %(you_already_gave_an_answer)s, please edit it instead."
-msgstr ""
+msgstr "对不起，%(you_already_gave_an_answer)s，请编辑它即可。"
 
 #: models/__init__.py:940 models/__init__.py:1026
 msgid "Sorry, commenting closed entries is not allowed"
-msgstr ""
+msgstr "对不起，无法评论已关闭的条目"
 
 #: models/__init__.py:951
 #, python-format
@@ -4830,11 +4833,11 @@ msgstr "对不起，只有发布者或版主才能修改留言"
 
 #: models/__init__.py:980
 msgid "repost items"
-msgstr ""
+msgstr "转发条目"
 
 #: models/__init__.py:1015
 msgid "post comments"
-msgstr ""
+msgstr "发布评论"
 
 #: models/__init__.py:1044
 msgid ""
@@ -4846,15 +4849,15 @@ msgstr "这个问题已经被删除，而且只能被发布者，网站管理员
 msgid ""
 "Sorry, only moderators, site administrators and post owners can edit deleted "
 "posts"
-msgstr "对不起，只有版主，网站管理员及发布者可以编辑删除此信息"
+msgstr "对不起，只有版主、网站管理员及发布者可以编辑删除此信息"
 
 #: models/__init__.py:1072
 msgid "edit wiki posts"
-msgstr ""
+msgstr "编辑维基帖子"
 
 #: models/__init__.py:1075
 msgid "edit posts"
-msgstr ""
+msgstr "编辑帖子"
 
 #: models/__init__.py:1115
 #, fuzzy, python-format
@@ -4879,23 +4882,23 @@ msgid ""
 msgid_plural ""
 "Sorry, cannot %(delete_your_question)s since it has some %(upvoted_answers)s "
 "posted by other users"
-msgstr[0] ""
+msgstr[0] "对不起，无法 %(delete_your_question)s，因为已有其他用户发布 %(delete_your_question)s"
 
 #: models/__init__.py:1202
 msgid "delete posts"
-msgstr ""
+msgstr "删除帖子"
 
 #: models/__init__.py:1230
 msgid "reopen questions"
-msgstr ""
+msgstr "重新打开提问"
 
 #: models/__init__.py:1244
 msgid "You have flagged this post before and cannot do it more than once"
-msgstr ""
+msgstr "你已标记这条帖子，不可重复执行"
 
 #: models/__init__.py:1256
 msgid "flag posts as offensive"
-msgstr ""
+msgstr "标记帖子为冒犯他人"
 
 #: models/__init__.py:1268
 #, python-format
@@ -4910,7 +4913,7 @@ msgstr "无法移除不存在的标记"
 
 #: models/__init__.py:1299
 msgid "remove flags"
-msgstr ""
+msgstr "移除标记"
 
 #: models/__init__.py:1308
 msgid "you don't have the permission to remove all flags"
@@ -4922,7 +4925,7 @@ msgstr "本条目无标记"
 
 #: models/__init__.py:1349
 msgid "delete comments"
-msgstr ""
+msgstr "删除评论"
 
 #: models/__init__.py:1366
 msgid "sorry, but older votes cannot be revoked"
@@ -4964,7 +4967,7 @@ msgstr[0] "%(days)d 天"
 msgid ""
 "New users must wait %(days)s to %(answer_own_questions)s.  You can post an "
 "answer %(left)s"
-msgstr ""
+msgstr "新用户必须等待 %(days)s 才能 %(answer_own_questions)s。你能发布答案 %(left)s"
 
 #: models/__init__.py:2542
 msgid "Registered User"
@@ -4972,11 +4975,11 @@ msgstr "注册用户"
 
 #: models/__init__.py:2544
 msgid "Administrator"
-msgstr ""
+msgstr "管理员"
 
 #: models/__init__.py:2546
 msgid "Moderator"
-msgstr ""
+msgstr "审核者"
 
 #: models/__init__.py:2548
 msgid "Suspended User"
@@ -4988,7 +4991,7 @@ msgstr "冻结账户"
 
 #: models/__init__.py:2552
 msgid "New User"
-msgstr ""
+msgstr "新用户"
 
 #: models/__init__.py:2766
 #, python-format
