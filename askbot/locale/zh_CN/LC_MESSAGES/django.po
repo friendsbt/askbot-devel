@@ -1867,7 +1867,7 @@ msgstr "LDAP 编码"
 msgid ""
 "This value in almost all cases is \"utf-8\". Change it if yours is "
 "different. This field is required"
-msgstr "几乎所有情况，值为\“UTF-8\”。若不是，请自行修改。这是必填栏“
+msgstr "几乎所有情况，值为UTF-8。若不是，请自行修改。这是必填栏"
 
 #: conf/ldap.py:82
 msgid "Base DN (distinguished name)"
@@ -4035,7 +4035,7 @@ msgstr "%(perform_action)s 至少需要 %(min_rep)s 积分"
 #: const/message_keys.py:44
 #, python-format
 msgid "Sorry, you will be able to %(perform_action)s after %(until)s"
-msgstr "对不起，%(perform_action)s 之后，您就可以 %(perform_action)s"
+msgstr "对不起，%(until)s之后，您就可以%(perform_action)s"
 
 #: const/message_keys.py:46
 #, python-format
@@ -4429,7 +4429,7 @@ msgstr "<p>对不起，处理信息时出错，请联系 %(site)s 管理员</p>"
 msgid ""
 "<p>Sorry, in order to make posts to %(site)s by email, please <a href="
 "\"%(url)s\">register first</a></p>"
-msgstr "<p>对不起，如果需要通过邮件发布帖子，请先 <a href=\"%(url)s\">注册</a></p>"
+msgstr "<p>对不起，如果需要通过邮件发布帖子给%(site)s，请先 <a href=\"%(url)s\">注册</a></p>"
 
 #: mail/__init__.py:216
 msgid ""
@@ -4721,7 +4721,7 @@ msgstr "对不起，只有审核者和管理员能 %(perform_action)s"
 msgid ""
 "Sorry, only administrators, moderators or users with reputation > "
 "%(min_rep)s can %(perform_action)s"
-msgstr "对不起，只有管理员、审核者或拥有大于 %(perform_action)s 声望值的用户能 %(perform_action)s"
+msgstr "对不起，只有管理员、审核者或拥有大于%(min_rep)s声望值的用户能 %(perform_action)s"
 
 #: models/__init__.py:824
 msgid "Sorry, you cannot vote for your own posts"
@@ -4830,7 +4830,7 @@ msgid ""
 msgid_plural ""
 "Sorry, cannot %(delete_your_question)s since it has some %(upvoted_answers)s "
 "posted by other users"
-msgstr[0] "对不起，无法 %(delete_your_question)s，因为已有其他用户发布 %(delete_your_question)s"
+msgstr[0] "对不起，无法 %(delete_your_question)s，因为已有其他用户发布%(upvoted_answers)s"
 
 #: models/__init__.py:1202
 msgid "delete posts"
