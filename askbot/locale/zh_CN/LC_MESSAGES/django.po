@@ -7430,6 +7430,9 @@ msgstr "无法转换，因为文本的字符数超过了评论允许的最大值
 msgid "Hi there! Please sign in"
 msgstr "请登录"
 
+msgid "search or ask your question"
+msgstr "搜索您的问题"
+
 #~ msgid "settings"
 #~ msgstr "设置"
 
