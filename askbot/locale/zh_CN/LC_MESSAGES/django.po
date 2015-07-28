@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: askbot\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-28 16:26+0800\n"
+"POT-Creation-Date: 2015-07-28 10:32-0500\n"
 "PO-Revision-Date: 2014-11-01 17:05+0000\n"
 "Last-Translator: evgeny <evgeny.fadeev@gmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/projects/p/askbot/"
@@ -71,7 +71,7 @@ msgid "must be < %d word"
 msgid_plural "must be < %d words"
 msgstr[0] "最多 %d 个单词"
 
-#: forms.py:236
+#: forms.py:236 templates/widgets/ask_form.html:44
 msgid "Select language"
 msgstr "选择语言"
 
@@ -79,7 +79,8 @@ msgstr "选择语言"
 msgid "minor edit (don't send alerts)"
 msgstr "小修改(不发送通知)"
 
-#: forms.py:291
+#: forms.py:291 templates/widgets/markdown_help.html:20
+#: templates/widgets/markdown_help.html:24
 msgid "title"
 msgstr "标题"
 
@@ -123,6 +124,7 @@ msgid ""
 msgstr "已经没有空间存储标签。请缩短或者删除部分标签。"
 
 #: forms.py:455 forms.py:1122 models/widgets.py:27
+#: templates/widgets/meta_nav.html:11 templates/widgets/tags_field.html:10
 msgid "tags"
 msgstr "标签"
 
@@ -267,7 +269,7 @@ msgstr "请标记“我不想给出邮箱地址”字段。"
 msgid "keep private within your groups"
 msgstr "只有您的组成员可以访问"
 
-#: forms.py:942
+#: forms.py:942 templates/ask.html:39 templates/question.html:412
 msgid "User name:"
 msgstr "用户名："
 
@@ -275,7 +277,7 @@ msgstr "用户名："
 msgid "Enter name to post on behalf of someone else. Can create new accounts."
 msgstr "请输入文章署名，可以同时创建新帐号。"
 
-#: forms.py:951
+#: forms.py:951 templates/question.html:413
 msgid "Email address:"
 msgstr "邮箱地址："
 
@@ -287,7 +289,7 @@ msgstr "邮箱需要有用户名"
 msgid "Email is required if user name is added"
 msgstr "增加用户名需要提供邮箱"
 
-#: forms.py:1036
+#: forms.py:1036 templates/widgets/ask_form.html:15
 msgid "Add details (optional)"
 msgstr "详细描述（可选）"
 
@@ -385,15 +387,20 @@ msgstr "试一试"
 msgid "no %(sitename)s email please, thanks"
 msgstr "不要 %(sitename)s的电子邮件，谢谢"
 
-#: forms.py:1730
+#: forms.py:1730 templates/reopen.html:7
 msgid "Title"
 msgstr "标题"
 
-#: forms.py:1733
+#: forms.py:1733 templates/groups.html:32 templates/email/preview_email.html:9
 msgid "Description"
 msgstr "描述"
 
-#: forms.py:1752
+#: forms.py:1752 templates/tags.html:3 templates/main_page/sidebar.html:23
+#: templates/tags/header.html:9
+#: templates/tags/list_bulk_tag_subscription.html:12
+#: templates/widgets/tag_category_selector.html:2
+#: templates/widgets/tags_field.html:4 templates/widgets/tags_field.html:14
+#: templates/widgets/tags_field.html:18
 msgid "Tags"
 msgstr "标签"
 
@@ -3179,7 +3186,7 @@ msgstr "接受一个答案的最少天数，如果它没有被问题发起者接
 msgid "Site terms vocabulary"
 msgstr "网站条款词汇"
 
-#: conf/words.py:22 conf/words.py:23
+#: conf/words.py:22 conf/words.py:23 templates/ask.html:4
 msgid "Ask Your Question"
 msgstr "发起问题"
 
@@ -3648,18 +3655,23 @@ msgid "disable sharing"
 msgstr "撤销共享"
 
 #: const/__init__.py:31
+#: templates/user_profile/twitter_sharing_controls.html:13
+#: templates/user_profile/twitter_sharing_controls.html:17
 msgid "my posts"
 msgstr "我的帖子"
 
 #: const/__init__.py:32
+#: templates/user_profile/twitter_sharing_controls.html:14
+#: templates/user_profile/twitter_sharing_controls.html:16
 msgid "all posts"
 msgstr "所有帖子"
 
-#: const/__init__.py:55
+#: const/__init__.py:55 templates/question/answer_tab_bar.html:12
 msgid "newest"
 msgstr "最新问题"
 
-#: const/__init__.py:56
+#: const/__init__.py:56 templates/users.html:54
+#: templates/question/answer_tab_bar.html:10
 msgid "oldest"
 msgstr "按最早加入"
 
@@ -3679,7 +3691,7 @@ msgstr "热门问题"
 msgid "coldest"
 msgstr "最酷"
 
-#: const/__init__.py:61
+#: const/__init__.py:61 templates/question/answer_tab_bar.html:14
 msgid "most voted"
 msgstr "最有价值的问题"
 
@@ -3724,31 +3736,32 @@ msgstr "最老的一个"
 msgid "most voted first"
 msgstr "投票最多的一个"
 
-#: const/__init__.py:122
+#: const/__init__.py:122 templates/tags/header.html:25
 msgid "sorted by frequency of tag use"
 msgstr "按标签被使用的次数排序"
 
-#: const/__init__.py:123
+#: const/__init__.py:123 templates/tags/header.html:19
 msgid "sorted alphabetically"
 msgstr "按名称的字母先后顺序排序"
 
-#: const/__init__.py:128
+#: const/__init__.py:128 templates/users.html:40
 msgid "see people with the highest reputation"
 msgstr "查看积分最高的用户"
 
-#: const/__init__.py:129
+#: const/__init__.py:129 templates/users.html:47
 msgid "see people who joined most recently"
 msgstr "查看最新加入的用户"
 
-#: const/__init__.py:130
+#: const/__init__.py:130 templates/users.html:53
 msgid "see people who joined the site first"
 msgstr "查看最早加入的用户"
 
-#: const/__init__.py:131
+#: const/__init__.py:131 templates/users.html:59
 msgid "see people sorted by name"
 msgstr "按名字排序查看用户"
 
-#: const/__init__.py:142
+#: const/__init__.py:142 templates/moderation/queue.html:11
+#: templates/user_inbox/responses.html:12
 msgid "all"
 msgstr "所有"
 
@@ -3965,15 +3978,15 @@ msgstr "wavatar"
 msgid "retro"
 msgstr "retro"
 
-#: const/__init__.py:526
+#: const/__init__.py:526 templates/badges.html:32
 msgid "gold"
 msgstr "金牌"
 
-#: const/__init__.py:527
+#: const/__init__.py:527 templates/badges.html:42
 msgid "silver"
 msgstr "银牌"
 
-#: const/__init__.py:528
+#: const/__init__.py:528 templates/badges.html:49
 msgid "bronze"
 msgstr "铜牌"
 
@@ -4081,7 +4094,7 @@ msgstr "不感兴趣的"
 msgid "subscribed"
 msgstr "订阅了"
 
-#: const/message_keys.py:33
+#: const/message_keys.py:33 templates/question_retag.html:60
 msgid "tags are required"
 msgstr " 标签不能为空。"
 
@@ -4244,7 +4257,8 @@ msgstr "确认-电子邮件地址/"
 msgid "%(site)s user name and password"
 msgstr "使用%(site)s 帐号密码登录"
 
-#: deps/django_authopenid/util.py:410
+#: deps/django_authopenid/util.py:410 templates/authopenid/signin.html:115
+#: templates/authopenid/widget_signin.html:106
 msgid "Create a password-protected account"
 msgstr "创建一个密码保护账户"
 
@@ -4751,7 +4765,7 @@ msgstr "请登录%s"
 msgid "None"
 msgstr "无"
 
-#: models/__init__.py:210
+#: models/__init__.py:210 templates/avatar/show_list.html:26
 msgid "Gravatar"
 msgstr "Gravatar"
 
@@ -4805,11 +4819,13 @@ msgstr ""
 msgid "Sorry, you cannot vote for your own posts"
 msgstr "对不起，您不能给自己的帖子投票"
 
-#: models/__init__.py:831
+#: models/__init__.py:831 templates/faq_static.html:32
+#: templates/user_profile/user_votes.html:14
 msgid "upvote"
 msgstr "投赞成票"
 
-#: models/__init__.py:834
+#: models/__init__.py:834 templates/faq_static.html:42
+#: templates/user_profile/user_votes.html:16
 msgid "downvote"
 msgstr "投反对票"
 
@@ -5223,7 +5239,8 @@ msgstr "分享失败。原因：分组未知"
 msgid "merged revision"
 msgstr "合并版本"
 
-#: models/post.py:1112 templatetags/extra_filters_jinja.py:146
+#: models/post.py:1112 templates/question/answer_controls.html:60
+#: templatetags/extra_filters_jinja.py:146
 msgid "more"
 msgstr "更多"
 
@@ -5371,17 +5388,1866 @@ msgstr "账户/"
 msgid "signin/"
 msgstr "登录/"
 
+#: templates/404.html:3 templates/404.html.py:5
+msgid "Page not found"
+msgstr "此页未找到"
+
+#: templates/404.html:7
+msgid "Sorry, could not find the page you requested."
+msgstr "对不起，没有找到您请求的页面！"
+
+#: templates/404.html:8
+msgid "This might have happened for the following reasons:"
+msgstr "有可能是以下原因导致："
+
+#: templates/404.html:11
+#, fuzzy
+msgid "This page has been deleted"
+msgstr "该问题已被删除"
+
+#: templates/404.html:12
+msgid "url has error - please check it;"
+msgstr "请求的地址有误 - 请核实原始URL地址；"
+
+#: templates/404.html:13
+msgid ""
+"the page you tried to visit is protected or you don't have sufficient "
+"points, see"
+msgstr "访问的页面被保护或您的积分不够，参见"
+
+#: templates/404.html:14 templates/widgets/footer.html:39
+msgid "faq"
+msgstr "常见问题"
+
+#: templates/404.html:16
+msgid "if you believe this error 404 should not have occured, please"
+msgstr "如果您确信不该出现404错误，请"
+
+#: templates/404.html:17
+msgid "report this problem"
+msgstr "报告这个问题"
+
+#: templates/500.html:3 templates/500.html.py:5
+msgid "Internal server error"
+msgstr "服务器内部错误"
+
+#: templates/500.html:8
+msgid "system error log is recorded, error will be fixed as soon as possible"
+msgstr "系统错误日志已记录，此错误将尽快被解决"
+
+#: templates/500.html:9
+msgid "please report the error to the site administrators"
+msgstr ""
+
+#: templates/answer_edit.html:11 templates/question_edit.html:9
+#: templates/question_retag.html:5 templates/revisions.html:7
+#: templates/group_messaging/home.html:9
+msgid "back"
+msgstr "返回"
+
+#: templates/answer_edit.html:42 templates/question_edit.html:57
+msgid "Save edit"
+msgstr "现在修改"
+
+#: templates/answer_edit.html:46 templates/close.html:17
+#: templates/feedback.html:61 templates/question_edit.html:58
+#: templates/question_retag.html:22 templates/reopen.html:26
+#: templates/subscribe_for_tags.html:12
+#: templates/avatar/confirm_delete.html:16
+#: templates/group_messaging/home.html:44
+#: templates/moderation/manage_reject_reasons_dialog.html:19
+#: templates/user_profile/user_edit.html:103
+msgid "Cancel"
+msgstr "取消"
+
+#: templates/answer_edit.html:83 templates/answer_edit.html.py:86
+#: templates/ask.html:58 templates/ask.html.py:61
+#: templates/question_edit.html:101 templates/question_edit.html.py:104
+#: templates/editors/rich_text.html:19 templates/question/javascript.html:122
+#: templates/question/javascript.html:125
+msgid "hide preview"
+msgstr "禁用预览"
+
+#: templates/answer_edit.html:86 templates/ask.html:61
+#: templates/question_edit.html:104 templates/question/javascript.html:125
+msgid "show preview"
+msgstr "显示预览"
+
+#: templates/badge.html:5 templates/badge.html.py:9
+#: templates/user_profile/user_recent.html:18
+#: templates/user_profile/user_stats.html:77
+#, python-format
+msgid "%(name)s"
+msgstr "%(name)s"
+
+#: templates/badge.html:5
+msgid "Badge"
+msgstr "奖牌"
+
+#: templates/badge.html:7
+#, fuzzy, python-format
+msgid "Badge \"%(name)s\""
+msgstr "徽章名"
+
+#: templates/badge.html:9 templates/user_profile/user_recent.html:16
+#: templates/user_profile/user_stats.html:75
+#, python-format
+msgid "%(description)s"
+msgstr "%(description)s"
+
+#: templates/badge.html:14
+msgid "user received this badge:"
+msgid_plural "users received this badge:"
+msgstr[0] "用户获得奖牌"
+
+#: templates/badges.html:3 templates/badges.html.py:5
+msgid "Badges"
+msgstr "奖牌"
+
+#: templates/badges.html:9
+msgid ""
+"Below is the list of available badges and number of times each type of badge "
+"has been awarded."
+msgstr ""
+"在下面列出社区所有的奖牌，不仅有每类奖牌获取的所需条件，并且有每类奖牌的所获"
+"数量。"
+
+#: templates/badges.html:30
+msgid "Community badges"
+msgstr "社区奖牌"
+
+#: templates/badges.html:32
+msgid "gold badge: the highest honor and is very rare"
+msgstr "金牌:十分罕见之最高荣耀"
+
+#: templates/badges.html:35
+msgid ""
+"Gold badge is the highest award in this community. To obtain it you have to "
+"show \n"
+"profound knowledge and ability in addition to your active participation."
+msgstr "金牌:十分罕见之最高奖励"
+
+#: templates/badges.html:41 templates/badges.html.py:45
+msgid ""
+"silver badge: occasionally awarded for the very high quality contributions"
+msgstr "银牌:偶尔颁发之优质奖章"
+
+#: templates/badges.html:48 templates/badges.html.py:52
+msgid "bronze badge: often given as a special honor"
+msgstr "铜牌:时常授予之特殊荣誉"
+
+#: templates/base.html:23
+#, python-format
+msgid "RSS feed from %(site_title)s"
+msgstr "聚合内容来自 %(site_title)s"
+
+#: templates/close.html:12
+msgid "Reasons"
+msgstr "原因"
+
+#: templates/close.html:16
+msgid "OK to close"
+msgstr "确定关闭"
+
+#: templates/faq_static.html:3 templates/faq_static.html.py:5
+#: views/meta.py:114
+msgid "FAQ"
+msgstr "问答"
+
+#: templates/faq_static.html:5
+msgid "Frequently Asked Questions "
+msgstr "常见问题"
+
+#: templates/faq_static.html:6
+msgid "What kinds of questions can I ask here?"
+msgstr "我可以在这里提问什么样的问题？"
+
+#: templates/faq_static.html:7
+msgid ""
+"Most importantly - questions should be <strong>relevant</strong> to this "
+"community."
+msgstr "最重要的是，问题应该是和这个社区相关的。"
+
+#: templates/faq_static.html:8
+msgid ""
+"Before you ask - please make sure to search for a similar question. You can "
+"search questions by their title or tags."
+msgstr "在您问之前，请您通过标题或标签搜索问题，确保没有类似的问题存在。"
+
+#: templates/faq_static.html:10
+msgid "What kinds of questions should be avoided?"
+msgstr "应该避免什么样的问题？"
+
+#: templates/faq_static.html:11
+msgid ""
+"Please avoid asking questions that are not relevant to this community, too "
+"subjective and argumentative."
+msgstr ""
+"请避免含有极端情绪化、极端主观的个人判断的问题。含有极端情绪化的提问往往不是"
+"为了寻找答案，而是通过提问来表达、发泄个人行情绪。含有极端主观个人判断的问"
+"题，问题中的判断可能与事实不相符。"
+
+#: templates/faq_static.html:13
+msgid "What should I avoid in my answers?"
+msgstr "应该避免什么样的回答？"
+
+#: templates/faq_static.html:14
+msgid ""
+"is a <strong>question and answer</strong> site - <strong>it is not a "
+"discussion group</strong>. Please avoid holding debates in your answers as "
+"they tend to dilute the essense of questions and answers. For the brief "
+"discussions please use commenting facility."
+msgstr ""
+"是一个<strong>问答社区</strong>-而不是一个<strong>灌水论坛</strong>。请避免与"
+"问题本身无关或没有意义的回答。"
+
+#: templates/faq_static.html:15
+msgid "Who moderates this community?"
+msgstr "谁是社区的管理员？"
+
+#: templates/faq_static.html:16
+msgid "The short answer is: <strong>you</strong>."
+msgstr "答案是：<span class=\"yellowbg\">每个用户。</span>"
+
+#: templates/faq_static.html:17
+msgid "This website is moderated by the users."
+msgstr "本站由用户管理。"
+
+#: templates/faq_static.html:18
+msgid ""
+"Karma system allows users to earn rights to perform a variety of moderation "
+"tasks"
+msgstr "当声望值达到某个程度，用户的权限就会增加。"
+
+#: templates/faq_static.html:20
+msgid "How does karma system work?"
+msgstr "积分系统如何工作？"
+
+#: templates/faq_static.html:21
+msgid ""
+"When a question or answer is upvoted, the user who posted them will gain "
+"some points, which are called \"karma points\". These points serve as a "
+"rough measure of the community trust to him/her. Various moderation tasks "
+"are gradually assigned to the users based on those points."
+msgstr ""
+
+#: templates/faq_static.html:22
+#, python-format
+msgid ""
+"For example, if you ask an interesting question or give a helpful answer, "
+"your input will be upvoted. On the other hand if the answer is misleading - "
+"it will be downvoted. Each vote in favor will generate <strong>"
+"%(REP_GAIN_FOR_RECEIVING_UPVOTE)s</strong> points, each vote against will "
+"subtract <strong>%(REP_LOSS_FOR_RECEIVING_DOWNVOTE)s</strong> points. There "
+"is a limit of <strong>%(MAX_REP_GAIN_PER_USER_PER_DAY)s</strong> points that "
+"can be accumulated for a question or answer per day. The table below "
+"explains reputation point requirements for each type of moderation task."
+msgstr ""
+"例如，如果您问一个有趣的问题或给别人一个有帮助的答案，您的输入将被投赞成票。"
+"否则您的答案是误导的，您将被投反对票。\n"
+"每个赞成票将增加<strong>%(REP_GAIN_FOR_RECEIVING_UPVOTE)s</strong>分，每个反"
+"对票将减去<strong>%(REP_LOSS_FOR_RECEIVING_DOWNVOTE)s</strong>分，\n"
+"每个问题或答案都将有一个<strong>%(MAX_REP_GAIN_PER_USER_PER_DAY)s</strong>分"
+"限制。下表解释了每个相应任务的积分要求："
+
+#: templates/faq_static.html:37
+msgid "add comments"
+msgstr "添加评论"
+
+#: templates/faq_static.html:46
+msgid " accept own answer to own questions"
+msgstr " 自己的提问接受自己的回答"
+
+#: templates/faq_static.html:50
+msgid "retag other's questions"
+msgstr "整理标签"
+
+#: templates/faq_static.html:55
+msgid "edit community wiki questions"
+msgstr "编辑社区维基问题"
+
+#: templates/faq_static.html:60
+msgid "edit any answer"
+msgstr "编辑任何答案"
+
+#: templates/faq_static.html:64
+msgid "delete any comment"
+msgstr "删除任何评论"
+
+#: templates/faq_static.html:68
+msgid "How to change my picture (gravatar) and what is gravatar?"
+msgstr "如何改变我的头像(gravatar)，什么是gravatar？"
+
+#: templates/faq_static.html:69
+msgid ""
+"<p>The picture that appears on the users profiles is called "
+"<strong>gravatar</strong> (which means <strong>g</strong>lobally <strong>r</"
+"strong>ecognized <strong>avatar</strong>).</p><p>Here is how it works: a "
+"<strong>cryptographic key</strong> (unbreakable code) is calculated from "
+"your email address. You upload your picture (or your favorite alter ego "
+"image) the website <a href='http://gravatar.com'><strong>gravatar.com</"
+"strong></a> from where we later retreive your image using the key.</"
+"p><p>This way all the websites you trust can show your image next to your "
+"posts and your email address remains private.</p><p>Please "
+"<strong>personalize your account</strong> with an image - just register at "
+"<a href='http://gravatar.com'><strong>gravatar.com</strong></a> (just please "
+"be sure to use the same email address that you used to register with us). "
+"Default image that looks like a kitchen tile is generated automatically.</p>"
+msgstr ""
+"头像出现在用户设置页面，Gravatartitle是Globally Recognized Avatar的缩写，是"
+"<a href='http://baike.baidu.com/view/675247.htm'><strong>gravatar</strong></"
+"a>推出的一项服务，意为“全球通用头像”。"
+
+#: templates/faq_static.html:70
+msgid "To register, do I need to create new password?"
+msgstr "我需要注册一个新用户吗？"
+
+#: templates/faq_static.html:71
+msgid ""
+"No, you don't have to. You can login through any service that supports "
+"OpenID, e.g. Google, Yahoo, AOL, etc."
+msgstr "不必，您可以通过任何支持OpenID的网站登录，例如：腾讯，新浪，等。"
+
+#: templates/faq_static.html:72
+msgid "\"Login now!\""
+msgstr "“马上登录！”"
+
+#: templates/faq_static.html:74
+msgid "Why other people can edit my questions/answers?"
+msgstr "为什么其他人可以修改我的问题/回答？"
+
+#: templates/faq_static.html:75
+msgid "Goal of this site is..."
+msgstr "本站的目标是..."
+
+#: templates/faq_static.html:75
+msgid ""
+"So questions and answers can be edited like wiki pages by experienced users "
+"of this site and this improves the overall quality of the knowledge base "
+"content."
+msgstr ""
+"所有问题和答案都如维基百科一样可共同编辑的，我们希望社区成员的共同协作可以让"
+"每一个问题和答案变得更有价值，就像一条流动的河流，知识在这里可以随时间不断更"
+"新，得到持续优化和改进。"
+
+#: templates/faq_static.html:76
+msgid "If this approach is not for you, we respect your choice."
+msgstr "如果您不喜欢这种方式，我们尊重您的选择。"
+
+#: templates/faq_static.html:78
+msgid "Still have questions?"
+msgstr "还有其他问题？"
+
+#: templates/faq_static.html:79
+#, python-format
+msgid ""
+"Please <a href='%(ask_question_url)s'>ask</a> your question, help make our "
+"community better!"
+msgstr "欢迎您来<a href='%(ask_question_url)s'>提问</a>，共建美好社区。"
+
+#: templates/feedback.html:4
+#, fuzzy
+msgid "Feedback"
+msgstr "问题反馈/"
+
+#: templates/feedback.html:6
+msgid "Give us your feedback!"
+msgstr "请反馈给我们！"
+
+#: templates/feedback.html:15
+#, python-format
+msgid ""
+"\n"
+"        <span class='big strong'>Dear %(user_name)s</span>, we look forward "
+"to hearing your feedback. \n"
+"        Please type and send us your message below.\n"
+"        "
+msgstr ""
+"\n"
+"<span class='big strong'>亲爱的 %(user_name)s</span>,  我们盼望收到您的反"
+"馈. \n"
+"请发送您的反馈信息给我们，以帮助我们更好的改进."
+
+#: templates/feedback.html:22
+msgid ""
+"\n"
+"        <span class='big strong'>Dear visitor</span>, we look forward to "
+"hearing your feedback.\n"
+"        Please type and send us your message below.\n"
+"        "
+msgstr ""
+"\n"
+"        <span class='big strong'>亲爱的访客</span>,  我们盼望收到您的反馈。\n"
+"        请在下面输入您的留言并发送。\n"
+"        "
+
+#: templates/feedback.html:31
+msgid "(to hear from us please enter a valid email or check the box below)"
+msgstr "(要获得动态请输入有效的电子邮箱地址或选中下面的复选框)"
+
+#: templates/feedback.html:38 templates/feedback.html.py:47
+msgid "(this field is required)"
+msgstr "必填项"
+
+#: templates/feedback.html:60
+#, fuzzy
+msgid "Send Feedback"
+msgstr "问题反馈"
+
+#: templates/groups.html:3 templates/groups.html.py:6
+#: templates/question/sidebar.html:109
+#: templates/tags/list_bulk_tag_subscription.html:15
+msgid "Groups"
+msgstr "群组"
+
+#: templates/groups.html:11
+msgid "All groups"
+msgstr "所有组"
+
+#: templates/groups.html:13
+msgid "all groups"
+msgstr "所有组"
+
+#: templates/groups.html:15
+msgid "My groups"
+msgstr "我的群组"
+
+#: templates/groups.html:17
+msgid "my groups"
+msgstr "我的群组"
+
+#: templates/groups.html:25
+msgid ""
+"Tip: to create a new group - please go to some user profile and add the new "
+"group there. That user will be the first member of the group"
+msgstr ""
+
+#: templates/groups.html:30
+msgid "Group"
+msgstr "群组"
+
+#: templates/groups.html:31
+msgid "Number of members"
+msgstr "用户数"
+
+#: templates/help_static.html:2 templates/help_static.html.py:4
+#: views/meta.py:97
+msgid "Help"
+msgstr "帮助"
+
+#: templates/help_static.html:7
+#, python-format
+msgid "Welcome %(username)s,"
+msgstr "欢迎您 %(username)s，"
+
+#: templates/help_static.html:9
+msgid "Welcome,"
+msgstr "欢迎，"
+
+#: templates/help_static.html:13
+#, python-format
+msgid "Thank you for using %(app_name)s, here is how it works."
+msgstr "谢谢您使用本社区-- %(app_name)s。"
+
+#: templates/help_static.html:16
+msgid "How questions, answers and comments work"
+msgstr "如何提问，回答和评论。"
+
+#: templates/help_static.html:18
+msgid ""
+"This site is for asking and answering questions, not for open-ended "
+"discussions."
+msgstr "这个网站的目的是为了提供高质量的答案，而不是灌水。"
+
+#: templates/help_static.html:19
+msgid ""
+"We encourage everyone to use “question” space for asking and “answer” for "
+"answering."
+msgstr ""
+"我们鼓励大家“发起您不知道，别人知道的问题；回答您知道，别人不知道的答案”。提"
+"问应遵循“真实、客观、简洁、明确、规范”的原则。回答应遵循“尽可能提供详细的解释"
+"和说明”的原则。"
+
+#: templates/help_static.html:22
+msgid ""
+"Despite that, each question and answer can be commented – \n"
+"    the comments are good for the limited discussions."
+msgstr ""
+"如果您对问题本身或别人的答案有自己的看法，您可以通过「评论」来进行，不要把评"
+"论当作答案来发布。那样的话，该问题会被其他用户点击「反对票」而扣除作者的声望"
+"值，反而起不到实际效果，也无助于提供高质量的答案。"
+
+#: templates/help_static.html:26
+msgid "Please search before asking your questions"
+msgstr "在您提问之前，请先搜索一下。"
+
+#: templates/help_static.html:27
+msgid ""
+"Type your question in the search bar and see whether a similar question has "
+"been asked before"
+msgstr "在搜索框中输入您的问题，看是否有类似的问题已经问过。"
+
+#: templates/help_static.html:29
+msgid "Search has advanced capabilities:"
+msgstr "搜索具有先进的功能："
+
+#: templates/help_static.html:31
+msgid "to search in title - enter [title: your text]"
+msgstr "只搜索标题 - 输入 [title: your text]"
+
+#: templates/help_static.html:32
+msgid "to search by tags - enter [tag: sometag] or #sometag"
+msgstr "只搜索标签 - 输入 [tag: sometag]"
+
+#: templates/help_static.html:33
+msgid ""
+"to search by user - enter [user: somename] or @somename or @\"some name\""
+msgstr "只搜索用户 - 输入 [user: somename]"
+
+#: templates/help_static.html:35
+msgid ""
+"In addition, it is possible to click on tags to add them to the search query."
+msgstr "此外，可以点击相应的标签用于搜索。"
+
+#: templates/help_static.html:37
+msgid ""
+"Finally, a separate tag search box is available in the side bar of the main "
+"page, where the search tags can be entered as well"
+msgstr "最后，主页的右侧栏还有独立的标签搜索框可用，帮助您过滤标签。"
+
+#: templates/help_static.html:40
+msgid ""
+"<em>Important!!!</em> All search terms are combined with a logical \"AND\" "
+"expression - to narrow the search by adding new terms."
+msgstr "<em>非常重要!!!</em>所有的搜索条件联合起来，增加条件越多搜索越准确。"
+
+#: templates/help_static.html:42
+msgid "Voting"
+msgstr "投票"
+
+#: templates/help_static.html:44
+#, python-format
+msgid ""
+"Voting in %(app_name)s helps to select best answers and thank most helpful "
+"users."
+msgstr "在社区--%(app_name)s中，投票可以帮助社区选出最好的答案和鼓励用户回答。"
+
+#: templates/help_static.html:47
+#, python-format
+msgid ""
+"Please vote when you find helpful information,\n"
+"    it really helps the %(app_name)s community."
+msgstr ""
+"当您发现有用的内容时，请投票给他，这样子可以帮助整个 %(app_name)s社区。"
+
+#: templates/help_static.html:51
+msgid "Other topics"
+msgstr "其它提示"
+
+#: templates/help_static.html:53
+msgid ""
+"You can @mention users anywhere in the text to point their attention,\n"
+"    follow users and conversations and report inappropriate content by "
+"flagging it."
+msgstr ""
+"虽然允许您修改他人提出的问题，但当您在修改他人提出的问题时，仍然应该慎重。有"
+"些问题有明显的错误或不妥，您可以大胆地改进它们；但有些问题细微的文字修改就会"
+"带来问题本身的差别，这时候更应该慎重。无论何时，只在您相信自己的修改能够帮助"
+"改进这个问题时才进行修改。请不要恶意修改问题。如果出现恶意破坏行为，社区系统"
+"会记录操作者的身份，我们会酌情予以警告或停止帐号等处理。"
+
+#: templates/help_static.html:56
+msgid "Enjoy."
+msgstr "玩得开心。"
+
+#: templates/import_data.html:2 templates/import_data.html.py:4
+msgid "Import StackExchange data"
+msgstr "导入 StackExchange 数据"
+
+#: templates/import_data.html:13
+msgid ""
+"<em>Warning:</em> if your database is not empty, please back it up\n"
+"        before attempting this operation."
+msgstr ""
+"<em>Warning:</em> if your database is not empty, please back it up\n"
+"        before attempting this operation."
+
+#: templates/import_data.html:16
+msgid ""
+"Upload your stackexchange dump .zip file, then wait until\n"
+"        the data import completes. This process may take several minutes.\n"
+"        Please note that feedback will be printed in plain text.\n"
+"        "
+msgstr ""
+"Upload your stackexchange dump .zip file, then wait until\n"
+"        the data import completes. This process may take several minutes.\n"
+"        Please note that feedback will be printed in plain text.\n"
+"        "
+
+#: templates/import_data.html:25
+msgid "Import data"
+msgstr "导入数据"
+
+#: templates/import_data.html:27
+msgid ""
+"In the case you experience any difficulties in using this import tool,\n"
+"        please try importing your data via command line: <code>python manage."
+"py load_stackexchange path/to/your-data.zip</code>"
+msgstr ""
+"In the case you experience any difficulties in using this import tool,\n"
+"        please try importing your data via command line: <code>python manage."
+"py load_stackexchange path/to/your-data.zip</code>"
+
+#: templates/list_suggested_tags.html:11
+msgid "Tag"
+msgstr "标签"
+
+#: templates/list_suggested_tags.html:12
+#, fuzzy
+msgid "Suggested by"
+msgstr "推荐编辑"
+
+#: templates/list_suggested_tags.html:13
+msgid "Your decision"
+msgstr "您的决定"
+
+#: templates/list_suggested_tags.html:14
+msgid "Where the tag was used"
+msgstr ""
+
+#: templates/list_suggested_tags.html:34 templates/list_suggested_tags.html:45
+msgid "Accept"
+msgstr "接受"
+
+#: templates/list_suggested_tags.html:35 templates/list_suggested_tags.html:46
+msgid "Reject"
+msgstr "拒绝"
+
+#: templates/list_suggested_tags.html:38
+#, fuzzy
+msgid "This tag has not yet been used"
+msgstr "该问题已被删除"
+
+#: templates/list_suggested_tags.html:61
+#, python-format
+msgid "Apply tag \"%(name)s\" to the above"
+msgstr ""
+
+#: templates/list_suggested_tags.html:62
+msgid "Reject tag"
+msgstr "拒绝标签"
+
+#: templates/list_suggested_tags.html:70 templates/tags/content.html:5
+#: templates/tags/content.html.py:30
+msgid "Nothing found"
+msgstr "没有找到相关数据。"
+
+#: templates/macros.html:5
+#, fuzzy, python-format
+msgid "Share this content on %(site)s"
+msgstr "抱歉，内容不可用"
+
+#: templates/macros.html:48
+msgid "current number of votes"
+msgstr "当前总票数"
+
+#: templates/macros.html:61
+msgid "anonymous user"
+msgstr "匿名用户"
+
+#: templates/macros.html:80
+msgid "posted"
+msgstr "发布"
+
+#: templates/macros.html:86
+msgid "this post is marked as community wiki"
+msgstr "这个帖子标记为社区维基"
+
+#: templates/macros.html:90
+#, python-format
+msgid ""
+"This post is a wiki.\n"
+"        Anyone with karma &gt;%(wiki_min_rep)s is welcome to improve it."
+msgstr ""
+"这个帖子是维基.\n"
+"积分超过 %(wiki_min_rep)s 的用户都可以改进它."
+
+#: templates/macros.html:239 templates/macros.html.py:245
+msgid "Leave this group"
+msgstr "离开此组"
+
+#: templates/macros.html:240 templates/macros.html.py:242
+#: templates/macros.html:261
+msgid "Join this group"
+msgstr "加入此组"
+
+#: templates/macros.html:241 templates/macros.html.py:246
+#: templates/macros.html:256
+msgid "You are a member"
+msgstr "您是会员"
+
+#: templates/macros.html:248
+#, fuzzy
+msgid "Cancel application"
+msgstr "邮箱验证"
+
+#: templates/macros.html:249 templates/macros.html.py:258
+#, fuzzy
+msgid "Awaiting approval"
+msgstr "等待审核"
+
+#: templates/macros.html:251 templates/macros.html.py:252
+#: templates/macros.html:263
+msgid "Ask to join"
+msgstr "请加入"
+
+#: templates/macros.html:337 templates/macros.html.py:348
+#: templates/question.html:411
+msgid "add a comment"
+msgstr "添加评论"
+
+#: templates/macros.html:341
+#, fuzzy
+msgid "load older comments"
+msgstr "添加评论"
+
+#: templates/macros.html:343
+#, fuzzy
+msgid "see more comments"
+msgstr "删除评论"
+
+#: templates/macros.html:376
+msgid "delete this comment"
+msgstr "删除这个留言"
+
+#: templates/macros.html:379 templates/question/answer_card.html:24
+#: templates/question/question_card.html:17
+msgid "This post is awaiting moderation"
+msgstr ""
+
+#: templates/macros.html:395 templates/revisions.html:38
+#: templates/revisions.html.py:41 templates/question/answer_controls.html:5
+#: templates/question/question_controls.html:1
+msgid "edit"
+msgstr "编辑"
+
+#: templates/macros.html:404
+msgid "convert to answer"
+msgstr "转为答案"
+
+#: templates/macros.html:435
+#, fuzzy
+msgid "Comments"
+msgstr "评论"
+
+#: templates/macros.html:584 templatetags/extra_tags.py:45
+#, python-format
+msgid "%(username)s gravatar image"
+msgstr "%(username)s 图像"
+
+#: templates/macros.html:593
+#, python-format
+msgid "%(username)s's website is %(url)s"
+msgstr "%(username)s当前的状态是 \"%(url)s\""
+
+#: templates/macros.html:614 templates/macros.html.py:615
+#: templates/macros.html:676 templates/macros.html.py:677
+msgid "previous"
+msgstr "上一页"
+
+#: templates/macros.html:633 templates/macros.html.py:688
+msgid "current page"
+msgstr "当前页"
+
+#: templates/macros.html:639 templates/macros.html.py:652
+#: templates/macros.html:690 templates/macros.html.py:697
+#, python-format
+msgid "page %(num)s"
+msgstr "第%(num)s页"
+
+#: templates/macros.html:661 templates/macros.html.py:701
+msgid "next page"
+msgstr "下一页"
+
+#: templates/macros.html:662
+#, fuzzy
+msgid "next"
+msgstr "下一页"
+
+#: templates/macros.html:713
+#, python-format
+msgid "responses for %(username)s"
+msgstr "回应%(username)s"
+
+#: templates/macros.html:715
+#, python-format
+msgid "you have %(response_count)s new response"
+msgid_plural "you have %(response_count)s new responses"
+msgstr[0] "您有 %(response_count)s 个新回应"
+
+#: templates/macros.html:727 templates/macros.html.py:728
+#, python-format
+msgid "%(new)s new flagged posts and %(seen)s previous"
+msgstr "%(new)s 新标记的发布和之前查看的 %(seen)s"
+
+#: templates/macros.html:730 templates/macros.html.py:731
+#, python-format
+msgid "%(new)s new flagged posts"
+msgstr "%(new)s 新标记的发布信息"
+
+#: templates/macros.html:736 templates/macros.html.py:737
+#, python-format
+msgid "%(seen)s flagged posts"
+msgstr "\"%(seen)s 已标记的发布信息"
+
+#: templates/main_page.html:15
+msgid "Questions"
+msgstr "问题列表"
+
+#: templates/question_edit.html:46
+msgid "Change language"
+msgstr "修改語言"
+
+#: templates/question_edit.html:64 templates/widgets/answer_edit_tips.html:3
+msgid "Tips"
+msgstr "提示"
+
+#: templates/question_retag.html:21
+msgid "Retag"
+msgstr "修改标签"
+
+#: templates/question_retag.html:28
+msgid "Why use and modify tags?"
+msgstr "为什么我只能修改问题标签？"
+
+#: templates/question_retag.html:30
+msgid "Tags help to keep the content better organized and searchable"
+msgstr "标签使内容可以更好的组织及搜索"
+
+#: templates/question_retag.html:32
+msgid "tag editors receive special awards from the community"
+msgstr "修改标签的用户将授予特殊的社区奖牌"
+
+#: templates/question_retag.html:61
+msgid "up to 5 tags, less than 20 characters each"
+msgstr "最多5个标签，每个标签长度小于20个字符。"
+
+#: templates/reopen.html:12
+#, python-format
+msgid ""
+"Closed by: \n"
+"    <a href=\"%(closed_by_profile_url)s\">%(username)s</a>\n"
+msgstr ""
+
+#: templates/reopen.html:17
+msgid "Close reason:"
+msgstr "关闭原因"
+
+#: templates/reopen.html:20
+msgid "When:"
+msgstr "当:"
+
+#: templates/revisions.html:4 templates/revisions.html.py:7
+msgid "Revision history"
+msgstr "版本历史"
+
+#: templates/revisions.html:23
+msgid "click to hide/show revision"
+msgstr "点击隐藏或显示版本"
+
+#: templates/revisions.html:29
+#, python-format
+msgid "revision %(number)s"
+msgstr "版本%(number)s"
+
+#: templates/subscribe_for_tags.html:3 templates/subscribe_for_tags.html:5
+msgid "Subscribe for tags"
+msgstr "订阅标签"
+
+#: templates/subscribe_for_tags.html:6
+msgid "Please, subscribe for the following tags:"
+msgstr "请订阅下述标签:"
+
+#: templates/subscribe_for_tags.html:11
+msgid "Subscribe"
+msgstr "订阅"
+
+#: templates/users.html:8 templates/users.html.py:18
+#: templates/tags/list_bulk_tag_subscription.html:13
+msgid "Users"
+msgstr "用户列表"
+
+#: templates/users.html:16
+#, fuzzy, python-format
+msgid "Users in group %(name)s"
+msgstr "全球用户组名"
+
+#: templates/users.html:24
+#, fuzzy
+msgid "Select/Sort by &raquo;"
+msgstr "排序方式 &raquo;"
+
+#: templates/users.html:29
+#, fuzzy, python-format
+msgid "people in group %(name)s"
+msgstr "用户和群组"
+
+#: templates/users.html:33 templates/main_page/tab_bar.html:17
+#: templates/tags/header.html:14
+msgid "Sort by &raquo;"
+msgstr "排序方式 &raquo;"
+
+#: templates/users.html:41 templates/user_profile/user_info.html:19
+#: templates/user_profile/user_reputation.html:4
+#: templates/user_profile/user_tabs.html:24
+msgid "karma"
+msgstr "积分"
+
+#: templates/users.html:48
+msgid "recent"
+msgstr "最新加入"
+
+#: templates/users.html:60
+msgid "by username"
+msgstr "按用户名"
+
+#: templates/users.html:66
+#, python-format
+msgid "users matching query %(search_query)s:"
+msgstr ""
+
+#: templates/users.html:69
+#, fuzzy
+msgid "No users found."
+msgstr "没有找到相关数据。"
+
+#: templates/authopenid/account_recovery_form.html:2
+#: templates/authopenid/signin.html:196
+#: templates/authopenid/widget_signin.html:185
+#, fuzzy
+msgid "Enter your email"
+msgstr "登录名或电子邮箱地址"
+
+#: templates/authopenid/account_recovery_form.html:5
+msgid "Send a new recovery key"
+msgstr "发送一个恢复建"
+
+#: templates/authopenid/account_recovery_form.html:7
+#: templates/authopenid/complete.html:90
+#: templates/authopenid/recover_account.html:2
+#: templates/authopenid/recover_account.html:9
+#: templates/authopenid/signin.html:197
+#: templates/authopenid/widget_signin.html:186
+#, fuzzy
+msgid "Recover account"
+msgstr "恢复您的账户 %(site)s "
+
+#: templates/authopenid/authopenid_macros.html:63
+msgid "Please enter your <span>user name</span>, then sign in"
+msgstr "请输入您的用户名,然后登录"
+
+#: templates/authopenid/authopenid_macros.html:64
+#: templates/authopenid/widget_signin.html:88
+msgid "(or select another login method above)"
+msgstr "(或从上面选择一个登录方式)"
+
+#: templates/authopenid/authopenid_macros.html:66
+#: templates/authopenid/signin.html:113
+#: templates/authopenid/widget_signin.html:104
+msgid "Sign in"
+msgstr "登录"
+
+#: templates/authopenid/complete.html:21 templates/authopenid/complete.html:26
+#, fuzzy
+msgid "Complete registration"
+msgstr "用户注册"
+
+#: templates/authopenid/complete.html:56
+#: templates/authopenid/signup_with_password.html:24 utils/forms.py:100
+msgid "Choose a screen name"
+msgstr "昵称"
+
+#: templates/authopenid/complete.html:68
+#: templates/authopenid/signup_with_password.html:34
+#: templates/widgets/proxy_author_fields.html:18
+#, fuzzy
+msgid "Email address"
+msgstr "邮箱地址："
+
+#: templates/authopenid/complete.html:84
+#: templates/authopenid/signup_with_password.html:5
+#: templates/authopenid/signup_with_password.html:62
+msgid "Signup"
+msgstr "注册帐号"
+
+#: templates/authopenid/complete.html:95
+#, fuzzy
+msgid "Already have an account?"
+msgstr "您已经给出了回答"
+
+#: templates/authopenid/complete.html:96
+#, fuzzy
+msgid "Recover it by email."
+msgstr "通过电子邮件编辑"
+
+#: templates/authopenid/complete.html:99
+msgid "Prefer to create a new account?"
+msgstr ""
+
+#: templates/authopenid/complete.html:100
+#, fuzzy
+msgid "Return to registration."
+msgstr "用户注册"
+
+#: templates/authopenid/confirm_email.txt:1
+msgid "Thank you for registering at our Q&A forum!"
+msgstr ""
+
+#: templates/authopenid/confirm_email.txt:3
+#, fuzzy
+msgid "Your account details are:"
+msgstr "通过邮件恢复您的账户"
+
+#: templates/authopenid/confirm_email.txt:5
+#, fuzzy
+msgid "Username:"
+msgstr "用户名："
+
+#: templates/authopenid/confirm_email.txt:6
+#, fuzzy
+msgid "Password:"
+msgstr "密码"
+
+#: templates/authopenid/confirm_email.txt:8
+#, fuzzy
+msgid "Please sign in here:"
+msgstr "请登录"
+
+#: templates/authopenid/confirm_email.txt:11
+#: templates/authopenid/email_validation/body.txt:13
+#, fuzzy
+msgid ""
+"Sincerely,\n"
+"Q&A Forum Administrator"
+msgstr "<p>{{ SITE_NAME }} 管理员</p>"
+
+#: templates/authopenid/logout.html:3
+msgid "Logout"
+msgstr "退出登录"
+
+#: templates/authopenid/logout.html:5
+msgid "You have successfully logged out"
+msgstr "您已成功退出"
+
+#: templates/authopenid/logout.html:7
+msgid ""
+"However, you still may be logged in to your OpenID provider. Please logout "
+"of your provider if you wish to do so."
+msgstr "如果您愿意的话，本网站还支持OpenID帐号登录。"
+
+#: templates/authopenid/signin.html:5
+#: templates/authopenid/widget_signin.html:5
+#, fuzzy
+msgid "User login"
+msgstr "用户登录"
+
+#: templates/authopenid/signin.html:17
+#: templates/authopenid/widget_signin.html:22
+msgid ""
+"It's a good idea to make sure that your existing login methods still work, "
+"or add a new one. Please click any of the icons below to check/change or add "
+"new login methods."
+msgstr ""
+"您最好确认您目前的登录方式可以工作，或者您需要添加一个新的登录方式。请点击下"
+"面任何一个icon选择添加一个新登录方式。"
+
+#: templates/authopenid/signin.html:19
+#: templates/authopenid/widget_signin.html:24
+msgid ""
+"Please add a more permanent login method by clicking one of the icons below, "
+"to avoid logging in via email each time."
+msgstr ""
+"请通过点击以下icon添加更多永久的登录方式，从而避免每次都是用email登录。"
+
+#: templates/authopenid/signin.html:23
+#: templates/authopenid/widget_signin.html:28
+msgid ""
+"Click on one of the icons below to add a new login method or re-validate an "
+"existing one."
+msgstr "点击以下icon，添加一个新的登录方式或者重验证已经存在的登录方式。"
+
+#: templates/authopenid/signin.html:25
+#: templates/authopenid/widget_signin.html:30
+msgid ""
+"You don't have a method to log in right now, please add one or more by "
+"clicking any of the icons below."
+msgstr "您目前还没有一个登录方式，请添加一个或多个通过点击下面的icons。"
+
+#: templates/authopenid/signin.html:28
+#: templates/authopenid/widget_signin.html:33
+msgid ""
+"Please check your email and visit the enclosed link to re-connect to your "
+"account"
+msgstr "请检查您的邮件并访问邮件里链接重连您的账户"
+
+#: templates/authopenid/signin.html:79
+msgid "or enter your <span>user name and password</span>"
+msgstr "或者输入您的<span>用户名和密码</span>"
+
+#: templates/authopenid/signin.html:83
+#: templates/authopenid/widget_signin.html:84
+msgid "Please, sign in"
+msgstr "请登录"
+
+#: templates/authopenid/signin.html:88
+#: templates/authopenid/widget_signin.html:91
+msgid "Login failed, please try again"
+msgstr "登录失败，请重试"
+
+#: templates/authopenid/signin.html:97
+#, fuzzy
+msgid "Username"
+msgstr "用户名："
+
+#: templates/authopenid/signin.html:99
+#: templates/authopenid/widget_signin.html:95
+#, fuzzy
+msgid "Username or email"
+msgstr "登录名或电子邮箱地址"
+
+#: templates/authopenid/signin.html:109
+#: templates/authopenid/signup_with_password.html:44
+#: templates/authopenid/widget_signin.html:99 utils/forms.py:275
+msgid "Password"
+msgstr "密码"
+
+#: templates/authopenid/signin.html:120
+#: templates/authopenid/widget_signin.html:111
+msgid "To change your password - please enter the new one twice, then submit"
+msgstr "修改密码-请输入新密码两次并提交"
+
+#: templates/authopenid/signin.html:130
+#: templates/authopenid/widget_signin.html:115
+msgid "New password"
+msgstr "新密码"
+
+#: templates/authopenid/signin.html:140
+#: templates/authopenid/widget_signin.html:124
+msgid "Please, retype"
+msgstr "确认密码"
+
+#: templates/authopenid/signin.html:145
+#: templates/authopenid/widget_signin.html:134
+#: templates/livesettings/site_settings.html:24
+msgid "Change password"
+msgstr "修改密码"
+
+#: templates/authopenid/signin.html:159
+#: templates/authopenid/widget_signin.html:148
+msgid "Here are your current login methods"
+msgstr "这里有您的登录方式"
+
+#: templates/authopenid/signin.html:163
+#: templates/authopenid/widget_signin.html:152
+msgid "provider"
+msgstr "提供者"
+
+#: templates/authopenid/signin.html:164
+#: templates/authopenid/widget_signin.html:153
+msgid "last used"
+msgstr "上次活动时间"
+
+#: templates/authopenid/signin.html:178
+#: templates/authopenid/widget_signin.html:167
+#: templates/question/answer_controls.html:33
+#: templates/question/question_controls.html:34
+#: templates/user_inbox/responses.html:10
+msgid "delete"
+msgstr "删除"
+
+#: templates/authopenid/signin.html:180
+#: templates/authopenid/widget_signin.html:169
+msgid "cannot be deleted"
+msgstr "无法删除"
+
+#: templates/authopenid/signin.html:192
+#: templates/authopenid/widget_signin.html:181
+#, fuzzy
+msgid "Having trouble signing in?"
+msgstr "还有其他问题？"
+
+#: templates/authopenid/signup_with_password.html:10
+msgid "Create login name and password"
+msgstr "使用帐号密码登录"
+
+#: templates/authopenid/signup_with_password.html:11
+msgid ""
+"<span class='strong big'>If you prefer, create your forum login name and\n"
+"password here. However</span>, please keep in mind that we also support\n"
+"<strong>OpenID</strong> login method. With <strong>OpenID</strong> you can\n"
+"simply reuse your external login (e.g. Gmail or AOL) without ever sharing\n"
+"your login details with anyone and having to remember yet another password."
+msgstr ""
+
+#: templates/authopenid/signup_with_password.html:54 utils/forms.py:283
+#, fuzzy
+msgid "Password retyped"
+msgstr "必填项"
+
+#: templates/authopenid/tos_field.html:4
+msgid "Terms of service:"
+msgstr ""
+
+#: templates/authopenid/verify_email.html:2
+#: templates/authopenid/verify_email.html:4
+msgid "Confirm email address"
+msgstr "确认电子邮箱地址"
+
+#: templates/authopenid/verify_email.html:6
+msgid ""
+"Validation email sent. Please find it and follow the enclosed link.<br/>\n"
+"        If the link doesn't work - enter the code below:"
+msgstr ""
+
+#: templates/authopenid/verify_email.html:11
+msgid "Confirm email"
+msgstr "确认电子邮箱地址"
+
+#: templates/authopenid/widget_signin.html:19
+msgid ""
+"Choose your favorite service below to sign in using secure OpenID or similar "
+"technology. Your external service password always stays confidential and you "
+"don't have to rememeber or create another one."
+msgstr ""
+
+#: templates/authopenid/widget_signin.html:80
+msgid "or enter your <span>user name and password</span>, then sign in"
+msgstr "或者输入您的<span>用户名和密码</span>, 然后登陆"
+
+#: templates/authopenid/email_validation/body.html:2
+#: templates/authopenid/email_validation/body.html:3
+#, python-format
+msgid "Greetings from the %(site_name)s"
+msgstr "来自%(site_name)s的祝福"
+
+#: templates/authopenid/email_validation/body.html:7
+#: templates/authopenid/email_validation/body.txt:3
+msgid "To make use of the Forum, please follow the link below:"
+msgstr "请跟随以下的链接来使用论坛:"
+
+#: templates/authopenid/email_validation/body.html:11
+#: templates/authopenid/email_validation/body.txt:7
+msgid "Following the link above will help us verify your email address."
+msgstr "点击上面的链接可以帮助我们确认您的邮件地址"
+
+#: templates/authopenid/email_validation/body.html:13
+#: templates/authopenid/email_validation/body.txt:9
+msgid ""
+"If you believe that this message was sent in mistake - \n"
+"no further action is needed. Just ignore this email, we apologize\n"
+"for any inconvenience"
+msgstr ""
+"如果您认为此消息被错误的发送,不要进行更进一步的动作.仅仅忽略这封邮件,为给您带"
+"来的不便道歉."
+
+#: templates/authopenid/email_validation/body.txt:1
+#, fuzzy
+msgid "Greetings from the Q&A forum"
+msgstr "网站标题"
+
+#: templates/authopenid/email_validation/subject.txt:1
+#, fuzzy, python-format
+msgid "Recover your %(site_name)s account"
+msgstr "恢复您的账户 %(site)s "
+
+#: templates/avatar/avatar.html:3
+#, fuzzy, python-format
+msgid "%(username)s's primary avatar"
+msgstr "%(username)s 图像"
+
+#: templates/avatar/avatar.html:5
+#, fuzzy, python-format
+msgid "%(username)s's avatar"
+msgstr "%(username)s 图像"
+
+#: templates/avatar/confirm_delete.html:2
+msgid "delete avatar"
+msgstr "删除头像"
+
+#: templates/avatar/confirm_delete.html:4
+msgid "Please select the avatars that you would like to delete."
+msgstr "请选择希望删除的头像。"
+
+#: templates/avatar/confirm_delete.html:6
+#, python-format
+msgid ""
+"You have no avatars to delete. Please <a href=\"%(avatar_change_url)s"
+"\">upload one</a> now."
+msgstr ""
+"You have no avatars to delete. Please <a href=\"%(avatar_change_url)s"
+"\">upload one</a> now."
+
+#: templates/avatar/confirm_delete.html:13
+msgid "Delete These"
+msgstr "删除这些"
+
+#: templates/avatar/show_list.html:3
+#, fuzzy
+msgid "manage avatars"
+msgstr "修改头像"
+
+#: templates/avatar/show_list.html:13
+msgid ""
+"This is a default avatar image, shown at your account because you have not "
+"yet uploaded an avatar."
+msgstr ""
+
+#: templates/avatar/show_list.html:13
+#, fuzzy
+msgid "Default avatar"
+msgstr "删除头像"
+
+#: templates/avatar/show_list.html:21 templates/avatar/show_list.html.py:35
+#: templates/avatar/show_list.html:45
+msgid "Set as primary"
+msgstr ""
+
+#: templates/avatar/show_list.html:26
+#, python-format
+msgid ""
+"This image, called 'gravatar', is linked to the email address %(email)s.  It "
+"can be changed at http://gravatar.com"
+msgstr ""
+
+#: templates/avatar/show_list.html:52
+#, fuzzy
+msgid "Remove"
+msgstr "移除"
+
+#: templates/avatar/show_list.html:56
+#, fuzzy
+msgid "Primary avatar"
+msgstr "添加头像"
+
+#: templates/avatar/show_list.html:63
+#, fuzzy
+msgid "You haven't uploaded an avatar yet."
+msgstr "You haven't uploaded an avatar yet. Please upload one now."
+
+#: templates/avatar/show_list.html:68
+#, fuzzy
+msgid "Upload an avatar"
+msgstr "已上传头像"
+
+#: templates/editors/rich_text.html:17
+msgid "Toggle the real time Markdown editor preview"
+msgstr "打开或者关闭Markdown编辑器的实时预览"
+
+#: templates/email/change_settings_info.html:4
+#, python-format
+msgid ""
+"To change frequency, language and content of these alerts, please visit <a "
+"href=\"%(url)s\">your user profile</a>."
+msgstr ""
+
+#: templates/email/change_settings_info.html:6
+#, fuzzy, python-format
+msgid ""
+"To change frequency and content of these alerts, please visit <a href="
+"\"%(url)s\">your user profile</a>."
+msgstr "请访问 <a href=\"%(url)s\">Akismet 网站</a> 获取 Akismet key"
+
+#: templates/email/change_settings_info.html:9
+#, python-format
+msgid ""
+"If you believe that this message was sent in an error, please email about it "
+"the forum administrator at <a href=\"mailto:%(admin_email)s\">"
+"%(admin_email)s</a>."
+msgstr ""
+
+#: templates/email/list_emails.html:2
+#, fuzzy
+msgid "Preview of emails"
+msgstr "通过电子邮件编辑"
+
+#: templates/email/list_emails.html:4
+msgid "List of emails sent by Askbot"
+msgstr ""
+
+#: templates/email/macros.html:32 templates/email/macros.html.py:46
+#, python-format
+msgid "Started by %(author)s:"
+msgstr ""
+
+#: templates/email/macros.html:34
+#, fuzzy, python-format
+msgid ""
+"\n"
+"                                    In reply to %(author)s:\n"
+"                                "
+msgstr ""
+"\n"
+"%(author)s的评论："
+
+#: templates/email/macros.html:53
+msgid "Tags:"
+msgstr "标签："
+
+#: templates/email/macros.html:61
+#, fuzzy, python-format
+msgid ""
+"\n"
+"                                %(author)s's response:\n"
+"                            "
+msgstr ""
+"\n"
+"%(author)s的评论："
+
+#: templates/email/macros.html:65
+#, fuzzy, python-format
+msgid ""
+"\n"
+"                                In reply to %(author)s:\n"
+"                            "
+msgstr ""
+"\n"
+"%(author)s的评论："
+
+#: templates/email/macros.html:70
+#, python-format
+msgid "Replied by %(author)s:"
+msgstr ""
+
+#: templates/email/macros.html:77
+#, python-format
+msgid ""
+"\n"
+"                                %(author)s's comment:\n"
+"                            "
+msgstr ""
+"\n"
+"%(author)s的评论："
+
+#: templates/email/macros.html:81
+#, fuzzy, python-format
+msgid ""
+"\n"
+"                                In reply to %(author)s's comment:\n"
+"                            "
+msgstr ""
+"\n"
+"%(author)s的评论："
+
+#: templates/email/macros.html:86
+#, python-format
+msgid ""
+"\n"
+"                            Commented by %(author)s:\n"
+"                        "
+msgstr ""
+"\n"
+"%(author)s的评论："
+
+#: templates/email/post_as_subthread.html:8
+#, fuzzy, python-format
+msgid ""
+"\n"
+"                %(count)s comment:\n"
+"            "
+msgid_plural ""
+"\n"
+"                %(count)s comments:\n"
+"            "
+msgstr[0] ""
+"\n"
+"%(author)s的评论："
+
+#: templates/email/preview_email.html:2 templates/email/preview_email.html:8
+#, python-format
+msgid "Preview of email \"%(title)s\""
+msgstr ""
+
+#: templates/email/preview_email.html:5
+#, fuzzy
+msgid "Askbot emails"
+msgstr "没有邮件"
+
+#: templates/email/preview_email.html:13
+#, fuzzy
+msgid "Subject"
+msgstr "主题"
+
+#: templates/email/preview_email.html:14
+msgid "Body text (below, email styling preserved)"
+msgstr ""
+
+#: templates/email/accept_answers_reminder/body.html:2
+#: templates/email/accept_answers_reminder/body.html:3
+msgid "Please select the best responses for"
+msgstr ""
+
+#: templates/email/approved_post_notification/body.html:9
+#: templates/email/approved_post_notification_respondable/body.html:20
+msgid "Below is a copy of your post:"
+msgstr ""
+
+#: templates/email/approved_post_notification/subject.txt:1
+#: templates/email/approved_post_notification_respondable/subject.txt:1
+#, python-format
+msgid "Your post at %(site_name)s is now published"
+msgstr "您在 %(site_name)s 的帖子已经发布"
+
+#: templates/email/ask_for_signature/body.html:4
+#, python-format
+msgid "%(user)s, please reply to this message."
+msgstr "%(user)s，请回复此信息。"
+
+#: templates/email/ask_for_signature/body.html:9
+msgid ""
+"Your post could not be published, because we could not detect signature in "
+"your email."
+msgstr ""
+
+#: templates/email/ask_for_signature/body.html:10
+msgid ""
+"This happened either because this is your first post or you have changed "
+"your email signature."
+msgstr ""
+
+#: templates/email/ask_for_signature/body.html:11
+msgid "Please make a simple response, without editing this message."
+msgstr ""
+
+#: templates/email/ask_for_signature/body.html:12
+msgid ""
+"We will then attempt to detect the signature in your response and you should "
+"be able to post."
+msgstr ""
+
+#: templates/email/ask_for_signature/subject.txt:1
+#: templates/email/insufficient_reputation/subject.txt:1
+msgid "Subject line depends on the previous incoming email"
+msgstr ""
+
+#: templates/email/batch_email_alert/subject.txt:2
+#, python-format
+msgid ""
+"\n"
+"        %(question_count)s update about %(topics)s\n"
+"    "
+msgid_plural ""
+"\n"
+"        %(question_count)s updates about %(topics)s\n"
+"    "
+msgstr[0] ""
+
+#: templates/email/batch_email_alert/subject.txt:8
+#, python-format
+msgid ""
+"\n"
+"        %(question_count)s update\n"
+"    "
+msgid_plural ""
+"\n"
+"        %(question_count)s updates\n"
+"    "
+msgstr[0] ""
+
+#: templates/email/feedback/body.html:6 templates/email/feedback/body.html:7
+#, fuzzy, python-format
+msgid "%(site_name)s feedback"
+msgstr "问题反馈"
+
+#: templates/email/feedback/body.html:10 templates/email/feedback/body.html:12
+msgid "wrote:"
+msgstr ""
+
+#: templates/email/feedback/subject.txt:1
+#, python-format
+msgid "%(site_name)s feedback message"
+msgstr ""
+
+#: templates/email/insufficient_reputation/body.html:10
+#, python-format
+msgid "%(username)s, your content could not be posted by email just yet."
+msgstr ""
+
+#: templates/email/insufficient_reputation/body.html:14
+#, python-format
+msgid ""
+"To make posts by email, you need to receive about %(min_upvotes)s upvotes."
+msgstr ""
+
+#: templates/email/insufficient_reputation/body.html:15
+#, python-format
+msgid "At this time, please post your content at %(link)s"
+msgstr ""
+
+#: templates/email/moderation_queue_notification/body.html:3
+#, python-format
+msgid ""
+"\n"
+"        There are new items in the %(site)s moderation queue, <a href="
+"\"%(mod_url)s\">please have a look</a>\n"
+"    "
+msgstr ""
+
+#: templates/email/moderation_queue_notification/subject.txt:1
+#, fuzzy, python-format
+msgid "%(site)s moderation alert"
+msgstr "启用电子邮件提醒"
+
+#: templates/email/re_welcome/body.html:2
+#: templates/email/re_welcome/body.html:3
+#, fuzzy, python-format
+msgid "Great, you are ready to use %(site_name)s!"
+msgstr "欢迎来到 %(site_name)s!"
+
+#: templates/email/re_welcome/body.html:8
+msgid ""
+"When you receive update notifications, you will be able to respond to them, "
+"also by email."
+msgstr ""
+
+#: templates/email/re_welcome/body.html:9
+#, python-format
+msgid ""
+"Of course, you can always visit the %(site_name)s at <a href=\"%(site_url)s"
+"\">%(site_url)s</a>."
+msgstr ""
+
+#: templates/email/re_welcome/body.html:11
+#, python-format
+msgid ""
+"Please visit %(site_name)s at <a href=\"%(site_url)s\">%(site_url)s</a>, we "
+"look forward to your posts."
+msgstr ""
+
+#: templates/email/re_welcome/subject.txt:1
+#, python-format
+msgid "Re: Welcome to %(site_name)s"
+msgstr "答复: 欢迎 %(site_name)s"
+
+#: templates/email/rejected_post/body.html:2
+#: templates/email/rejected_post/body.html:3
+#, fuzzy
+msgid "Your post was rejected."
+msgstr "您的帖子已经被拒绝。"
+
+#: templates/email/rejected_post/body.html:5
+#, fuzzy
+msgid "Your post (copied in the end), was rejected for the following reason:"
+msgstr "有可能是以下原因导致："
+
+#: templates/email/rejected_post/body.html:7
+msgid "Here is your original post"
+msgstr "这是您的原始帖子"
+
+#: templates/email/rejected_post/subject.txt:1
+msgid "your post was not accepted"
+msgstr "帖子未被接受"
+
+#: templates/email/reply_by_email_error/body.html:3
+#, fuzzy
+msgid "The system was unable to process your message successfully"
+msgstr ""
+"\n"
+"<p>系统不能正确处理您的信息，原因如下：<p>\n"
+
+#: templates/email/reply_by_email_error/subject.txt:1
+msgid "Error posting your reply"
+msgstr ""
+
+#: templates/email/unanswered_questions_reminder/subject.txt:2
+#, python-format
+msgid ""
+"%(question_count)s %(unanswered_questions_phrase)s about %(tag_summary)s"
+msgstr ""
+
+#: templates/email/welcome/subject.txt:1
+#: templates/email/welcome_respondable/subject.txt:1
+#, python-format
+msgid "Welcome to %(site_name)s"
+msgstr "欢迎 %(site_name)s"
+
+#: templates/email/welcome_respondable/body.html:3
+#: templates/email/welcome_respondable/body.html:4
+#, python-format
+msgid "Welcome to %(site_name)s!"
+msgstr "欢迎来到 %(site_name)s!"
+
+#: templates/email/welcome_respondable/body.html:10
+msgid ""
+"Important: <em>Please reply</em> to this message, without editing it. We "
+"need this to determine your email signature and that the email address is "
+"valid and was typed correctly."
+msgstr ""
+
+#: templates/email/welcome_respondable/body.html:13
+#, python-format
+msgid ""
+"Until we receive the response from you, you will not be able to post content "
+"on %(site_name)s by email."
+msgstr ""
+
+#: templates/embed/list_widgets.html:5
+#, python-format
+msgid "%(type)s widget list"
+msgstr ""
+
+#: templates/embed/list_widgets.html:8
+#, fuzzy
+msgid "Widget Title"
+msgstr "小工具"
+
+#: templates/embed/list_widgets.html:9
+msgid "Code"
+msgstr ""
+
+#: templates/embed/list_widgets.html:10
+#, fuzzy
+msgid "Actions"
+msgstr "动作"
+
+#: templates/embed/list_widgets.html:23 templates/embed/list_widgets.html:34
+#: templates/tags/list_bulk_tag_subscription.html:49 views/commands.py:543
+msgid "Edit"
+msgstr "编辑"
+
+#: templates/embed/list_widgets.html:24 templates/embed/list_widgets.html:35
+#: templates/tags/list_bulk_tag_subscription.html:53
+#, fuzzy
+msgid "Delete"
+msgstr "删除"
+
+#: templates/embed/list_widgets.html:48
+msgid "How to use?"
+msgstr ""
+
+#: templates/embed/list_widgets.html:50
+msgid ""
+"Just copy the &lt;script&gt; tag provided and paste it in the site where you "
+"wan to put it."
+msgstr ""
+
+#: templates/embed/widget_form.html:3 templates/embed/widget_form.html.py:5
+#, python-format
+msgid "%(action)s an %(widget_name)s widget"
+msgstr "%(action)s%(widget_name)s的小工具"
+
+#: templates/embed/widget_form.html:14
+#: templates/livesettings/group_settings.html:47
+#: templates/livesettings/site_settings.html:93
+#: templates/tags/form_bulk_tag_subscription.html:10
+msgid "Save"
+msgstr "保存"
+
+#: templates/embed/widgets.html:3 templates/embed/widgets.html.py:5
+msgid "Widgets"
+msgstr "小工具"
+
+#: templates/embed/widgets.html:11
+msgid ""
+"Create and embed widgets into your sites, here a list of available widgets."
+msgstr ""
+
+#: templates/embed/widgets.html:17 templates/embed/widgets.html.py:26
+msgid "create"
+msgstr "创建"
+
+#: templates/embed/widgets.html:20 templates/embed/widgets.html.py:29
+msgid "view list"
+msgstr "查看列表"
+
+#: templates/group_messaging/home.html:10
+#: templates/group_messaging/home_thread_details.html:7
+#, fuzzy
+msgid "compose"
+msgstr "完成/"
+
+#: templates/group_messaging/home.html:25
+#: templates/group_messaging/home.html:43
+msgid "Send"
+msgstr ""
+
+#: templates/group_messaging/home.html:26
+msgid "Reply"
+msgstr ""
+
+#: templates/group_messaging/home.html:33
+msgid "Recipient"
+msgstr ""
+
+#: templates/group_messaging/home.html:39
+#, fuzzy
+msgid "Write your message"
+msgstr "您的信息:"
+
+#: templates/group_messaging/macros.html:5
+#, python-format
+msgid "You wrote on %(date)s:"
+msgstr "您写于%(date)s:"
+
+#: templates/group_messaging/senders_list.html:3
+#, fuzzy
+msgid "Messages by sender:"
+msgstr "发送消息"
+
+#: templates/group_messaging/senders_list.html:5
+#: templates/user_inbox/base.html:5
+msgid "inbox"
+msgstr "收件箱"
+
+#: templates/group_messaging/senders_list.html:9
+msgid "sent"
+msgstr "已发送"
+
+#: templates/group_messaging/senders_list.html:16
+msgid "trash"
+msgstr "废件夹"
+
+#: templates/group_messaging/threads_list.html:25
+msgid "there are no messages yet..."
+msgstr "无任何消息..."
+
+#: templates/group_messaging/email_alert/body.html:7
+#, python-format
+msgid "%(author)s wrote:"
+msgstr ""
+
+#: templates/group_messaging/email_alert/body.html:11
+msgid ""
+"To reply please <a class=\"thread-link\" href=\"THREAD_URL_HOLE\">visit your "
+"message inbox</a>"
+msgstr ""
+
 #: templates/livesettings/_admin_site_views.html:4
 msgid "Sites"
 msgstr "网站"
 
+#: templates/livesettings/group_settings.html:4
+msgid "Settings"
+msgstr "设置"
+
+#: templates/livesettings/group_settings.html:9
+#: templates/livesettings/site_settings.html:51
+msgid "Please correct the error below."
+msgid_plural "Please correct the errors below."
+msgstr[0] "请改正下面的错误"
+
+#: templates/livesettings/group_settings.html:16
+#, python-format
+msgid "Settings included in %(name)s."
+msgstr "设置包含在%(name)s."
+
+#: templates/livesettings/group_settings.html:50
+#: templates/livesettings/site_settings.html:98
+msgid "You don't have permission to edit values."
+msgstr "您没有权限修改这些值"
+
 #: templates/livesettings/site_settings.html:24
 msgid "Documentation"
 msgstr "文档"
-
-#: templates/livesettings/site_settings.html:24
-msgid "Change password"
-msgstr "修改密码"
 
 #: templates/livesettings/site_settings.html:24
 msgid "Log out"
@@ -5403,11 +7269,6 @@ msgstr "此功能不支持"
 msgid "All configuration options must be edited in the site settings.py file"
 msgstr "所有配置选项都必须在网站的settings.py文件中设置"
 
-#: templates/livesettings/site_settings.html:51
-msgid "Please correct the error below."
-msgid_plural "Please correct the errors below."
-msgstr[0] "请改正下面的错误"
-
 #: templates/livesettings/site_settings.html:67
 #, python-format
 msgid "Group settings: %(name)s"
@@ -5417,18 +7278,1174 @@ msgstr "组别设置: %(name)s"
 msgid "Uncollapse all"
 msgstr "全部收起"
 
-#: templates/livesettings/site_settings.html:98
-msgid "You don't have permission to edit values."
-msgstr "您没有权限修改这些值"
+#: templates/main_page/headline.html:6
+#, python-format
+msgid "with %(author_name)s's contributions"
+msgstr "%(author_name)s的贡献"
+
+#: templates/main_page/headline.html:11
+msgid "Tagged"
+msgstr "已加标签"
+
+#: templates/main_page/headline.html:22
+msgid "Search tips:"
+msgstr "搜索主题"
+
+#: templates/main_page/headline.html:25
+msgid "reset author"
+msgstr "重置作者"
+
+#: templates/main_page/headline.html:27 templates/main_page/headline.html:30
+#: templates/main_page/nothing_found.html:18
+#: templates/main_page/nothing_found.html:21
+msgid " or "
+msgstr "或者"
+
+#: templates/main_page/headline.html:28
+msgid "reset tags"
+msgstr "重置标签"
+
+#: templates/main_page/headline.html:31 templates/main_page/headline.html:34
+msgid "start over"
+msgstr "重新开始"
+
+#: templates/main_page/headline.html:36
+msgid " - to expand, or dig in by adding more tags and revising the query."
+msgstr " - 通过添加更多标签和改进查询来扩展和挖掘信息"
+
+#: templates/main_page/headline.html:39
+msgid "Search tip:"
+msgstr "搜索主题 :"
+
+#: templates/main_page/headline.html:39
+msgid "add tags and a query to focus your search"
+msgstr "添加标签和查询条件进行更精确查询"
+
+#: templates/main_page/nothing_found.html:13
+msgid "You can expand your search by "
+msgstr "扩展您的查询"
+
+#: templates/main_page/nothing_found.html:16
+msgid "resetting author"
+msgstr "重置作者"
+
+#: templates/main_page/nothing_found.html:19
+msgid "resetting tags"
+msgstr "重置标签"
+
+#: templates/main_page/nothing_found.html:22
+#: templates/main_page/nothing_found.html:25
+msgid "starting over"
+msgstr "重新开始"
+
+#: templates/main_page/questions_loop.html:9
+msgid "Did not find what you were looking for?"
+msgstr "您找的问题没有?"
+
+#: templates/main_page/tab_bar.html:11
+#, fuzzy
+msgid "subscribe to the feed"
+msgstr "订阅 rss feed"
+
+#: templates/main_page/tab_bar.html:12
+msgid "RSS"
+msgstr "RSS"
+
+#: templates/main_page/tag_search.html:2
+msgid "Tag search"
+msgstr "标签搜索"
+
+#: templates/main_page/tag_search.html:5
+msgid "search"
+msgstr "搜索"
+
+#: templates/meta/bottom_scripts.html:7
+#, python-format
+msgid ""
+"Please note: %(app_name)s requires javascript to work properly, please "
+"enable javascript in your browser, <a href=\"%(noscript_url)s\">here is how</"
+"a>"
+msgstr ""
+"Please note: %(app_name)s requires javascript to work properly, please "
+"enable javascript in your browser, <a href=\"%(noscript_url)s\">here is how</"
+"a>"
+
+#: templates/meta/editor_data.html:5
+#, python-format
+msgid "each tag must be shorter that %(max_chars)s character"
+msgid_plural "each tag must be shorter than %(max_chars)s characters"
+msgstr[0] "每个标签的长度不超过%(max_chars)s"
+
+#: templates/meta/editor_data.html:7
+#, python-format
+msgid "please use %(tag_count)s tag"
+msgid_plural "please use %(tag_count)s tags or less"
+msgstr[0] "最多只能有%(tag_count)s个标签"
+
+#: templates/meta/editor_data.html:8
+#, python-format
+msgid ""
+"please use up to %(tag_count)s tags, less than %(max_chars)s characters each"
+msgstr "最多%(tag_count)s个标签，每个标签长度小于%(max_chars)s个字符。"
+
+#: templates/moderation/manage_reject_reasons_dialog.html:4
+#, fuzzy
+msgid "Manage post flag/reject reasons"
+msgstr "创建拒绝帖子的原因"
+
+#: templates/moderation/manage_reject_reasons_dialog.html:11
+msgid "1) Enter a brief description of why you are rejecting the post."
+msgstr "1) 简要说明您拒绝的理由。"
+
+#: templates/moderation/manage_reject_reasons_dialog.html:14
+msgid "2) Please enter details here. This text will be sent to the user."
+msgstr "2)请在这里输入的细节。本文将被发送到用户。"
+
+#: templates/moderation/manage_reject_reasons_dialog.html:18
+#, fuzzy
+msgid "Save reason"
+msgstr "关闭原因"
+
+#: templates/moderation/manage_reject_reasons_dialog.html:37
+msgid "Edit this reason"
+msgstr "修改这个理由"
+
+#: templates/moderation/manage_reject_reasons_dialog.html:38
+msgid "Delete this reason"
+msgstr "删除这个理由"
+
+#: templates/moderation/manage_reject_reasons_dialog.html:39
+msgid "Add a new reason"
+msgstr "添加一个新的理由"
+
+#: templates/moderation/queue.html:4 templates/moderation/queue.html.py:7
+#, fuzzy
+msgid "Moderation queue"
+msgstr "管理"
+
+#: templates/moderation/queue.html:10
+#, fuzzy
+msgid "Select:"
+msgstr "选择主题"
+
+#: templates/moderation/queue.html:12 templates/user_inbox/responses.html:13
+msgid "none"
+msgstr "无"
+
+#: templates/moderation/queue.html:14
+#, fuzzy
+msgid "approve posts"
+msgstr "批准"
+
+#: templates/moderation/queue.html:15
+#, fuzzy
+msgid "approve posts and users"
+msgstr "启用电子邮件提醒"
+
+#: templates/moderation/queue.html:18
+msgid "decline and explain why"
+msgstr ""
+
+#: templates/moderation/queue.html:28
+#, fuzzy
+msgid "add/manage reject reasons"
+msgstr "更新拒绝帖子的原因"
+
+#: templates/moderation/queue.html:32
+#, fuzzy
+msgid "block spammers"
+msgstr "冻结账户"
+
+#: templates/moderation/queue.html:34
+msgid "block spammers and IPs"
+msgstr ""
+
+#: templates/question/answer_card.html:21
+msgid "This response is published"
+msgstr "此回复已经发布"
+
+#: templates/question/answer_controls.html:11
+msgid "remove offensive flag"
+msgstr "移除标记垃圾帖"
+
+#: templates/question/answer_controls.html:13
+#: templates/question/question_controls.html:9
+msgid "remove flag"
+msgstr "移除标签"
+
+#: templates/question/answer_controls.html:18
+#: templates/question/answer_controls.html:26
+#: templates/question/question_controls.html:7
+#: templates/question/question_controls.html:13
+#: templates/question/question_controls.html:20
+msgid ""
+"report as offensive (i.e containing spam, advertising, malicious text, etc.)"
+msgstr "检举该帖为垃“水帖”（含广告、人身攻击、恶意言论等）"
+
+#: templates/question/answer_controls.html:20
+#: templates/question/answer_controls.html:28
+#: templates/question/question_controls.html:15
+#: templates/question/question_controls.html:22
+msgid "flag offensive"
+msgstr "垃圾帖"
+
+#: templates/question/answer_controls.html:33
+#: templates/question/question_controls.html:34
+msgid "undelete"
+msgstr "取消"
+
+#: templates/question/answer_controls.html:44
+msgid "unpublish"
+msgstr "取消发布"
+
+#: templates/question/answer_controls.html:49
+msgid "publish"
+msgstr "发布"
+
+#: templates/question/answer_controls.html:56
+msgid "permanent link"
+msgstr "永久链接"
+
+#: templates/question/answer_controls.html:57
+#: templates/widgets/markdown_help.html:20
+msgid "link"
+msgstr "链接"
+
+#: templates/question/answer_tab_bar.html:7
+msgid "Sort by »"
+msgstr "排序方式 »"
+
+#: templates/question/answer_vote_buttons.html:10
+msgid "(click again to undo)"
+msgstr ""
+
+#: templates/question/closed_question_info.html:2
+#, fuzzy
+msgid "Closed for the following reason"
+msgstr "有可能是以下原因导致："
+
+#: templates/question/closed_question_info.html:3
+msgid "by"
+msgstr ""
+
+#: templates/question/closed_question_info.html:5
+#, python-format
+msgid "close date %(closed_at)s"
+msgstr "%(closed_at)s日关闭"
+
+#: templates/question/content.html:19
+#, fuzzy
+msgid "See the accepted answer"
+msgstr "给出了接受答案"
+
+#: templates/question/lang_switch_message.html:1
+#, python-format
+msgid ""
+"Sorry, this page is only available in %(post_lang)s. Go to the \n"
+"<a href=\"%(home_url)s\">home page in %(request_lang)s</a>."
+msgstr ""
+
+#: templates/question/question_controls.html:2
+msgid "retag"
+msgstr "更新标签"
+
+#: templates/question/question_controls.html:26
+msgid "reopen"
+msgstr "打开"
+
+#: templates/question/question_controls.html:28
+msgid "close"
+msgstr "关闭"
+
+#: templates/question/question_controls.html:30
+msgid "merge"
+msgstr ""
+
+#: templates/question/sidebar.html:11
+msgid "Unfollow"
+msgstr "取消关注"
+
+#: templates/question/sidebar.html:12 templates/question/sidebar.html.py:14
+#: templates/question/sidebar.html:20
+msgid "Follow"
+msgstr "关注"
+
+#: templates/question/sidebar.html:13 templates/question/sidebar.html.py:18
+msgid "Following"
+msgstr "已关注"
+
+#: templates/question/sidebar.html:27
+#, python-format
+msgid "%(count)s follower"
+msgid_plural "%(count)s followers"
+msgstr[0] "%(count)s 位粉丝"
+
+#: templates/question/sidebar.html:35
+#, fuzzy
+msgid "subscribe to the rss feed"
+msgstr "订阅 rss feed"
+
+#: templates/question/sidebar.html:36
+msgid "subscribe to rss feed"
+msgstr "订阅 rss feed"
+
+#: templates/question/sidebar.html:46
+msgid "Invite"
+msgstr "邀请"
+
+#: templates/question/sidebar.html:51 templates/question/sidebar.html.py:57
+#: templates/user_profile/user_email_subscriptions.html:59
+#: templates/widgets/tag_selector.html:20
+#: templates/widgets/tag_selector.html:37
+#: templates/widgets/tag_selector.html:56
+msgid "add"
+msgstr "添加"
+
+#: templates/question/sidebar.html:53 templates/question/sidebar.html.py:59
+msgid "- or -"
+msgstr "- 或者 -"
+
+#: templates/question/sidebar.html:71
+msgid "share with everyone"
+msgstr "与所有人共享"
+
+#: templates/question/sidebar.html:84
+msgid "Individual users"
+msgstr "个人用户"
+
+#: templates/question/sidebar.html:89
+msgid "You"
+msgstr "您"
+
+#: templates/question/sidebar.html:96 templates/question/sidebar.html:116
+msgid "and"
+msgstr "和"
+
+#: templates/question/sidebar.html:121
+#, fuzzy, python-format
+msgid "%(more_count)s more"
+msgstr "%(count)s 位粉丝"
+
+#: templates/question/sidebar.html:127
+msgid "Public thread"
+msgstr ""
+
+#: templates/question/sidebar.html:128
+#, python-format
+msgid "This thread is public, all members of %(site_name)s can read this page."
+msgstr ""
+
+#: templates/question/sidebar.html:136
+msgid "Stats"
+msgstr "统计"
+
+#: templates/question/sidebar.html:138
+msgid "Asked"
+msgstr "提问于"
+
+#: templates/question/sidebar.html:141
+msgid "Seen"
+msgstr "查看"
+
+#: templates/question/sidebar.html:141
+msgid "times"
+msgstr "次"
+
+#: templates/question/sidebar.html:144
+msgid "Last updated"
+msgstr "最后更新时间"
+
+#: templates/tags/form_bulk_tag_subscription.html:4
+msgid "Tag subscriptions"
+msgstr "标签订阅"
+
+#: templates/tags/form_bulk_tag_subscription.html:6
+msgid "Tag Subscriptions"
+msgstr "标签订阅"
+
+#: templates/tags/header.html:7
+#, python-format
+msgid "Tags, matching \"%(tag_query)s\""
+msgstr ""
+
+#: templates/tags/header.html:20
+msgid "by name"
+msgstr "按名称排序"
+
+#: templates/tags/header.html:26
+msgid "by popularity"
+msgstr "按流行度排序"
+
+#: templates/tags/header.html:34 templates/tags/header.html.py:35
+#, fuzzy
+msgid "suggested"
+msgstr "推荐的标签/"
+
+#: templates/tags/header.html:42 templates/tags/header.html.py:43
+#, fuzzy
+msgid "manage subscriptions"
+msgstr "标签订阅"
+
+#: templates/tags/list_bulk_tag_subscription.html:4
+#, fuzzy
+msgid "Manage Tag subscriptions"
+msgstr "标签订阅"
+
+#: templates/tags/list_bulk_tag_subscription.html:7
+#, fuzzy
+msgid "Manage Tag subscription"
+msgstr "标签订阅"
+
+#: templates/tags/list_bulk_tag_subscription.html:8
+msgid "Create New"
+msgstr "新建"
+
+#: templates/tags/list_bulk_tag_subscription.html:11
+msgid "Date"
+msgstr "日期"
+
+#: templates/tags/list_bulk_tag_subscription.html:17
+msgid "Action"
+msgstr "动作"
+
+#: templates/user_inbox/base.html:13
+msgid "Sections:"
+msgstr "部分："
+
+#: templates/user_inbox/base.html:18
+msgid "messages"
+msgstr "信息"
+
+#: templates/user_inbox/base.html:23
+#, fuzzy, python-format
+msgid "forum responses (<span class=\"response-count\">%(re_count)s</span>)"
+msgstr "<span class=\"count\">%(counter)s</span>标签"
+
+#: templates/user_inbox/base.html:30
+#, fuzzy, python-format
+msgid "flagged items (<span class=\"mod-memo-count\">%(flags_count)s</span>)"
+msgstr "<span class=\"count\">%(counter)s</span>标签"
+
+#: templates/user_inbox/base.html:37
+#, fuzzy
+msgid "group join requests"
+msgstr "重新打开提问"
+
+#: templates/user_inbox/group_join_requests.html:4
+msgid "inbox - group join requests"
+msgstr ""
+
+#: templates/user_inbox/group_join_requests.html:26
+msgid "Approve"
+msgstr "接受"
+
+#: templates/user_inbox/group_join_requests.html:41
+msgid "Deny"
+msgstr "拒绝"
+
+#: templates/user_inbox/messages.html:9
+#: templates/user_profile/user_tabs.html:13
+#, fuzzy
+msgid "private messages"
+msgstr "用户资料 - 消息"
+
+#: templates/user_inbox/responses.html:4
+#: templates/user_profile/user_tabs.html:10
+#, fuzzy
+msgid "notifications"
+msgstr "城市"
+
+#: templates/user_inbox/responses.html:9
+#, fuzzy
+msgid "mark seen"
+msgstr "上次活动时间"
+
+#: templates/user_inbox/responses.html:11
+msgid "select:"
+msgstr ""
+
+#: templates/user_profile/twitter_sharing_controls.html:8
+#, python-format
+msgid "Auto-tweeting to @%(handle)s"
+msgstr ""
+
+#: templates/user_profile/twitter_sharing_controls.html:19
+msgid "stop tweeting"
+msgstr ""
+
+#: templates/user_profile/twitter_sharing_controls.html:23
+msgid "Auto-tweeting is inactive"
+msgstr ""
+
+#: templates/user_profile/twitter_sharing_controls.html:26
+#, fuzzy
+msgid "Select twitter account"
+msgstr "选择国家"
+
+#: templates/user_profile/twitter_sharing_controls.html:28
+#, fuzzy
+msgid "use another account"
+msgstr "用其它账户发布 Tweet"
+
+#: templates/user_profile/twitter_sharing_controls.html:32
+msgid "Auto-tweeting is off"
+msgstr ""
+
+#: templates/user_profile/twitter_sharing_controls.html:33
+msgid "Start tweeting"
+msgstr ""
+
+#: templates/user_profile/user.html:12
+#, python-format
+msgid "%(username)s's profile"
+msgstr "%(username)s用户概览"
+
+#: templates/user_profile/user_edit.html:4
+msgid "Edit user profile"
+msgstr "修改个人资料"
+
+#: templates/user_profile/user_edit.html:7
+msgid "edit profile"
+msgstr "编辑资料"
+
+#: templates/user_profile/user_edit.html:21
+#: templates/user_profile/user_info.html:14
+msgid "change picture"
+msgstr "修改图片"
+
+#: templates/user_profile/user_edit.html:32
+msgid "Screen Name"
+msgstr "用户名"
+
+#: templates/user_profile/user_edit.html:52
+msgid "(cannot be changed)"
+msgstr "(无法修改)"
+
+#: templates/user_profile/user_edit.html:102
+#: templates/user_profile/user_email_subscriptions.html:23
+msgid "Update"
+msgstr "更新"
+
+#: templates/user_profile/user_email_subscriptions.html:5
+#: templates/user_profile/user_tabs.html:40
+msgid "subscriptions"
+msgstr "订阅"
+
+#: templates/user_profile/user_email_subscriptions.html:8
+msgid "Email subscription settings"
+msgstr "邮件订阅设置"
+
+#: templates/user_profile/user_email_subscriptions.html:10
+msgid ""
+"<span class='big strong'>Adjust frequency of email updates.</span> Receive "
+"updates on interesting content by email. If you do not wish to receive "
+"emails - select 'no email' on all items below.<br/>Updates are only sent "
+"when there is any new activity on selected items."
+msgstr ""
+
+#: templates/user_profile/user_email_subscriptions.html:24
+msgid "Stop Email"
+msgstr "停止发送邮件"
+
+#: templates/user_profile/user_email_subscriptions.html:30
+msgid "Subscribed languages"
+msgstr "订阅语"
+
+#: templates/user_profile/user_email_subscriptions.html:43
+msgid "Save languages"
+msgstr "保存语言"
+
+#: templates/user_profile/user_email_subscriptions.html:48
+msgid "Subscribed Tags"
+msgstr "订阅的标签"
+
+#: templates/user_profile/user_info.html:32
+#, python-format
+msgid "unfollow %(alias)s"
+msgstr "取消关注 %(alias)s"
+
+#: templates/user_profile/user_info.html:33
+#: templates/user_profile/user_info.html:35
+#: templates/user_profile/user_info.html:41
+#, python-format
+msgid "follow %(alias)s"
+msgstr "关注 %(alias)s"
+
+#: templates/user_profile/user_info.html:34
+#: templates/user_profile/user_info.html:39
+#, python-format
+msgid "following %(alias)s"
+msgstr "已关注 %(alias)s"
+
+#: templates/user_profile/user_info.html:52
+msgid "update profile"
+msgstr "更新资料"
+
+#: templates/user_profile/user_info.html:56
+#, fuzzy
+msgid "manage login methods"
+msgstr "管理登录方法"
+
+#: templates/user_profile/user_info.html:69
+msgid "real name"
+msgstr "姓名"
+
+#: templates/user_profile/user_info.html:75
+#, fuzzy
+msgid "email"
+msgstr "没有邮件"
+
+#: templates/user_profile/user_info.html:81
+msgid "groups"
+msgstr "群组"
+
+#: templates/user_profile/user_info.html:92
+msgid "add group"
+msgstr "添加组"
+
+#: templates/user_profile/user_info.html:98
+msgid "member since"
+msgstr "加入时间"
+
+#: templates/user_profile/user_info.html:103
+msgid "last seen"
+msgstr "上次活动时间"
+
+#: templates/user_profile/user_info.html:109
+msgid "website"
+msgstr "个人网站"
+
+#: templates/user_profile/user_info.html:122
+msgid "location"
+msgstr "城市"
+
+#: templates/user_profile/user_info.html:129
+msgid "age"
+msgstr "年龄"
+
+#: templates/user_profile/user_info.html:130
+#, python-format
+msgid "%(age)s years old"
+msgstr "%(age)s岁"
+
+#: templates/user_profile/user_info.html:135
+msgid "todays unused votes"
+msgstr "今日剩余投票数"
+
+#: templates/user_profile/user_info.html:136
+msgid "votes left"
+msgstr "剩余投票数"
+
+#: templates/user_profile/user_moderate.html:4
+#: templates/user_profile/user_tabs.html:45
+#, fuzzy
+msgid "moderation"
+msgstr "版主"
+
+#: templates/user_profile/user_moderate.html:8
+#, python-format
+msgid "%(username)s's current status is \"%(status)s\""
+msgstr "%(username)s当前的状态是 \"%(status)s\""
+
+#: templates/user_profile/user_moderate.html:20
+#, fuzzy
+msgid "Change status"
+msgstr "修改状态为"
+
+#: templates/user_profile/user_moderate.html:22
+msgid "Block user and delete all content"
+msgstr ""
+
+#: templates/user_profile/user_moderate.html:29
+#, python-format
+msgid "Your current reputation is %(reputation)s points"
+msgstr "您当前的积分是 %(reputation)s "
+
+#: templates/user_profile/user_moderate.html:31
+#, python-format
+msgid "User's current reputation is %(reputation)s points"
+msgstr "用户当前的积分是 %(reputation)s"
+
+#: templates/user_profile/user_moderate.html:35
+msgid "User reputation changed"
+msgstr "用户积分已修改"
+
+#: templates/user_profile/user_moderate.html:42
+msgid "Subtract"
+msgstr "减去"
+
+#: templates/user_profile/user_moderate.html:43
+msgid "Add"
+msgstr "添加"
+
+#: templates/user_profile/user_moderate.html:47
+#, python-format
+msgid "Send message to %(username)s"
+msgstr "发送信息给%(username)s"
+
+#: templates/user_profile/user_moderate.html:48
+msgid ""
+"An email will be sent to the user with 'reply-to' field set to your email "
+"address. Please make sure that your address is entered correctly."
+msgstr "邮件将被发送给接受回复的用户地址，请确保您输入的邮件地址是正确的"
+
+#: templates/user_profile/user_moderate.html:50
+msgid "Message sent"
+msgstr "发送消息"
+
+#: templates/user_profile/user_moderate.html:68
+#, fuzzy
+msgid "Send message"
+msgstr "信息"
+
+#: templates/user_profile/user_moderate.html:78
+msgid ""
+"Administrators have privileges of normal users, but in addition they can "
+"assign/revoke any status to any user, and are exempt from the reputation "
+"limits."
+msgstr ""
+"Administrators have privileges of normal users, but in addition they can "
+"assign/revoke any status to any user, and are exempt from the reputation "
+"limits."
+
+#: templates/user_profile/user_moderate.html:81
+msgid ""
+"Moderators have the same privileges as administrators, but cannot add or "
+"remove user status of 'moderator' or 'administrator'."
+msgstr ""
+"Moderators have the same privileges as administrators, but cannot add or "
+"remove user status of 'moderator' or 'administrator'."
+
+#: templates/user_profile/user_moderate.html:84
+msgid "'Approved' status means the same as regular user."
+msgstr "“批准”状态表示常规用户。"
+
+#: templates/user_profile/user_moderate.html:87
+msgid "Suspended users can only edit or delete their own posts."
+msgstr "暂停使用的用户只能编辑或删除自己的帖子。"
+
+#: templates/user_profile/user_moderate.html:90
+msgid ""
+"Blocked users can only login and send feedback to the site administrators, "
+"their url and profile will also be hidden."
+msgstr ""
+
+#: templates/user_profile/user_network.html:5
+#: templates/user_profile/user_tabs.html:19
+msgid "network"
+msgstr "朋友圈"
+
+#: templates/user_profile/user_network.html:10
+#, python-format
+msgid "Followed by %(count)s person"
+msgid_plural "Followed by %(count)s people"
+msgstr[0] "被 %(count)s 名用户"
+
+#: templates/user_profile/user_network.html:14
+#, python-format
+msgid "Following %(count)s person"
+msgid_plural "Following %(count)s people"
+msgstr[0] "关注 %(count)s 名用户"
+
+#: templates/user_profile/user_network.html:19
+msgid ""
+"Your network is empty. Would you like to follow someone? - Just visit their "
+"profiles and click \"follow\""
+msgstr "朋友圈为空。是否希望关注一些用户? - 只需访问其个人档案并点击“关注”"
+
+#: templates/user_profile/user_network.html:21
+#, python-format
+msgid "%(username)s's network is empty"
+msgstr "%(username)s用户概览"
+
+#: templates/user_profile/user_recent.html:5
+#: templates/user_profile/user_tabs.html:31
+msgid "activity"
+msgstr "活跃问题"
+
+#: templates/user_profile/user_recent.html:25
+#: templates/user_profile/user_recent.html:30
+msgid "source"
+msgstr "来源"
+
+#: templates/user_profile/user_reputation.html:10
+msgid "Your karma change log."
+msgstr "您的积分历史"
+
+#: templates/user_profile/user_reputation.html:12
+#, python-format
+msgid "%(user_name)s's karma change log"
+msgstr "%(user_name)s的积分历史"
+
+#: templates/user_profile/user_stats.html:6
+#: templates/user_profile/user_tabs.html:6
+msgid "overview"
+msgstr "概览"
+
+#: templates/user_profile/user_stats.html:28
+#, python-format
+msgid "<span class=\"count\">%(cnt)s</span> Vote"
+msgid_plural "<span class=\"count\">%(cnt)s</span> Votes "
+msgstr[0] "<span class=\"count\">%(cnt)s</span>投票"
+
+#: templates/user_profile/user_stats.html:36
+#, python-format
+msgid "<span class=\"count\">%(counter)s</span> Tag"
+msgid_plural "<span class=\"count\">%(counter)s</span> Tags"
+msgstr[0] "<span class=\"count\">%(counter)s</span>标签"
+
+#: templates/user_profile/user_stats.html:69
+#, python-format
+msgid "<span class=\"count\">%(counter)s</span> Badge"
+msgid_plural "<span class=\"count\">%(counter)s</span> Badges"
+msgstr[0] "<span class=\"count\">%(counter)s</span>奖牌"
+
+#: templates/user_profile/user_stats.html:88
+msgid "Answer to:"
+msgstr "回答:"
+
+#: templates/user_profile/user_tabs.html:35
+#: templates/user_profile/user_votes.html:5
+msgid "votes"
+msgstr "投票"
+
+#: templates/widgets/answer_edit_tips.html:8
+#: templates/widgets/question_edit_tips.html:16
+msgid "provide enough details"
+msgstr "请详细描述您的问题"
+
+#: templates/widgets/answer_edit_tips.html:9
+#: templates/widgets/question_edit_tips.html:17
+#, fuzzy
+msgid "be clear and concise"
+msgstr "我们推荐您使用中文描述问题，这样可以得到更多的答复机会。"
+
+#: templates/widgets/ask_form.html:54
+msgid "Login/Signup to Post"
+msgstr "登录/发表答案"
+
+#: templates/widgets/contributors.html:3
+msgid "Contributors"
+msgstr "贡献者"
+
+#: templates/widgets/footer.html:33
+#, python-format
+msgid "Content on this site is licensed under a %(license)s"
+msgstr "本站内容依 %(license)s 授权"
+
+#: templates/widgets/footer.html:38
+msgid "about"
+msgstr "关于本站"
+
+#: templates/widgets/footer.html:40 templates/widgets/user_navigation.html:23
+msgid "help"
+msgstr "帮助"
+
+#: templates/widgets/footer.html:42
+msgid "privacy policy"
+msgstr "隐私政策"
+
+#: templates/widgets/footer.html:43
+#, fuzzy
+msgid "terms of service"
+msgstr "外部服务"
+
+#: templates/widgets/footer.html:55
+msgid "give feedback"
+msgstr "问题反馈"
+
+#: templates/widgets/group_info.html:3
+msgid "Group info"
+msgstr "群组信息"
+
+#: templates/widgets/group_info.html:26
+msgid "edit description"
+msgstr "编辑描述"
+
+#: templates/widgets/group_info.html:30
+msgid "change logo"
+msgstr "更该标识"
+
+#: templates/widgets/group_info.html:32
+#, fuzzy
+msgid "delete logo"
+msgstr "删除"
+
+#: templates/widgets/group_info.html:36
+msgid "add logo"
+msgstr "添加 logo"
+
+#: templates/widgets/group_info.html:46
+msgid "moderate emailed content"
+msgstr ""
+
+#: templates/widgets/group_info.html:63
+#, fuzzy
+msgid "How users join this group?"
+msgstr "加入此组"
+
+#: templates/widgets/group_info.html:85
+msgid "Can moderate site"
+msgstr "可以监管网站"
+
+#: templates/widgets/group_info.html:95
+msgid "Allow only read access"
+msgstr "仅允许阅读权限"
+
+#: templates/widgets/group_info.html:104
+#, fuzzy
+msgid "List of preapproved email addresses"
+msgstr "接受的电子邮件地址"
+
+#: templates/widgets/group_info.html:105
+msgid ""
+"Users with these email adderesses will be added to the group automatically."
+msgstr ""
+
+#: templates/widgets/group_info.html:106
+#, fuzzy
+msgid "edit preapproved emails"
+msgstr "通过电子邮件编辑"
+
+#: templates/widgets/group_info.html:114
+#, fuzzy
+msgid "List of preapproved email domain names"
+msgstr "接受电子邮件作为用户名"
+
+#: templates/widgets/group_info.html:115
+msgid ""
+"Users whose email adderesses belong to these domains will be added to the "
+"group automatically."
+msgstr ""
+
+#: templates/widgets/group_info.html:116
+#, fuzzy
+msgid "edit preapproved email domains"
+msgstr "接受电子邮件作为用户名"
+
+#: templates/widgets/logo.html:6
+#, python-format
+msgid "%(site)s logo"
+msgstr "%(site)s logo"
+
+#: templates/widgets/markdown_help.html:2
+msgid "Markdown basics"
+msgstr "Markdown 基础"
+
+#: templates/widgets/markdown_help.html:6
+msgid "*italic*"
+msgstr "*斜体*"
+
+#: templates/widgets/markdown_help.html:9
+msgid "**bold**"
+msgstr "**粗体**"
+
+#: templates/widgets/markdown_help.html:13
+msgid "*italic* or _italic_"
+msgstr "*斜体* 或 _斜体_"
+
+#: templates/widgets/markdown_help.html:16
+msgid "**bold** or __bold__"
+msgstr "**加粗** 或者 __加粗__ "
+
+#: templates/widgets/markdown_help.html:20
+#: templates/widgets/markdown_help.html:24
+msgid "text"
+msgstr "文本"
+
+#: templates/widgets/markdown_help.html:24
+msgid "image"
+msgstr "图片"
+
+#: templates/widgets/markdown_help.html:28
+msgid "numbered list:"
+msgstr "列表："
+
+#: templates/widgets/markdown_help.html:29
+msgid "One"
+msgstr ""
+
+#: templates/widgets/markdown_help.html:30
+msgid "Two"
+msgstr ""
+
+#: templates/widgets/markdown_help.html:33
+msgid "basic HTML tags are also supported"
+msgstr "同时支持基本 HTML 标签"
+
+#: templates/widgets/markdown_help.html:38
+msgid "learn more about Markdown"
+msgstr "有关Markdown详细说明"
+
+#: templates/widgets/meta_nav.html:18
+msgid "people & groups"
+msgstr "用户和群组"
+
+#: templates/widgets/meta_nav.html:26
+msgid "users"
+msgstr "用户"
+
+#: templates/widgets/meta_nav.html:33
+msgid "badges"
+msgstr "奖牌"
+
+#: templates/widgets/moderated_image.html:1
+#, fuzzy
+msgid "image awaiting moderation"
+msgstr "启用标签审核"
+
+#: templates/widgets/moderated_link.html:1
+#, fuzzy
+msgid "link awaiting moderation"
+msgstr "启用标签审核"
+
+#: templates/widgets/proxy_author_fields.html:7
+msgid ""
+"To post on behalf of someone else, enter user name <strong>and</strong> "
+"email below."
+msgstr "以他人的名义发表文章。"
+
+#: templates/widgets/proxy_author_fields.html:14
+#, fuzzy
+msgid "User name"
+msgstr "用户名："
+
+#: templates/widgets/question_edit_tips.html:7
+msgid ""
+"since you are not logged in right now, you will be asked to sign in or "
+"register after making your post"
+msgstr ""
+
+#: templates/widgets/question_edit_tips.html:11
+#, python-format
+msgid ""
+"Your email, %(email)s has not yet been validated. To post messages you must "
+"verify your email, please see <a href='%(email_validation_faq_url)s'>more "
+"details here</a>. You can submit your post now and validate email after that."
+msgstr ""
+
+#: templates/widgets/question_summary.html:12
+msgid "view"
+msgid_plural "views"
+msgstr[0] "浏览"
+
+#: templates/widgets/question_summary.html:41
+msgid "vote"
+msgid_plural "votes"
+msgstr[0] "投票"
+
+#: templates/widgets/scope_nav.html:10
+msgid "ALL"
+msgstr "全部"
+
+#: templates/widgets/scope_nav.html:20
+msgid "FOLLOWED"
+msgstr "已关注"
+
+#: templates/widgets/search_bar.html:20
+msgid "search or ask your question"
+msgstr "搜索您的问题"
+
+#: templates/widgets/tag_selector.html:4
+msgid "Interesting tags"
+msgstr "感兴趣的标签"
+
+#: templates/widgets/tag_selector.html:22
+msgid "Ignored tags"
+msgstr "不感兴趣的标签"
+
+#: templates/widgets/tag_selector.html:40
+msgid "Subscribed tags"
+msgstr "订阅的标签"
+
+#: templates/widgets/tag_selector.html:70
+msgid "Send me email alerts for"
+msgstr "发送邮件通知的情况"
+
+#: templates/widgets/tag_selector.html:86
+msgid "Change frequency of emails"
+msgstr "修改电子邮件的频率"
+
+#: templates/widgets/tags_field.html:11
+msgid ", one of these is required"
+msgstr "这些中的一个为必填项"
+
+#: templates/widgets/tags_field.html:15
+msgid "(required)"
+msgstr "必填"
+
+#: templates/widgets/three_column_category_selector.html:7
+#: templates/widgets/three_column_category_selector.html:10
+msgid "(done editing)"
+msgstr "(完成编辑)"
+
+#: templates/widgets/three_column_category_selector.html:8
+#: templates/widgets/three_column_category_selector.html:9
+#: templates/widgets/three_column_category_selector.html:11
+msgid "(edit categories)"
+msgstr "(编辑类别)"
+
+#: templates/widgets/user_long_score_and_badge_summary.html:3
+msgid "read only access"
+msgstr "只读访问"
+
+#: templates/widgets/user_long_score_and_badge_summary.html:10
+msgid "karma:"
+msgstr "按积分排序"
+
+#: templates/widgets/user_long_score_and_badge_summary.html:15
+msgid "badges:"
+msgstr "奖牌："
+
+#: templates/widgets/user_navigation.html:12
+msgid "sign out"
+msgstr "退出"
+
+#: templates/widgets/user_navigation.html:16
+#: templates/widgets/user_navigation.html:17
+msgid "Hi there! Please sign in"
+msgstr "请登录"
+
+#: templates/widgets/user_navigation.html:20
+msgid "settings"
+msgstr "设置"
+
+#: templates/widgets/user_navigation.html:21
+msgid "widgets"
+msgstr "小工具"
+
+#: templates/widgets/user_perms.html:1
+#, python-format
+msgid "Your karma is %(karma)s"
+msgstr "您的声望值是%(karma)s"
+
+#: templates/widgets/user_perms.html:4
+msgid "Karma reflects the value of your contribution to this community."
+msgstr "声望值是您对社区贡献的体现。"
+
+#: templates/widgets/user_perms.html:13
+#, python-format
+msgid ""
+"Since you are the site %(role)s, you have access to all functions regardless "
+"of your karma."
+msgstr "只要您是%(role)s，就拥有所有的访问权限，而不管您的声望值是多少。"
+
+#: templates/widgets/user_perms.html:15
+msgid "The higher is your karma, the more rights you have on this site."
+msgstr "在本网站，您的声望值越高，权限越大。"
+
+#: templates/widgets/user_perms.html:19
+msgid "Currently, you can:"
+msgstr "目前您可以："
+
+#: templates/widgets/user_perms.html:21
+#, fuzzy
+msgid "Make new posts"
+msgstr "新建帖子"
 
 #: templatetags/extra_filters_jinja.py:368
 msgid "no"
 msgstr "无"
-
-#: templatetags/extra_tags.py:45
-#, python-format
-msgid "%(username)s gravatar image"
-msgstr "%(username)s 图像"
 
 #: utils/decorators.py:105
 msgid "Oops, apologies - there was some error"
@@ -5449,10 +8466,6 @@ msgstr "此功能仅限于版主和管理员"
 #: utils/forms.py:73
 msgid "this field is required"
 msgstr "必填项"
-
-#: utils/forms.py:100
-msgid "Choose a screen name"
-msgstr "昵称"
 
 #: utils/forms.py:110
 msgid "user name is required"
@@ -5505,15 +8518,6 @@ msgstr "该电子邮件已被注册，请选择另一个再试。"
 #: utils/forms.py:234
 msgid "this email address is not authorized"
 msgstr "邮箱地址未验证"
-
-#: utils/forms.py:275
-msgid "Password"
-msgstr "密码"
-
-#: utils/forms.py:283
-#, fuzzy
-msgid "Password retyped"
-msgstr "必填项"
 
 #: utils/forms.py:284
 msgid "please, retype your password"
@@ -5602,10 +8606,6 @@ msgstr "请登录%(tags)s"
 msgid "Create"
 msgstr "创建"
 
-#: views/commands.py:543
-msgid "Edit"
-msgstr "编辑"
-
 #: views/commands.py:768
 msgid "Please sign in to vote"
 msgstr "请登录后投票"
@@ -5650,14 +8650,6 @@ msgstr "预览失败！原因可能是数据不足或渲染过程中的错误。
 #, python-format
 msgid "About %(site)s"
 msgstr "关于 %(site)s"
-
-#: views/meta.py:97
-msgid "Help"
-msgstr "帮助"
-
-#: views/meta.py:114
-msgid "FAQ"
-msgstr "问答"
 
 #: views/meta.py:134
 msgid "Please sign in or register to send your feedback"
@@ -5885,9 +8877,6 @@ msgstr "无法转换，因为文本的字符数超过了评论允许的最大值
 #~ msgid "content"
 #~ msgstr "内容"
 
-#~ msgid "Your post at %(site_name)s is now published"
-#~ msgstr "您在 %(site_name)s 的帖子已经发布"
-
 #~ msgid "tags/subscriptions/"
 #~ msgstr "标签/订阅/"
 
@@ -5970,657 +8959,20 @@ msgstr "无法转换，因为文本的字符数超过了评论允许的最大值
 #~ msgid "Please add one or more login methods."
 #~ msgstr "请添加一个或多个登录方式"
 
-#~ msgid "Recover your %(site)s account"
-#~ msgstr "恢复您的账户 %(site)s "
-
-#~ msgid "Re: Welcome to %(site_name)s"
-#~ msgstr "答复: 欢迎 %(site_name)s"
-
 #~ msgid "Re: %s"
 #~ msgstr "答复: %s"
 
 #~ msgid "\"%(title)s\""
 #~ msgstr "\"%(title)s\""
 
-#~ msgid "Welcome to %(site_name)s"
-#~ msgstr "欢迎 %(site_name)s"
-
 #~ msgid "New tags added to %s"
 #~ msgstr "新标签添加到 %s"
-
-#~ msgid "Page not found"
-#~ msgstr "此页未找到"
-
-#~ msgid "Sorry, could not find the page you requested."
-#~ msgstr "对不起，没有找到您请求的页面！"
-
-#~ msgid "This might have happened for the following reasons:"
-#~ msgstr "有可能是以下原因导致："
-
-#~ msgid "url has error - please check it;"
-#~ msgstr "请求的地址有误 - 请核实原始URL地址；"
-
-#~ msgid ""
-#~ "the page you tried to visit is protected or you don't have sufficient "
-#~ "points, see"
-#~ msgstr "访问的页面被保护或您的积分不够，参见"
-
-#~ msgid "faq"
-#~ msgstr "常见问题"
-
-#~ msgid "if you believe this error 404 should not have occured, please"
-#~ msgstr "如果您确信不该出现404错误，请"
-
-#~ msgid "report this problem"
-#~ msgstr "报告这个问题"
-
-#~ msgid "Internal server error"
-#~ msgstr "服务器内部错误"
-
-#~ msgid ""
-#~ "system error log is recorded, error will be fixed as soon as possible"
-#~ msgstr "系统错误日志已记录，此错误将尽快被解决"
-
-#~ msgid "back"
-#~ msgstr "返回"
-
-#~ msgid "Save edit"
-#~ msgstr "现在修改"
-
-#~ msgid "Cancel"
-#~ msgstr "取消"
-
-#~ msgid "hide preview"
-#~ msgstr "禁用预览"
-
-#~ msgid "show preview"
-#~ msgstr "显示预览"
-
-#~ msgid "%(name)s"
-#~ msgstr "%(name)s"
-
-#~ msgid "Badge"
-#~ msgstr "奖牌"
-
-#~ msgid "%(description)s"
-#~ msgstr "%(description)s"
-
-#~ msgid "user received this badge:"
-#~ msgid_plural "users received this badge:"
-#~ msgstr[0] "用户获得奖牌"
-
-#~ msgid "Badges"
-#~ msgstr "奖牌"
-
-#~ msgid ""
-#~ "Below is the list of available badges and number of times each type of "
-#~ "badge has been awarded."
-#~ msgstr ""
-#~ "在下面列出社区所有的奖牌，不仅有每类奖牌获取的所需条件，并且有每类奖牌的所"
-#~ "获数量。"
-
-#~ msgid "Community badges"
-#~ msgstr "社区奖牌"
-
-#~ msgid "gold badge: the highest honor and is very rare"
-#~ msgstr "金牌:十分罕见之最高荣耀"
-
-#~ msgid ""
-#~ "Gold badge is the highest award in this community. To obtain it you have "
-#~ "to show \n"
-#~ "profound knowledge and ability in addition to your active participation."
-#~ msgstr "金牌:十分罕见之最高奖励"
-
-#~ msgid ""
-#~ "silver badge: occasionally awarded for the very high quality contributions"
-#~ msgstr "银牌:偶尔颁发之优质奖章"
-
-#~ msgid "bronze badge: often given as a special honor"
-#~ msgstr "铜牌:时常授予之特殊荣誉"
-
-#~ msgid "RSS feed from %(site_title)s"
-#~ msgstr "聚合内容来自 %(site_title)s"
-
-#~ msgid "Reasons"
-#~ msgstr "原因"
-
-#~ msgid "OK to close"
-#~ msgstr "确定关闭"
-
-#~ msgid "Frequently Asked Questions "
-#~ msgstr "常见问题"
-
-#~ msgid "What kinds of questions can I ask here?"
-#~ msgstr "我可以在这里提问什么样的问题？"
-
-#~ msgid ""
-#~ "Most importantly - questions should be <strong>relevant</strong> to this "
-#~ "community."
-#~ msgstr "最重要的是，问题应该是和这个社区相关的。"
-
-#~ msgid ""
-#~ "Before you ask - please make sure to search for a similar question. You "
-#~ "can search questions by their title or tags."
-#~ msgstr "在您问之前，请您通过标题或标签搜索问题，确保没有类似的问题存在。"
-
-#~ msgid "What kinds of questions should be avoided?"
-#~ msgstr "应该避免什么样的问题？"
-
-#~ msgid ""
-#~ "Please avoid asking questions that are not relevant to this community, "
-#~ "too subjective and argumentative."
-#~ msgstr ""
-#~ "请避免含有极端情绪化、极端主观的个人判断的问题。含有极端情绪化的提问往往不"
-#~ "是为了寻找答案，而是通过提问来表达、发泄个人行情绪。含有极端主观个人判断的"
-#~ "问题，问题中的判断可能与事实不相符。"
-
-#~ msgid "What should I avoid in my answers?"
-#~ msgstr "应该避免什么样的回答？"
-
-#~ msgid ""
-#~ "is a <strong>question and answer</strong> site - <strong>it is not a "
-#~ "discussion group</strong>. Please avoid holding debates in your answers "
-#~ "as they tend to dilute the essense of questions and answers. For the "
-#~ "brief discussions please use commenting facility."
-#~ msgstr ""
-#~ "是一个<strong>问答社区</strong>-而不是一个<strong>灌水论坛</strong>。请避"
-#~ "免与问题本身无关或没有意义的回答。"
-
-#~ msgid "Who moderates this community?"
-#~ msgstr "谁是社区的管理员？"
-
-#~ msgid "The short answer is: <strong>you</strong>."
-#~ msgstr "答案是：<span class=\"yellowbg\">每个用户。</span>"
-
-#~ msgid "This website is moderated by the users."
-#~ msgstr "本站由用户管理。"
-
-#~ msgid ""
-#~ "Karma system allows users to earn rights to perform a variety of "
-#~ "moderation tasks"
-#~ msgstr "当声望值达到某个程度，用户的权限就会增加。"
-
-#~ msgid "How does karma system work?"
-#~ msgstr "积分系统如何工作？"
-
-#~ msgid ""
-#~ "For example, if you ask an interesting question or give a helpful answer, "
-#~ "your input will be upvoted. On the other hand if the answer is misleading "
-#~ "- it will be downvoted. Each vote in favor will generate <strong>"
-#~ "%(REP_GAIN_FOR_RECEIVING_UPVOTE)s</strong> points, each vote against will "
-#~ "subtract <strong>%(REP_LOSS_FOR_RECEIVING_DOWNVOTE)s</strong> points. "
-#~ "There is a limit of <strong>%(MAX_REP_GAIN_PER_USER_PER_DAY)s</strong> "
-#~ "points that can be accumulated for a question or answer per day. The "
-#~ "table below explains reputation point requirements for each type of "
-#~ "moderation task."
-#~ msgstr ""
-#~ "例如，如果您问一个有趣的问题或给别人一个有帮助的答案，您的输入将被投赞成"
-#~ "票。否则您的答案是误导的，您将被投反对票。\n"
-#~ "每个赞成票将增加<strong>%(REP_GAIN_FOR_RECEIVING_UPVOTE)s</strong>分，每个"
-#~ "反对票将减去<strong>%(REP_LOSS_FOR_RECEIVING_DOWNVOTE)s</strong>分，\n"
-#~ "每个问题或答案都将有一个<strong>%(MAX_REP_GAIN_PER_USER_PER_DAY)s</strong>"
-#~ "分限制。下表解释了每个相应任务的积分要求："
-
-#~ msgid "add comments"
-#~ msgstr "添加评论"
-
-#~ msgid " accept own answer to own questions"
-#~ msgstr " 自己的提问接受自己的回答"
-
-#~ msgid "retag other's questions"
-#~ msgstr "整理标签"
-
-#~ msgid "edit community wiki questions"
-#~ msgstr "编辑社区维基问题"
-
-#~ msgid "edit any answer"
-#~ msgstr "编辑任何答案"
-
-#~ msgid "delete any comment"
-#~ msgstr "删除任何评论"
-
-#~ msgid "How to change my picture (gravatar) and what is gravatar?"
-#~ msgstr "如何改变我的头像(gravatar)，什么是gravatar？"
-
-#~ msgid ""
-#~ "<p>The picture that appears on the users profiles is called "
-#~ "<strong>gravatar</strong> (which means <strong>g</strong>lobally "
-#~ "<strong>r</strong>ecognized <strong>avatar</strong>).</p><p>Here is how "
-#~ "it works: a <strong>cryptographic key</strong> (unbreakable code) is "
-#~ "calculated from your email address. You upload your picture (or your "
-#~ "favorite alter ego image) the website <a href='http://gravatar."
-#~ "com'><strong>gravatar.com</strong></a> from where we later retreive your "
-#~ "image using the key.</p><p>This way all the websites you trust can show "
-#~ "your image next to your posts and your email address remains private.</"
-#~ "p><p>Please <strong>personalize your account</strong> with an image - "
-#~ "just register at <a href='http://gravatar.com'><strong>gravatar.com</"
-#~ "strong></a> (just please be sure to use the same email address that you "
-#~ "used to register with us). Default image that looks like a kitchen tile "
-#~ "is generated automatically.</p>"
-#~ msgstr ""
-#~ "头像出现在用户设置页面，Gravatartitle是Globally Recognized Avatar的缩写，"
-#~ "是<a href='http://baike.baidu.com/view/675247.htm'><strong>gravatar</"
-#~ "strong></a>推出的一项服务，意为“全球通用头像”。"
-
-#~ msgid "To register, do I need to create new password?"
-#~ msgstr "我需要注册一个新用户吗？"
-
-#~ msgid ""
-#~ "No, you don't have to. You can login through any service that supports "
-#~ "OpenID, e.g. Google, Yahoo, AOL, etc."
-#~ msgstr "不必，您可以通过任何支持OpenID的网站登录，例如：腾讯，新浪，等。"
-
-#~ msgid "\"Login now!\""
-#~ msgstr "“马上登录！”"
-
-#~ msgid "Why other people can edit my questions/answers?"
-#~ msgstr "为什么其他人可以修改我的问题/回答？"
-
-#~ msgid "Goal of this site is..."
-#~ msgstr "本站的目标是..."
-
-#~ msgid ""
-#~ "So questions and answers can be edited like wiki pages by experienced "
-#~ "users of this site and this improves the overall quality of the knowledge "
-#~ "base content."
-#~ msgstr ""
-#~ "所有问题和答案都如维基百科一样可共同编辑的，我们希望社区成员的共同协作可以"
-#~ "让每一个问题和答案变得更有价值，就像一条流动的河流，知识在这里可以随时间不"
-#~ "断更新，得到持续优化和改进。"
-
-#~ msgid "If this approach is not for you, we respect your choice."
-#~ msgstr "如果您不喜欢这种方式，我们尊重您的选择。"
-
-#~ msgid "Still have questions?"
-#~ msgstr "还有其他问题？"
-
-#~ msgid ""
-#~ "Please <a href='%(ask_question_url)s'>ask</a> your question, help make "
-#~ "our community better!"
-#~ msgstr "欢迎您来<a href='%(ask_question_url)s'>提问</a>，共建美好社区。"
-
-#~ msgid "Give us your feedback!"
-#~ msgstr "请反馈给我们！"
-
-#~ msgid ""
-#~ "\n"
-#~ "        <span class='big strong'>Dear %(user_name)s</span>, we look "
-#~ "forward to hearing your feedback. \n"
-#~ "        Please type and send us your message below.\n"
-#~ "        "
-#~ msgstr ""
-#~ "\n"
-#~ "<span class='big strong'>亲爱的 %(user_name)s</span>,  我们盼望收到您的反"
-#~ "馈. \n"
-#~ "请发送您的反馈信息给我们，以帮助我们更好的改进."
-
-#~ msgid ""
-#~ "\n"
-#~ "        <span class='big strong'>Dear visitor</span>, we look forward to "
-#~ "hearing your feedback.\n"
-#~ "        Please type and send us your message below.\n"
-#~ "        "
-#~ msgstr ""
-#~ "\n"
-#~ "        <span class='big strong'>亲爱的访客</span>,  我们盼望收到您的反"
-#~ "馈。\n"
-#~ "        请在下面输入您的留言并发送。\n"
-#~ "        "
-
-#~ msgid "(to hear from us please enter a valid email or check the box below)"
-#~ msgstr "(要获得动态请输入有效的电子邮箱地址或选中下面的复选框)"
-
-#~ msgid "(this field is required)"
-#~ msgstr "必填项"
-
-#~ msgid "Groups"
-#~ msgstr "群组"
-
-#~ msgid "All groups"
-#~ msgstr "所有组"
-
-#~ msgid "all groups"
-#~ msgstr "所有组"
-
-#~ msgid "My groups"
-#~ msgstr "我的群组"
-
-#~ msgid "my groups"
-#~ msgstr "我的群组"
-
-#~ msgid "Group"
-#~ msgstr "群组"
-
-#~ msgid "Number of members"
-#~ msgstr "用户数"
-
-#~ msgid "Welcome %(username)s,"
-#~ msgstr "欢迎您 %(username)s，"
-
-#~ msgid "Welcome,"
-#~ msgstr "欢迎，"
-
-#~ msgid "Thank you for using %(app_name)s, here is how it works."
-#~ msgstr "谢谢您使用本社区-- %(app_name)s。"
-
-#~ msgid "How questions, answers and comments work"
-#~ msgstr "如何提问，回答和评论。"
-
-#~ msgid ""
-#~ "This site is for asking and answering questions, not for open-ended "
-#~ "discussions."
-#~ msgstr "这个网站的目的是为了提供高质量的答案，而不是灌水。"
-
-#~ msgid ""
-#~ "We encourage everyone to use “question” space for asking and “answer” for "
-#~ "answering."
-#~ msgstr ""
-#~ "我们鼓励大家“发起您不知道，别人知道的问题；回答您知道，别人不知道的答案”。"
-#~ "提问应遵循“真实、客观、简洁、明确、规范”的原则。回答应遵循“尽可能提供详细"
-#~ "的解释和说明”的原则。"
-
-#~ msgid ""
-#~ "Despite that, each question and answer can be commented – \n"
-#~ "    the comments are good for the limited discussions."
-#~ msgstr ""
-#~ "如果您对问题本身或别人的答案有自己的看法，您可以通过「评论」来进行，不要把"
-#~ "评论当作答案来发布。那样的话，该问题会被其他用户点击「反对票」而扣除作者的"
-#~ "声望值，反而起不到实际效果，也无助于提供高质量的答案。"
-
-#~ msgid "Please search before asking your questions"
-#~ msgstr "在您提问之前，请先搜索一下。"
-
-#~ msgid ""
-#~ "Type your question in the search bar and see whether a similar question "
-#~ "has been asked before"
-#~ msgstr "在搜索框中输入您的问题，看是否有类似的问题已经问过。"
-
-#~ msgid "Search has advanced capabilities:"
-#~ msgstr "搜索具有先进的功能："
-
-#~ msgid "to search in title - enter [title: your text]"
-#~ msgstr "只搜索标题 - 输入 [title: your text]"
-
-#~ msgid "to search by tags - enter [tag: sometag] or #sometag"
-#~ msgstr "只搜索标签 - 输入 [tag: sometag]"
-
-#~ msgid ""
-#~ "to search by user - enter [user: somename] or @somename or @\"some name\""
-#~ msgstr "只搜索用户 - 输入 [user: somename]"
-
-#~ msgid ""
-#~ "In addition, it is possible to click on tags to add them to the search "
-#~ "query."
-#~ msgstr "此外，可以点击相应的标签用于搜索。"
-
-#~ msgid ""
-#~ "Finally, a separate tag search box is available in the side bar of the "
-#~ "main page, where the search tags can be entered as well"
-#~ msgstr "最后，主页的右侧栏还有独立的标签搜索框可用，帮助您过滤标签。"
-
-#~ msgid ""
-#~ "<em>Important!!!</em> All search terms are combined with a logical \"AND"
-#~ "\" expression - to narrow the search by adding new terms."
-#~ msgstr ""
-#~ "<em>非常重要!!!</em>所有的搜索条件联合起来，增加条件越多搜索越准确。"
-
-#~ msgid "Voting"
-#~ msgstr "投票"
-
-#~ msgid ""
-#~ "Voting in %(app_name)s helps to select best answers and thank most "
-#~ "helpful users."
-#~ msgstr ""
-#~ "在社区--%(app_name)s中，投票可以帮助社区选出最好的答案和鼓励用户回答。"
-
-#~ msgid ""
-#~ "Please vote when you find helpful information,\n"
-#~ "    it really helps the %(app_name)s community."
-#~ msgstr ""
-#~ "当您发现有用的内容时，请投票给他，这样子可以帮助整个 %(app_name)s社区。"
-
-#~ msgid "Other topics"
-#~ msgstr "其它提示"
-
-#~ msgid ""
-#~ "You can @mention users anywhere in the text to point their attention,\n"
-#~ "    follow users and conversations and report inappropriate content by "
-#~ "flagging it."
-#~ msgstr ""
-#~ "虽然允许您修改他人提出的问题，但当您在修改他人提出的问题时，仍然应该慎重。"
-#~ "有些问题有明显的错误或不妥，您可以大胆地改进它们；但有些问题细微的文字修改"
-#~ "就会带来问题本身的差别，这时候更应该慎重。无论何时，只在您相信自己的修改能"
-#~ "够帮助改进这个问题时才进行修改。请不要恶意修改问题。如果出现恶意破坏行为，"
-#~ "社区系统会记录操作者的身份，我们会酌情予以警告或停止帐号等处理。"
-
-#~ msgid "Enjoy."
-#~ msgstr "玩得开心。"
-
-#~ msgid "Import StackExchange data"
-#~ msgstr "导入 StackExchange 数据"
-
-#~ msgid ""
-#~ "<em>Warning:</em> if your database is not empty, please back it up\n"
-#~ "        before attempting this operation."
-#~ msgstr ""
-#~ "<em>Warning:</em> if your database is not empty, please back it up\n"
-#~ "        before attempting this operation."
-
-#~ msgid ""
-#~ "Upload your stackexchange dump .zip file, then wait until\n"
-#~ "        the data import completes. This process may take several "
-#~ "minutes.\n"
-#~ "        Please note that feedback will be printed in plain text.\n"
-#~ "        "
-#~ msgstr ""
-#~ "Upload your stackexchange dump .zip file, then wait until\n"
-#~ "        the data import completes. This process may take several "
-#~ "minutes.\n"
-#~ "        Please note that feedback will be printed in plain text.\n"
-#~ "        "
-
-#~ msgid "Import data"
-#~ msgstr "导入数据"
-
-#~ msgid ""
-#~ "In the case you experience any difficulties in using this import tool,\n"
-#~ "        please try importing your data via command line: <code>python "
-#~ "manage.py load_stackexchange path/to/your-data.zip</code>"
-#~ msgstr ""
-#~ "In the case you experience any difficulties in using this import tool,\n"
-#~ "        please try importing your data via command line: <code>python "
-#~ "manage.py load_stackexchange path/to/your-data.zip</code>"
-
-#~ msgid "Tag"
-#~ msgstr "标签"
-
-#~ msgid "Your decision"
-#~ msgstr "您的决定"
-
-#~ msgid "Accept"
-#~ msgstr "接受"
-
-#~ msgid "Reject"
-#~ msgstr "拒绝"
-
-#~ msgid "Reject tag"
-#~ msgstr "拒绝标签"
-
-#~ msgid "Nothing found"
-#~ msgstr "没有找到相关数据。"
-
-#~ msgid "current number of votes"
-#~ msgstr "当前总票数"
-
-#~ msgid "anonymous user"
-#~ msgstr "匿名用户"
-
-#~ msgid "posted"
-#~ msgstr "发布"
-
-#~ msgid "this post is marked as community wiki"
-#~ msgstr "这个帖子标记为社区维基"
-
-#~ msgid ""
-#~ "This post is a wiki.\n"
-#~ "        Anyone with karma &gt;%(wiki_min_rep)s is welcome to improve it."
-#~ msgstr ""
-#~ "这个帖子是维基.\n"
-#~ "积分超过 %(wiki_min_rep)s 的用户都可以改进它."
-
-#~ msgid "Leave this group"
-#~ msgstr "离开此组"
-
-#~ msgid "Join this group"
-#~ msgstr "加入此组"
-
-#~ msgid "You are a member"
-#~ msgstr "您是会员"
-
-#~ msgid "Waiting approval"
-#~ msgstr "等待审核"
-
-#~ msgid "Ask to join"
-#~ msgstr "请加入"
-
-#~ msgid "delete this comment"
-#~ msgstr "删除这个留言"
-
-#~ msgid "edit"
-#~ msgstr "编辑"
-
-#~ msgid "convert to answer"
-#~ msgstr "转为答案"
-
-#~ msgid "follow %(alias)s"
-#~ msgstr "关注 %(alias)s"
-
-#~ msgid "unfollow %(alias)s"
-#~ msgstr "取消关注 %(alias)s"
-
-#~ msgid "following %(alias)s"
-#~ msgstr "已关注 %(alias)s"
-
-#~ msgid "%(username)s's website is %(url)s"
-#~ msgstr "%(username)s当前的状态是 \"%(url)s\""
-
-#~ msgid "previous"
-#~ msgstr "上一页"
-
-#~ msgid "current page"
-#~ msgstr "当前页"
-
-#~ msgid "page %(num)s"
-#~ msgstr "第%(num)s页"
-
-#~ msgid "next page"
-#~ msgstr "下一页"
-
-#~ msgid "responses for %(username)s"
-#~ msgstr "回应%(username)s"
-
-#~ msgid "you have %(response_count)s new response"
-#~ msgid_plural "you have %(response_count)s new responses"
-#~ msgstr[0] "您有 %(response_count)s 个新回应"
-
-#~ msgid "%(new)s new flagged posts and %(seen)s previous"
-#~ msgstr "%(new)s 新标记的发布和之前查看的 %(seen)s"
-
-#~ msgid "%(new)s new flagged posts"
-#~ msgstr "%(new)s 新标记的发布信息"
-
-#~ msgid "%(seen)s flagged posts"
-#~ msgstr "\"%(seen)s 已标记的发布信息"
-
-#~ msgid "Questions"
-#~ msgstr "问题列表"
-
-#~ msgid "add a comment"
-#~ msgstr "添加评论"
-
-#~ msgid "Login/Signup to Post"
-#~ msgstr "登录/发表答案"
-
-#~ msgid "Change language"
-#~ msgstr "修改語言"
-
-#~ msgid "Tips"
-#~ msgstr "提示"
-
-#~ msgid "Retag"
-#~ msgstr "修改标签"
-
-#~ msgid "Why use and modify tags?"
-#~ msgstr "为什么我只能修改问题标签？"
-
-#~ msgid "Tags help to keep the content better organized and searchable"
-#~ msgstr "标签使内容可以更好的组织及搜索"
-
-#~ msgid "tag editors receive special awards from the community"
-#~ msgstr "修改标签的用户将授予特殊的社区奖牌"
-
-#~ msgid "up to 5 tags, less than 20 characters each"
-#~ msgstr "最多5个标签，每个标签长度小于20个字符。"
-
-#~ msgid "Close reason:"
-#~ msgstr "关闭原因"
-
-#~ msgid "When:"
-#~ msgstr "当:"
-
-#~ msgid "Revision history"
-#~ msgstr "版本历史"
-
-#~ msgid "click to hide/show revision"
-#~ msgstr "点击隐藏或显示版本"
-
-#~ msgid "revision %(number)s"
-#~ msgstr "版本%(number)s"
-
-#~ msgid "Subscribe for tags"
-#~ msgstr "订阅标签"
-
-#~ msgid "Please, subscribe for the following tags:"
-#~ msgstr "请订阅下述标签:"
-
-#~ msgid "Subscribe"
-#~ msgstr "订阅"
 
 #~ msgid "search for tags"
 #~ msgstr "搜索标签"
 
-#~ msgid "Users"
-#~ msgstr "用户列表"
-
-#~ msgid "Sort by &raquo;"
-#~ msgstr "排序方式 &raquo;"
-
-#~ msgid "karma"
-#~ msgstr "积分"
-
-#~ msgid "recent"
-#~ msgstr "最新加入"
-
-#~ msgid "by username"
-#~ msgstr "按用户名"
-
-#~ msgid "Nothing found."
-#~ msgstr "没有找到相关数据。"
-
-#~ msgid "Please enter your <span>user name</span>, then sign in"
-#~ msgstr "请输入您的用户名,然后登录"
-
-#~ msgid "(or select another login method above)"
-#~ msgstr "(或从上面选择一个登录方式)"
-
-#~ msgid "Sign in"
-#~ msgstr "登录"
-
 #~ msgid "Registration"
 #~ msgstr "注册"
-
-#~ msgid "User registration"
-#~ msgstr "用户注册"
 
 #~ msgid "<strong>Screen Name</strong> (<i>will be shown to others</i>)"
 #~ msgstr "<strong>昵称</strong> (<i>在社区中显示的名称</i>)"
@@ -6633,109 +8985,6 @@ msgstr "无法转换，因为文本的字符数超过了评论允许的最大值
 #~ msgstr ""
 #~ "<strong>邮件地址</strong> (<i><strong>不公开</strong>，必须有效的</i>)"
 
-#~ msgid "Signup"
-#~ msgstr "注册帐号"
-
-#~ msgid "Greetings from the %(site_name)s"
-#~ msgstr "来自%(site_name)s的祝福"
-
-#~ msgid "To make use of the Forum, please follow the link below:"
-#~ msgstr "请跟随以下的链接来使用论坛:"
-
-#~ msgid "Following the link above will help us verify your email address."
-#~ msgstr "点击上面的链接可以帮助我们确认您的邮件地址"
-
-#~ msgid ""
-#~ "If you believe that this message was sent in mistake - \n"
-#~ "no further action is needed. Just ignore this email, we apologize\n"
-#~ "for any inconvenience"
-#~ msgstr ""
-#~ "如果您认为此消息被错误的发送,不要进行更进一步的动作.仅仅忽略这封邮件,为给"
-#~ "您带来的不便道歉."
-
-#~ msgid "Logout"
-#~ msgstr "退出登录"
-
-#~ msgid "You have successfully logged out"
-#~ msgstr "您已成功退出"
-
-#~ msgid ""
-#~ "However, you still may be logged in to your OpenID provider. Please "
-#~ "logout of your provider if you wish to do so."
-#~ msgstr "如果您愿意的话，本网站还支持OpenID帐号登录。"
-
-#~ msgid ""
-#~ "It's a good idea to make sure that your existing login methods still "
-#~ "work, or add a new one. Please click any of the icons below to check/"
-#~ "change or add new login methods."
-#~ msgstr ""
-#~ "您最好确认您目前的登录方式可以工作，或者您需要添加一个新的登录方式。请点击"
-#~ "下面任何一个icon选择添加一个新登录方式。"
-
-#~ msgid ""
-#~ "Please add a more permanent login method by clicking one of the icons "
-#~ "below, to avoid logging in via email each time."
-#~ msgstr ""
-#~ "请通过点击以下icon添加更多永久的登录方式，从而避免每次都是用email登录。"
-
-#~ msgid ""
-#~ "Click on one of the icons below to add a new login method or re-validate "
-#~ "an existing one."
-#~ msgstr "点击以下icon，添加一个新的登录方式或者重验证已经存在的登录方式。"
-
-#~ msgid ""
-#~ "You don't have a method to log in right now, please add one or more by "
-#~ "clicking any of the icons below."
-#~ msgstr "您目前还没有一个登录方式，请添加一个或多个通过点击下面的icons。"
-
-#~ msgid ""
-#~ "Please check your email and visit the enclosed link to re-connect to your "
-#~ "account"
-#~ msgstr "请检查您的邮件并访问邮件里链接重连您的账户"
-
-#~ msgid "or enter your <span>user name and password</span>"
-#~ msgstr "或者输入您的<span>用户名和密码</span>"
-
-#~ msgid "Please, sign in"
-#~ msgstr "请登录"
-
-#~ msgid "Login failed, please try again"
-#~ msgstr "登录失败，请重试"
-
-#~ msgid "Login or email"
-#~ msgstr "登录名或电子邮箱地址"
-
-#~ msgid ""
-#~ "To change your password - please enter the new one twice, then submit"
-#~ msgstr "修改密码-请输入新密码两次并提交"
-
-#~ msgid "New password"
-#~ msgstr "新密码"
-
-#~ msgid "Please, retype"
-#~ msgstr "确认密码"
-
-#~ msgid "Here are your current login methods"
-#~ msgstr "这里有您的登录方式"
-
-#~ msgid "provider"
-#~ msgstr "提供者"
-
-#~ msgid "last used"
-#~ msgstr "上次活动时间"
-
-#~ msgid "delete"
-#~ msgstr "删除"
-
-#~ msgid "cannot be deleted"
-#~ msgstr "无法删除"
-
-#~ msgid "Still have trouble signing in?"
-#~ msgstr "还有其他问题？"
-
-#~ msgid "Send a new recovery key"
-#~ msgstr "发送一个恢复建"
-
 #~ msgid "Recover your account via email"
 #~ msgstr "通过邮件恢复您的账户"
 
@@ -6745,32 +8994,11 @@ msgstr "无法转换，因为文本的字符数超过了评论允许的最大值
 #~ msgid "or create a new user name and password here"
 #~ msgstr "或在此创建新的用户名与密码"
 
-#~ msgid "Create login name and password"
-#~ msgstr "使用帐号密码登录"
-
 #~ msgid "or"
 #~ msgstr "或者"
 
-#~ msgid "Confirm email address"
-#~ msgstr "确认电子邮箱地址"
-
-#~ msgid "Confirm email"
-#~ msgstr "确认电子邮箱地址"
-
-#~ msgid "or enter your <span>user name and password</span>, then sign in"
-#~ msgstr "或者输入您的<span>用户名和密码</span>, 然后登陆"
-
-#~ msgid "add avatar"
-#~ msgstr "添加头像"
-
-#~ msgid "Change avatar"
-#~ msgstr "修改头像"
-
 #~ msgid "Your current avatar: "
 #~ msgstr "您的当前头像:"
-
-#~ msgid "You haven't uploaded an avatar yet. Please upload one now."
-#~ msgstr "You haven't uploaded an avatar yet. Please upload one now."
 
 #~ msgid "Upload New Image"
 #~ msgstr "更新新图像"
@@ -6784,677 +9012,11 @@ msgstr "无法转换，因为文本的字符数超过了评论允许的最大值
 #~ msgid "Upload"
 #~ msgstr "上传"
 
-#~ msgid "delete avatar"
-#~ msgstr "删除头像"
-
-#~ msgid "Please select the avatars that you would like to delete."
-#~ msgstr "请选择希望删除的头像。"
-
-#~ msgid ""
-#~ "You have no avatars to delete. Please <a href=\"%(avatar_change_url)s"
-#~ "\">upload one</a> now."
-#~ msgstr ""
-#~ "You have no avatars to delete. Please <a href=\"%(avatar_change_url)s"
-#~ "\">upload one</a> now."
-
-#~ msgid "Delete These"
-#~ msgstr "删除这些"
-
-#~ msgid "%(user)s, please reply to this message."
-#~ msgstr "%(user)s，请回复此信息。"
-
-#~ msgid "Tags:"
-#~ msgstr "标签："
-
-#~ msgid ""
-#~ "\n"
-#~ "                                %(author)s's comment:\n"
-#~ "                            "
-#~ msgstr ""
-#~ "\n"
-#~ "%(author)s的评论："
-
-#~ msgid ""
-#~ "\n"
-#~ "                            Commented by %(author)s:\n"
-#~ "                        "
-#~ msgstr ""
-#~ "\n"
-#~ "%(author)s的评论："
-
-#~ msgid "Here is your original post"
-#~ msgstr "这是您的原始帖子"
-
-#~ msgid ""
-#~ "\n"
-#~ "<p>The system was unable to process your message successfully, the reason "
-#~ "being:<p>\n"
-#~ msgstr ""
-#~ "\n"
-#~ "<p>系统不能正确处理您的信息，原因如下：<p>\n"
-
-#~ msgid "Welcome to %(site_name)s!"
-#~ msgstr "欢迎来到 %(site_name)s!"
-
-#~ msgid "%(action)s an %(widget_name)s widget"
-#~ msgstr "%(action)s%(widget_name)s的小工具"
-
-#~ msgid "Save"
-#~ msgstr "保存"
-
-#~ msgid "Widgets"
-#~ msgstr "小工具"
-
-#~ msgid "create"
-#~ msgstr "创建"
-
-#~ msgid "view list"
-#~ msgstr "查看列表"
-
-#~ msgid "You wrote on %(date)s:"
-#~ msgstr "您写于%(date)s:"
-
-#~ msgid "inbox"
-#~ msgstr "收件箱"
-
-#~ msgid "sent"
-#~ msgstr "已发送"
-
-#~ msgid "trash"
-#~ msgstr "废件夹"
-
-#~ msgid "there are no messages yet..."
-#~ msgstr "无任何消息..."
-
-#~ msgid "Settings"
-#~ msgstr "设置"
-
-#~ msgid "Settings included in %(name)s."
-#~ msgstr "设置包含在%(name)s."
-
-#~ msgid "with %(author_name)s's contributions"
-#~ msgstr "%(author_name)s的贡献"
-
-#~ msgid "Tagged"
-#~ msgstr "已加标签"
-
-#~ msgid "Search tips:"
-#~ msgstr "搜索主题"
-
-#~ msgid "reset author"
-#~ msgstr "重置作者"
-
-#~ msgid " or "
-#~ msgstr "或者"
-
-#~ msgid "reset tags"
-#~ msgstr "重置标签"
-
-#~ msgid "start over"
-#~ msgstr "重新开始"
-
-#~ msgid " - to expand, or dig in by adding more tags and revising the query."
-#~ msgstr " - 通过添加更多标签和改进查询来扩展和挖掘信息"
-
-#~ msgid "Search tip:"
-#~ msgstr "搜索主题 :"
-
-#~ msgid "add tags and a query to focus your search"
-#~ msgstr "添加标签和查询条件进行更精确查询"
-
-#~ msgid "You can expand your search by "
-#~ msgstr "扩展您的查询"
-
-#~ msgid "resetting author"
-#~ msgstr "重置作者"
-
-#~ msgid "resetting tags"
-#~ msgstr "重置标签"
-
-#~ msgid "starting over"
-#~ msgstr "重新开始"
-
-#~ msgid "Did not find what you were looking for?"
-#~ msgstr "您找的问题没有?"
-
-#~ msgid "RSS"
-#~ msgstr "RSS"
-
-#~ msgid "Tag search"
-#~ msgstr "标签搜索"
-
-#~ msgid "search"
-#~ msgstr "搜索"
-
-#~ msgid ""
-#~ "Please note: %(app_name)s requires javascript to work properly, please "
-#~ "enable javascript in your browser, <a href=\"%(noscript_url)s\">here is "
-#~ "how</a>"
-#~ msgstr ""
-#~ "Please note: %(app_name)s requires javascript to work properly, please "
-#~ "enable javascript in your browser, <a href=\"%(noscript_url)s\">here is "
-#~ "how</a>"
-
-#~ msgid "each tag must be shorter that %(max_chars)s character"
-#~ msgid_plural "each tag must be shorter than %(max_chars)s characters"
-#~ msgstr[0] "每个标签的长度不超过%(max_chars)s"
-
-#~ msgid "please use %(tag_count)s tag"
-#~ msgid_plural "please use %(tag_count)s tags or less"
-#~ msgstr[0] "最多只能有%(tag_count)s个标签"
-
-#~ msgid ""
-#~ "please use up to %(tag_count)s tags, less than %(max_chars)s characters "
-#~ "each"
-#~ msgstr "最多%(tag_count)s个标签，每个标签长度小于%(max_chars)s个字符。"
-
-#~ msgid "1) Enter a brief description of why you are rejecting the post."
-#~ msgstr "1) 简要说明您拒绝的理由。"
-
-#~ msgid "2) Please enter details here. This text will be sent to the user."
-#~ msgstr "2)请在这里输入的细节。本文将被发送到用户。"
-
-#~ msgid "Edit this reason"
-#~ msgstr "修改这个理由"
-
-#~ msgid "Delete this reason"
-#~ msgstr "删除这个理由"
-
-#~ msgid "Add a new reason"
-#~ msgstr "添加一个新的理由"
-
-#~ msgid "none"
-#~ msgstr "无"
-
-#~ msgid "This response is published"
-#~ msgstr "此回复已经发布"
-
-#~ msgid "remove offensive flag"
-#~ msgstr "移除标记垃圾帖"
-
-#~ msgid "remove flag"
-#~ msgstr "移除标签"
-
-#~ msgid ""
-#~ "report as offensive (i.e containing spam, advertising, malicious text, "
-#~ "etc.)"
-#~ msgstr "检举该帖为垃“水帖”（含广告、人身攻击、恶意言论等）"
-
-#~ msgid "flag offensive"
-#~ msgstr "垃圾帖"
-
-#~ msgid "undelete"
-#~ msgstr "取消"
-
-#~ msgid "unpublish"
-#~ msgstr "取消发布"
-
-#~ msgid "publish"
-#~ msgstr "发布"
-
-#~ msgid "permanent link"
-#~ msgstr "永久链接"
-
-#~ msgid "link"
-#~ msgstr "链接"
-
-#~ msgid "Sort by »"
-#~ msgstr "排序方式 »"
-
-#~ msgid "close date %(closed_at)s"
-#~ msgstr "%(closed_at)s日关闭"
-
-#~ msgid "retag"
-#~ msgstr "更新标签"
-
-#~ msgid "reopen"
-#~ msgstr "打开"
-
-#~ msgid "close"
-#~ msgstr "关闭"
-
-#~ msgid "Following"
-#~ msgstr "已关注"
-
-#~ msgid "Unfollow"
-#~ msgstr "取消关注"
-
-#~ msgid "Follow"
-#~ msgstr "关注"
-
-#~ msgid "%(count)s follower"
-#~ msgid_plural "%(count)s followers"
-#~ msgstr[0] "%(count)s 位粉丝"
-
-#~ msgid "subscribe to rss feed"
-#~ msgstr "订阅 rss feed"
-
-#~ msgid "Invite"
-#~ msgstr "邀请"
-
-#~ msgid "add"
-#~ msgstr "添加"
-
-#~ msgid "- or -"
-#~ msgstr "- 或者 -"
-
-#~ msgid "share with everyone"
-#~ msgstr "与所有人共享"
-
-#~ msgid "Individual users"
-#~ msgstr "个人用户"
-
-#~ msgid "You"
-#~ msgstr "您"
-
-#~ msgid "and"
-#~ msgstr "和"
-
-#~ msgid "Stats"
-#~ msgstr "统计"
-
-#~ msgid "Asked"
-#~ msgstr "提问于"
-
-#~ msgid "Seen"
-#~ msgstr "查看"
-
-#~ msgid "times"
-#~ msgstr "次"
-
-#~ msgid "Last updated"
-#~ msgstr "最后更新时间"
-
-#~ msgid "Tag subscriptions"
-#~ msgstr "标签订阅"
-
-#~ msgid "Tag Subscriptions"
-#~ msgstr "标签订阅"
-
-#~ msgid "by name"
-#~ msgstr "按名称排序"
-
-#~ msgid "by popularity"
-#~ msgstr "按流行度排序"
-
-#~ msgid "Create New"
-#~ msgstr "新建"
-
-#~ msgid "Date"
-#~ msgstr "日期"
-
-#~ msgid "Action"
-#~ msgstr "动作"
-
-#~ msgid "Sections:"
-#~ msgstr "部分："
-
-#~ msgid "messages"
-#~ msgstr "信息"
-
-#~ msgid "Approve"
-#~ msgstr "接受"
-
-#~ msgid "Deny"
-#~ msgstr "拒绝"
-
-#~ msgid "%(username)s's profile"
-#~ msgstr "%(username)s用户概览"
-
-#~ msgid "Edit user profile"
-#~ msgstr "修改个人资料"
-
-#~ msgid "edit profile"
-#~ msgstr "编辑资料"
-
-#~ msgid "change picture"
-#~ msgstr "修改图片"
-
-#~ msgid "remove"
-#~ msgstr "移除"
-
 #~ msgid "Registered user"
 #~ msgstr "注册用户"
 
-#~ msgid "Screen Name"
-#~ msgstr "用户名"
-
-#~ msgid "(cannot be changed)"
-#~ msgstr "(无法修改)"
-
-#~ msgid "Update"
-#~ msgstr "更新"
-
-#~ msgid "subscriptions"
-#~ msgstr "订阅"
-
-#~ msgid "Email subscription settings"
-#~ msgstr "邮件订阅设置"
-
-#~ msgid "Stop Email"
-#~ msgstr "停止发送邮件"
-
-#~ msgid "Subscribed languages"
-#~ msgstr "订阅语"
-
-#~ msgid "Save languages"
-#~ msgstr "保存语言"
-
-#~ msgid "Subscribed Tags"
-#~ msgstr "订阅的标签"
-
-#~ msgid "update profile"
-#~ msgstr "更新资料"
-
-#~ msgid "real name"
-#~ msgstr "姓名"
-
-#~ msgid "groups"
-#~ msgstr "群组"
-
-#~ msgid "add group"
-#~ msgstr "添加组"
-
-#~ msgid "member since"
-#~ msgstr "加入时间"
-
-#~ msgid "last seen"
-#~ msgstr "上次活动时间"
-
-#~ msgid "website"
-#~ msgstr "个人网站"
-
-#~ msgid "location"
-#~ msgstr "城市"
-
-#~ msgid "age"
-#~ msgstr "年龄"
-
-#~ msgid "%(age)s years old"
-#~ msgstr "%(age)s岁"
-
-#~ msgid "todays unused votes"
-#~ msgstr "今日剩余投票数"
-
-#~ msgid "votes left"
-#~ msgstr "剩余投票数"
-
-#~ msgid "%(username)s's current status is \"%(status)s\""
-#~ msgstr "%(username)s当前的状态是 \"%(status)s\""
-
-#~ msgid "Your current reputation is %(reputation)s points"
-#~ msgstr "您当前的积分是 %(reputation)s "
-
-#~ msgid "User's current reputation is %(reputation)s points"
-#~ msgstr "用户当前的积分是 %(reputation)s"
-
-#~ msgid "User reputation changed"
-#~ msgstr "用户积分已修改"
-
-#~ msgid "Subtract"
-#~ msgstr "减去"
-
-#~ msgid "Add"
-#~ msgstr "添加"
-
-#~ msgid "Send message to %(username)s"
-#~ msgstr "发送信息给%(username)s"
-
-#~ msgid ""
-#~ "An email will be sent to the user with 'reply-to' field set to your email "
-#~ "address. Please make sure that your address is entered correctly."
-#~ msgstr "邮件将被发送给接受回复的用户地址，请确保您输入的邮件地址是正确的"
-
-#~ msgid "Message sent"
-#~ msgstr "发送消息"
-
-#~ msgid ""
-#~ "Administrators have privileges of normal users, but in addition they can "
-#~ "assign/revoke any status to any user, and are exempt from the reputation "
-#~ "limits."
-#~ msgstr ""
-#~ "Administrators have privileges of normal users, but in addition they can "
-#~ "assign/revoke any status to any user, and are exempt from the reputation "
-#~ "limits."
-
-#~ msgid ""
-#~ "Moderators have the same privileges as administrators, but cannot add or "
-#~ "remove user status of 'moderator' or 'administrator'."
-#~ msgstr ""
-#~ "Moderators have the same privileges as administrators, but cannot add or "
-#~ "remove user status of 'moderator' or 'administrator'."
-
-#~ msgid "'Approved' status means the same as regular user."
-#~ msgstr "“批准”状态表示常规用户。"
-
-#~ msgid "Suspended users can only edit or delete their own posts."
-#~ msgstr "暂停使用的用户只能编辑或删除自己的帖子。"
-
-#~ msgid "network"
-#~ msgstr "朋友圈"
-
-#~ msgid "Followed by %(count)s person"
-#~ msgid_plural "Followed by %(count)s people"
-#~ msgstr[0] "被 %(count)s 名用户"
-
-#~ msgid "Following %(count)s person"
-#~ msgid_plural "Following %(count)s people"
-#~ msgstr[0] "关注 %(count)s 名用户"
-
-#~ msgid ""
-#~ "Your network is empty. Would you like to follow someone? - Just visit "
-#~ "their profiles and click \"follow\""
-#~ msgstr "朋友圈为空。是否希望关注一些用户? - 只需访问其个人档案并点击“关注”"
-
-#~ msgid "%(username)s's network is empty"
-#~ msgstr "%(username)s用户概览"
-
-#~ msgid "activity"
-#~ msgstr "活跃问题"
-
-#~ msgid "source"
-#~ msgstr "来源"
-
-#~ msgid "Your karma change log."
-#~ msgstr "您的积分历史"
-
-#~ msgid "%(user_name)s's karma change log"
-#~ msgstr "%(user_name)s的积分历史"
-
-#~ msgid "overview"
-#~ msgstr "概览"
-
-#~ msgid "<span class=\"count\">%(cnt)s</span> Vote"
-#~ msgid_plural "<span class=\"count\">%(cnt)s</span> Votes "
-#~ msgstr[0] "<span class=\"count\">%(cnt)s</span>投票"
-
-#~ msgid "<span class=\"count\">%(counter)s</span> Tag"
-#~ msgid_plural "<span class=\"count\">%(counter)s</span> Tags"
-#~ msgstr[0] "<span class=\"count\">%(counter)s</span>标签"
-
-#~ msgid "<span class=\"count\">%(counter)s</span> Badge"
-#~ msgid_plural "<span class=\"count\">%(counter)s</span> Badges"
-#~ msgstr[0] "<span class=\"count\">%(counter)s</span>奖牌"
-
-#~ msgid "Answer to:"
-#~ msgstr "回答:"
-
-#~ msgid "votes"
-#~ msgstr "投票"
-
-#~ msgid "provide enough details"
-#~ msgstr "请详细描述您的问题"
-
-#~ msgid "Contributors"
-#~ msgstr "贡献者"
-
-#~ msgid ", one of these is required"
-#~ msgstr "这些中的一个为必填项"
-
 #~ msgid "tags:"
 #~ msgstr "标签："
-
-#~ msgid "(required)"
-#~ msgstr "必填"
-
-#~ msgid "Toggle the real time Markdown editor preview"
-#~ msgstr "打开或者关闭Markdown编辑器的实时预览"
-
-#~ msgid ""
-#~ "To post on behalf of someone else, enter user name <strong>and</strong> "
-#~ "email below."
-#~ msgstr "以他人的名义发表文章。"
-
-#~ msgid "Content on this site is licensed under a %(license)s"
-#~ msgstr "本站内容依 %(license)s 授权"
-
-#~ msgid "about"
-#~ msgstr "关于本站"
-
-#~ msgid "help"
-#~ msgstr "帮助"
-
-#~ msgid "privacy policy"
-#~ msgstr "隐私政策"
-
-#~ msgid "give feedback"
-#~ msgstr "问题反馈"
-
-#~ msgid "Group info"
-#~ msgstr "群组信息"
-
-#~ msgid "edit description"
-#~ msgstr "编辑描述"
-
-#~ msgid "change logo"
-#~ msgstr "更该标识"
-
-#~ msgid "add logo"
-#~ msgstr "添加 logo"
-
-#~ msgid "Can moderate site"
-#~ msgstr "可以监管网站"
-
-#~ msgid "Allow only read access"
-#~ msgstr "仅允许阅读权限"
-
-#~ msgid "%(site)s logo"
-#~ msgstr "%(site)s logo"
-
-#~ msgid "Markdown basics"
-#~ msgstr "Markdown 基础"
-
-#~ msgid "*italic*"
-#~ msgstr "*斜体*"
-
-#~ msgid "**bold**"
-#~ msgstr "**粗体**"
-
-#~ msgid "*italic* or _italic_"
-#~ msgstr "*斜体* 或 _斜体_"
-
-#~ msgid "**bold** or __bold__"
-#~ msgstr "**加粗** 或者 __加粗__ "
-
-#~ msgid "text"
-#~ msgstr "文本"
-
-#~ msgid "image"
-#~ msgstr "图片"
-
-#~ msgid "numbered list:"
-#~ msgstr "列表："
-
-#~ msgid "basic HTML tags are also supported"
-#~ msgstr "同时支持基本 HTML 标签"
-
-#~ msgid "learn more about Markdown"
-#~ msgstr "有关Markdown详细说明"
-
-#~ msgid "people & groups"
-#~ msgstr "用户和群组"
-
-#~ msgid "users"
-#~ msgstr "用户"
-
-#~ msgid "badges"
-#~ msgstr "奖牌"
-
-#~ msgid "view"
-#~ msgid_plural "views"
-#~ msgstr[0] "浏览"
-
-#~ msgid "vote"
-#~ msgid_plural "votes"
-#~ msgstr[0] "投票"
-
-#~ msgid "ALL"
-#~ msgstr "全部"
-
-#~ msgid "FOLLOWED"
-#~ msgstr "已关注"
-
-#~ msgid "Interesting tags"
-#~ msgstr "感兴趣的标签"
-
-#~ msgid "Ignored tags"
-#~ msgstr "不感兴趣的标签"
-
-#~ msgid "Subscribed tags"
-#~ msgstr "订阅的标签"
-
-#~ msgid "Send me email alerts for"
-#~ msgstr "发送邮件通知的情况"
-
-#~ msgid "Change frequency of emails"
-#~ msgstr "修改电子邮件的频率"
-
-#~ msgid "(done editing)"
-#~ msgstr "(完成编辑)"
-
-#~ msgid "(edit categories)"
-#~ msgstr "(编辑类别)"
-
-#~ msgid "read only access"
-#~ msgstr "只读访问"
-
-#~ msgid "karma:"
-#~ msgstr "按积分排序"
-
-#~ msgid "badges:"
-#~ msgstr "奖牌："
-
-#~ msgid "sign out"
-#~ msgstr "退出"
-
-msgid "Hi there! Please sign in"
-msgstr "请登录"
-
-msgid "search or ask your question"
-msgstr "搜索您的问题"
-
-#~ msgid "settings"
-#~ msgstr "设置"
-
-#~ msgid "widgets"
-#~ msgstr "小工具"
-
-#~ msgid "Your karma is %(karma)s"
-#~ msgstr "您的声望值是%(karma)s"
-
-#~ msgid "Karma reflects the value of your contribution to this community."
-#~ msgstr "声望值是您对社区贡献的体现。"
-
-#~ msgid ""
-#~ "Since you are the site %(role)s, you have access to all functions "
-#~ "regardless of your karma."
-#~ msgstr "只要您是%(role)s，就拥有所有的访问权限，而不管您的声望值是多少。"
-
-#~ msgid "The higher is your karma, the more rights you have on this site."
-#~ msgstr "在本网站，您的声望值越高，权限越大。"
-
-#~ msgid "Currently, you can:"
-#~ msgstr "目前您可以："
 
 #~ msgid "Password <i>(please retype)</i>"
 #~ msgstr "确认密码"
@@ -7467,9 +9029,6 @@ msgstr "搜索您的问题"
 
 #~ msgid "Successfully deleted the requested avatars."
 #~ msgstr "成功删除所请求头像。"
-
-#~ msgid "your post was not accepted"
-#~ msgstr "帖子未被接受"
 
 #~ msgid "Sorry, but anonymous users cannot access the inbox"
 #~ msgstr "对不起，匿名用户没有收件箱"
