@@ -3054,7 +3054,7 @@ msgstr "用户设置"
 
 #: conf/user_settings.py:23
 msgid "Welcome to our community!"
-msgstr ""
+msgstr "欢迎来到我们的问答社区"
 
 #: conf/user_settings.py:24
 msgid "On-screen greeting shown to the new users"
@@ -8391,7 +8391,7 @@ msgstr "只读访问"
 
 #: templates/widgets/user_long_score_and_badge_summary.html:10
 msgid "karma:"
-msgstr "按积分排序"
+msgstr "karma:"
 
 #: templates/widgets/user_long_score_and_badge_summary.html:15
 msgid "badges:"
