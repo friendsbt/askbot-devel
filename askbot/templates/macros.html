@@ -345,7 +345,7 @@ for the purposes of the AJAX comment editor #}
         </a>
     {% else %}
         {% if settings.COMMENTS_REVERSED == False %}
-            <a class="js-open-editor-btn">{% trans %}add a comment{% endtrans %}</a>
+            <a class="js-open-editor-btn"><i class="fa fa-commenting"></i>{% trans %}add a comment{% endtrans %}</a>
         {% endif %}
     {% endif %}
 {%- endmacro -%}

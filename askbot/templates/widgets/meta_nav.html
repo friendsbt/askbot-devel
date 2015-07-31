@@ -1,14 +1,14 @@
 {% import "macros.html" as macros%}
 <a
   id="navFBT"
-  href="http://211.149.208.82:9189/#/schools"
+  href="http://study.friendsbt.com/#/schools"
   {% if active_tab == 'tags' %}class="on"{% endif %}
-  >返回FBT</a>
+  >校园星空</a>
 <a
   id="navTags"
   href="{% url tags %}"
   {% if active_tab == 'tags' %}class="on"{% endif %}
->{% trans %}tags{% endtrans %}</a>
+><i class="fa fa-tag"></i>&nbsp{% trans %}tags{% endtrans %}</a>
 {% if settings.GROUPS_ENABLED %}
 <span class="dropdown groups-dropdown">
 <a
@@ -23,12 +23,12 @@
   id="navUsers"
   href="{% url users %}"
   {% if active_tab == 'users' %}class="on"{% endif %}
->{% trans %}users{% endtrans %}</a>
+><i class="fa fa-user"></i>&nbsp{% trans %}users{% endtrans %}</a>
 {% endif %}
 {% if settings.BADGES_MODE == 'public' %}
 <a 
   id="navBadges"
   href="{% url badges %}"
   {% if active_tab == 'badges' %}class="on"{% endif %}
->{% trans %}badges{% endtrans %}</a>
+><i class="fa fa-circle"></i>&nbsp{% trans %}badges{% endtrans %}</a>
 {% endif %}

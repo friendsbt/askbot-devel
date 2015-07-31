@@ -3,23 +3,6 @@
     <div class="content-wrapper">
         {% if settings.USE_LICENSE %}{# could be factored out into separate template #}
             {% if settings.LICENSE_USE_URL %}
-            <div class="copyright">
-                {% if settings.LICENSE_USE_LOGO %}
-                <a href="{{ settings.LICENSE_URL}}">
-                        <img
-                            class="license-logo"
-                            src="{{settings.LICENSE_LOGO_URL|media }}"
-                            title="{{settings.LICENSE_ACRONYM}}"
-                            alt="{{settings.LICENSE_ACRONYM}}"
-                        />
-                </a>
-                {% endif %}
-                {{settings.APP_COPYRIGHT}} {% trans 
-                    license_title=settings.LICENSE_TITLE,
-                    license_url=settings.LICENSE_URL
-                %}Content on this site is licensed under a <a href="{{license_url}}">{{license_title}}</a> license.{% endtrans %}
-
-            </div>
             {% else %}
             <div class="copyright">
                 {% if settings.LICENSE_USE_LOGO %}
@@ -55,11 +38,6 @@
                 {% trans %}give feedback{% endtrans %}
             </a>
             {% endif %}
-        </div>
-        <div class="powered-link">
-            <a href="http://askbot.com" target="_blank">
-                Powered by Askbot version {{settings.ASKBOT_VERSION}}
-            </a>
         </div>
         <div class="clean"></div>
     </div>
