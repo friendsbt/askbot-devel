@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: askbot\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-28 10:32-0500\n"
+"POT-Creation-Date: 2015-08-04 04:39-0500\n"
 "PO-Revision-Date: 2014-11-01 17:05+0000\n"
 "Last-Translator: evgeny <evgeny.fadeev@gmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/projects/p/askbot/"
@@ -403,6 +403,14 @@ msgstr "描述"
 #: templates/widgets/tags_field.html:18
 msgid "Tags"
 msgstr "标签"
+
+#: settings.py:239 setup_templates/settings.py:233
+msgid "account/"
+msgstr "账户/"
+
+#: settings.py:239 setup_templates/settings.py:233
+msgid "signin/"
+msgstr "登录/"
 
 #: tasks.py:129
 msgid "make an edit by email"
@@ -3367,9 +3375,10 @@ msgstr "未回答的问题"
 msgid "unanswered questions (plural)"
 msgstr "未回答的问题（复数）"
 
-#: conf/words.py:338
+#: conf/words.py:338 templates/widgets/question_summary.html:30
 msgid "answer"
-msgstr "回答"
+msgid_plural "answers"
+msgstr[0] "回答"
 
 #: conf/words.py:339
 msgid "answer (noun, sungular)"
@@ -5380,14 +5389,6 @@ msgstr "请列出有效的电子邮件域名"
 msgid "css for the widget"
 msgstr "小工具的CSS"
 
-#: setup_templates/settings.py:233
-msgid "account/"
-msgstr "账户/"
-
-#: setup_templates/settings.py:233
-msgid "signin/"
-msgstr "登录/"
-
 #: templates/404.html:3 templates/404.html.py:5
 msgid "Page not found"
 msgstr "此页未找到"
@@ -5415,7 +5416,7 @@ msgid ""
 "points, see"
 msgstr "访问的页面被保护或您的积分不够，参见"
 
-#: templates/404.html:14 templates/widgets/footer.html:39
+#: templates/404.html:14 templates/widgets/footer.html:22
 msgid "faq"
 msgstr "常见问题"
 
@@ -8128,29 +8129,29 @@ msgstr "登录/发表答案"
 msgid "Contributors"
 msgstr "贡献者"
 
-#: templates/widgets/footer.html:33
+#: templates/widgets/footer.html:16
 #, python-format
 msgid "Content on this site is licensed under a %(license)s"
 msgstr "本站内容依 %(license)s 授权"
 
-#: templates/widgets/footer.html:38
+#: templates/widgets/footer.html:21
 msgid "about"
 msgstr "关于本站"
 
-#: templates/widgets/footer.html:40 templates/widgets/user_navigation.html:23
+#: templates/widgets/footer.html:23 templates/widgets/user_navigation.html:23
 msgid "help"
 msgstr "帮助"
 
-#: templates/widgets/footer.html:42
+#: templates/widgets/footer.html:25
 msgid "privacy policy"
 msgstr "隐私政策"
 
-#: templates/widgets/footer.html:43
+#: templates/widgets/footer.html:26
 #, fuzzy
 msgid "terms of service"
 msgstr "外部服务"
 
-#: templates/widgets/footer.html:55
+#: templates/widgets/footer.html:38
 msgid "give feedback"
 msgstr "问题反馈"
 
